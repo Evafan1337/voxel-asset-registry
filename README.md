@@ -16,6 +16,15 @@ The model archive contains 29 GLB files and 203 rendered views; it can be used
 without installing this service. See [the pack guide](docs/STARTER_PACKS.md)
 and [the development roadmap](docs/STARTER_ROADMAP.md).
 
+**Blender files:** open **Releases → Assets** and download
+[the starter `.blend` archive](https://github.com/Evafan1337/voxel-asset-registry/releases/download/0.1.0-alpha.1/voxel-asset-registry-starter-blends-0.1.0-alpha.1.zip).
+It contains 29 editable scenes converted from the released GLBs, with final
+meshes, materials and available animations. No service installation is needed.
+For Zuk, extract the archive and open `models/assets/zuk_truck/v011/model.blend`;
+`v012` is the alternative without the external wheel-arch caps. Procedural
+recipe controls are available separately in this repository. Original demo
+models are CC0: commercial use without required attribution.
+
 ![Procedural truck projection sheet](docs/guide/assets/verified-truck-sheet.png)
 
 ## Install and start
