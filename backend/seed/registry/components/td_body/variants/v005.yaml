@@ -1,0 +1,9 @@
+id: v005
+parent: v003
+delta: {shape: round, width: 0.44, depth: 0.44, height: 0.38, lift: 0.5}
+level: 1
+author: llm
+note: 'корпус flyer: гранёная сфера, парит на 0.5 м'
+tags: [tower_defence, blockout, enemy]
+rating: null
+status: built

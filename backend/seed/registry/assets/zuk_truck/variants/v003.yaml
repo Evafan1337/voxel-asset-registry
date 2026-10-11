@@ -1,0 +1,14 @@
+id: v003
+parent: v002
+slots: {chassis: zk_chassis@v003, cab: zk_cab@v003, body: zk_body@v003, axle_front: zk_axle@v003, axle_rear: zk_axle@v004,
+  head_left: zk_lamp@v002, head_right: zk_lamp@v002, tail_left: zk_lamp@v003, tail_right: zk_lamp@v003}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 3
+author: llm
+note: 'Stage 3 A: D11–D20, компактные панели, металл/резина/стекло/эмиссия, поворот передних колёс и ход
+  подвески.'
+tags: [zuk, modular, impressor, stage3, animated]
+rating: null
+status: draft

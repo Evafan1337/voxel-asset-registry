@@ -1,0 +1,9 @@
+id: v005
+parent: v004
+delta: {stage: 5}
+level: 2
+author: llm
+note: 'GAME: материалы — металл, резина, стекло, огни (референс v3).'
+tags: [modular_truck, transport, modular]
+rating: null
+status: built

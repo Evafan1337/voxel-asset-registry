@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {width: 0.3, depth: 0.3, height: 0.14, taper: 0.05}
+level: 1
+author: llm
+note: короткая шея под ракетницу
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

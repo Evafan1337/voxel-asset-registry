@@ -1,0 +1,9 @@
+id: v006
+parent: v001
+delta: {bands: 5, softness: 0.01, band_bias: 0.1, outline_width: 0.02}
+level: 2
+author: llm
+note: 5 жёстких ступеней, толстый контур
+tags: [cel, stepped]
+rating: null
+status: built

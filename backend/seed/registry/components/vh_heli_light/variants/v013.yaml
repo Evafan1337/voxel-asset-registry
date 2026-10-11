@@ -1,0 +1,9 @@
+id: v013
+parent: v003
+delta: {part: tail_rotor}
+level: 3
+author: llm
+note: Ключевой блок «хвостовой ротор» на стадии 3.
+tags: [transport, evolution, animated]
+rating: null
+status: built

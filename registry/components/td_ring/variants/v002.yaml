@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {radius: 0.36, tube: 0.09, height: 0.1}
+level: 1
+author: llm
+note: 'кольцо v2: толще обод — крупнее силуэт'
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

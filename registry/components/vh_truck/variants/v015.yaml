@@ -1,0 +1,9 @@
+id: v015
+parent: v001
+delta: {part: chassis}
+level: 2
+author: llm
+note: Ключевой блок «топливный бак» на стадии 1.
+tags: [transport, evolution]
+rating: null
+status: built

@@ -1,0 +1,9 @@
+id: v017
+parent: v001
+delta: {width: 1.4, depth: 3.1, pips: 1, arrow: true, gap: 1.0, accent: signal_orange}
+level: 1
+author: llm
+note: 'Подиум витрины эволюции: width 1.4, depth 3.1, pips 1, arrow True, gap 1.0, accent signal_orange'
+tags: [showcase, evolution, transport]
+rating: null
+status: built

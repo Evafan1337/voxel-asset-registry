@@ -1,0 +1,10 @@
+id: v001
+parent: null
+slots: {tile: td_base@v002}
+params_delta: {}
+level: 1
+author: llm
+note: blockout v1 по референсу Orbital Defense
+tags: [tower_defence, environment, blockout]
+rating: null
+status: built

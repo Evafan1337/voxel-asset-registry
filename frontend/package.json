@@ -1,0 +1,20 @@
+{
+  "name": "voxel-asset-registry-ui",
+  "private": true,
+  "version": "0.1.0-alpha.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-isolation=none tests/*.test.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  }
+}

@@ -1,0 +1,12 @@
+id: v001
+parent: null
+slots: {chassis: zk_chassis@v001, cab: zk_cab@v001, body: zk_body@v001, axle_front: zk_axle@v001, axle_rear: zk_axle@v001}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'Stage 1: единый метрический скелет выбранного блокинга, четыре кубических колеса.'
+tags: [zuk, modular, impressor, stage1]
+rating: null
+status: draft

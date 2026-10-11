@@ -1,0 +1,63 @@
+# Пустой шаблон записи. Пример не объявляет результат проверенным или принятым.
+schema: impressor/review/v1
+brief_id: workshop_cube_study
+iteration_id: r001
+pass: cube_massing
+
+provenance:
+  style: industrial_chunky/v1
+  resolved_style_path: null
+  prompt_path: null
+  generator_tool: null
+  generator_model: null
+  generated_at: null
+  code_revision_or_snapshot: null
+  palette_snapshot_or_digest: null
+  tool_versions: {}
+
+result:
+  source_registry_ref: null
+  new_registry_refs: []
+  build_hashes: []
+  report_paths: []
+  preview_paths: []
+  # Контрольные виды одной 3D геометрии. Null означает, что вид ещё не получен.
+  projection_source_scene_path: null
+  projection_paths:
+    front: null
+    rear: null
+    left: null
+    right: null
+    top: null
+    bottom: null
+    isometric: null
+  game_camera_capture_path: null
+
+checks:
+  recipe_validation: pending
+  build_report: pending
+  visual_review: pending
+  projection_consistency: pending
+  in_game_review: pending
+
+observations: []
+# Каждое наблюдение записывается с ракурсом или кадром и видимым признаком.
+# Пример структуры записи:
+# - view: game_camera
+#   observation: Рабочий объём перекрывает вход при взгляде справа.
+#   hypothesis: Рабочий объём находится слишком близко к проходу.
+
+changes_from_source: []
+preserved_contracts: []
+
+decision: pending  # refine | advance | rollback | structural_branch после просмотра
+reviewer: null
+reason: null
+next_iteration:
+  question: null
+  allowed_changes: []
+  preserve: []
+  acceptance: []
+
+# decision не заменяет status варианта Registry.
+# Новые варианты агента остаются draft; approved выставляет человек.

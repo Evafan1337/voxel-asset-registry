@@ -1,0 +1,10 @@
+id: v002
+parent: v001
+delta: {bands: 2, softness: 0.06, rim: 0.45, rim_width: 0.4, specular: 0.5, specular_size: 0.2, shadow_color: '#6b4f86',
+  outline_width: 0.008}
+level: 2
+author: llm
+note: 'аниме: 2 мягкие ступени, контровой свет, блик'
+tags: [anime, soft]
+rating: null
+status: built

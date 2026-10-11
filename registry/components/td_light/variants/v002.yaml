@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {shape: orb, size: 0.14, color: signal_blue}
+level: 1
+author: llm
+note: синий излучатель на мачте
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

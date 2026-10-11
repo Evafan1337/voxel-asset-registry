@@ -1,0 +1,9 @@
+id: v003
+parent: v002
+delta: {stage: 3}
+level: 2
+author: llm
+note: 'STRUCTURE: стёкла в регионах граней, двери, решётка и фары, подкрылки, спарка, каркас фургона с утопленными филёнками, бак-цилиндр, задний брус с фонарями.'
+tags: [transport, evolution]
+rating: null
+status: built

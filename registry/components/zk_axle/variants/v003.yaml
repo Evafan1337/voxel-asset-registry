@@ -1,0 +1,10 @@
+id: v003
+parent: v002
+delta: {stage: 3}
+level: 3
+author: llm
+note: 'Stage 3 передняя ось: шины/диски/ступицы, поворот ±20°, независимый ход 0,0625 м, связанные рычаги
+  и полуоси.'
+tags: [zuk, stage_3, animated, running_gear]
+rating: null
+status: draft

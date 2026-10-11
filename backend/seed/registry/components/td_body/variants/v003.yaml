@@ -1,0 +1,9 @@
+id: v003
+parent: v001
+delta: {width: 0.4, depth: 0.5, height: 0.22, lift: 0.22, taper: 0.2, trim_color: signal_red}
+level: 1
+author: llm
+note: 'корпус scout: низкий, на ногах 0.22'
+tags: [tower_defence, blockout, enemy]
+rating: null
+status: built

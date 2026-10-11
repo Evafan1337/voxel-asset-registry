@@ -1,0 +1,20 @@
+id: v012
+parent: v011
+slots:
+  cab: zk_cab@v010
+  body: zk_body@v012
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 3
+author: llm
+note: 'Stage 3 B: only the external upper arch caps are removed from A; identical
+  smaller throats, inner wheelhouses, wheels, dimensions, lights and service panels.'
+tags:
+- zuk
+- modular
+- impressor
+- arch_balance
+- stage3
+rating: null
+status: draft

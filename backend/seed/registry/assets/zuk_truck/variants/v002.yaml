@@ -1,0 +1,13 @@
+id: v002
+parent: v001
+slots: {chassis: zk_chassis@v002, cab: zk_cab@v002, body: zk_body@v002, axle_front: zk_axle@v002, axle_rear: zk_axle@v002,
+  head_left: zk_lamp@v001, head_right: zk_lamp@v001}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'Stage 2: D01–D10, цельное лобовое стекло A, серые фонари, реальные согласованные проекции.'
+tags: [zuk, modular, impressor, stage2]
+rating: null
+status: draft

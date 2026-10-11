@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {stage: 2}
+level: 2
+author: llm
+note: 'Stage 2: колёса уточнены до 12 граней без изменения колеи, радиуса и ширины.'
+tags: [zuk, stage_2, running_gear]
+rating: null
+status: draft

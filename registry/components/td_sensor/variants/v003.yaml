@@ -1,0 +1,9 @@
+id: v003
+parent: v001
+delta: {shape: round, size: 0.28, depth: 0.05, eye: 0.72}
+level: 1
+author: llm
+note: круглый глаз flyer
+tags: [tower_defence, enemy, blockout]
+rating: null
+status: built

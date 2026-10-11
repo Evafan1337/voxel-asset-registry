@@ -1,0 +1,17 @@
+id: v012
+parent: v007
+delta:
+  arch_balance: liner_only
+level: 2
+author: llm
+note: 'Баланс арок B, стадия 3: тот же компактный кузов, меньшее горло и подкрылок,
+  что в A; отличается только отсутствием козырька.'
+tags:
+- zuk
+- sheet_study
+- stage3
+- inset
+- arch_balance
+- liner_only
+rating: null
+status: draft

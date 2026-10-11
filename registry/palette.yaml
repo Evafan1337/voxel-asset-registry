@@ -1,0 +1,110 @@
+voxel_size: 0.25
+colors:
+  stone: '#8c8680'
+  stone_dark: '#5e5954'
+  brick: '#9e4b37'
+  wood: '#9a6b3c'
+  wood_dark: '#5e3d22'
+  steel: '#a3adb5'
+  steel_dark: '#59626a'
+  rust: '#a8552c'
+  roof: '#7b312b'
+  roof_dark: '#4f4a47'
+  glass: '#8ec6da'
+  soot: '#2b2927'
+  brass: '#b8913a'
+  copper: '#b5653a'
+  paint_yellow: '#d6a634'
+  paint_green: '#5d8a4b'
+  paint_blue: '#4a7099'
+  plaster: '#cdb892'
+  signal_blue: '#3f82d9'
+  signal_red: '#d9403a'
+  signal_orange: '#e88a2a'
+  olive: '#5d6b3c'
+  olive_dark: '#434d2b'
+  skin_pale: '#f2d2bd'
+  skin_warm: '#dca47f'
+  skin_tan: '#b27852'
+  skin_deep: '#6f4531'
+  skin_blue: '#9fc4e8'
+  hair_black: '#2a2230'
+  hair_brown: '#6a4028'
+  hair_blonde: '#e6c46e'
+  hair_ginger: '#c2582f'
+  hair_violet: '#4b3fb8'
+  hair_pink: '#ec8fbf'
+  hair_white: '#ecebf2'
+  white: '#f6f4f0'
+  ink: '#1c1a24'
+  denim: '#4f6fa0'
+  teal: '#3aa39a'
+  berry: '#b8325e'
+  paint_royal: '#2c5fd4'
+  paint_gray: '#a8adb2'
+  metal_steel: '#c4ccd3'
+  metal_dark: '#434950'
+  rubber: '#242427'
+  plastic: '#30343a'
+  glass_tinted: '#2d4458'
+  lamp_yellow: '#ffcf3a'
+  lamp_amber: '#ff8a1e'
+  lamp_red: '#e8302c'
+  reflector_red: '#b51a22'
+  reflector_white: '#e9ecef'
+  construction_gray: '#a6adb5'
+  safety_orange: '#f28b28'
+  safety_yellow: '#e9ba36'
+  chitin_brown: '#554037'
+  chitin_dark: '#302821'
+  chitin_red: '#ca493f'
+  chitin_sand: '#9b805d'
+  chitin_rust: '#a85237'
+  venom_eye: '#ff352b'
+surface_types:
+  metal:
+    metallic: 0.85
+    roughness: 0.3
+  rubber:
+    metallic: 0.0
+    roughness: 0.95
+  plastic:
+    metallic: 0.0
+    roughness: 0.55
+  glass:
+    metallic: 0.0
+    roughness: 0.06
+  light:
+    metallic: 0.0
+    roughness: 0.4
+    emission: 3.0
+  reflector:
+    metallic: 0.0
+    roughness: 0.25
+    emission: 0.8
+  powder_coat:
+    metallic: 0.35
+    roughness: 0.36
+  chitin:
+    metallic: 0.0
+    roughness: 0.62
+surfaces:
+  metal_steel: metal
+  metal_dark: metal
+  rubber: rubber
+  plastic: plastic
+  glass_tinted: glass
+  lamp_yellow: light
+  lamp_amber: light
+  lamp_red: light
+  reflector_red: reflector
+  reflector_white: reflector
+  construction_gray: powder_coat
+  safety_orange: powder_coat
+  safety_yellow: powder_coat
+  chitin_brown: chitin
+  chitin_dark: chitin
+  chitin_red: chitin
+  chitin_sand: chitin
+  chitin_rust: chitin
+  venom_eye: light

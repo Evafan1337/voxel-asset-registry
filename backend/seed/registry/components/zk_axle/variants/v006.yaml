@@ -1,0 +1,9 @@
+id: v006
+parent: v001
+delta: {wheel_fit: inset}
+level: 2
+author: llm
+note: 'Stage 1 inset: узкие колёса X ±0,75 м, опоры на рельсах inset; база и радиус сохранены.'
+tags: [zuk, inset, running_gear]
+rating: null
+status: draft

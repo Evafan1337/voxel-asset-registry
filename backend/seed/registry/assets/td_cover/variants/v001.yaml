@@ -1,0 +1,10 @@
+id: v001
+parent: null
+slots: {wall: td_panel@v001, pillar_left: td_pedestal@v003, pillar_right: td_pedestal@v003, strip: td_light@v003}
+params_delta: {}
+level: 1
+author: llm
+note: blockout v1 по референсу Orbital Defense
+tags: [tower_defence, environment, blockout]
+rating: null
+status: built

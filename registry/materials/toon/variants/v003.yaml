@@ -1,0 +1,10 @@
+id: v003
+parent: v001
+delta: {bands: 4, softness: 0.12, shadow_color: '#2f5d8a', light_tint: '#ffe2b8', shadow_strength: 0.7,
+  specular: 0.0, rim: 0.0, outline_mode: none}
+level: 2
+author: llm
+note: 'гуч: тёплый свет / холодная тень, без контура'
+tags: [gooch, painterly]
+rating: null
+status: built

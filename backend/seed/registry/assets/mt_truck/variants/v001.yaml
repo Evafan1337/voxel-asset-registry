@@ -1,0 +1,14 @@
+id: v001
+parent: null
+slots: {chassis: mt_chassis@v001, cab: mt_cabin@v001, box: mt_cargo_box@v001, axle_front: mt_wheelset@v001,
+  axle_rear_1: mt_wheelset@v006, axle_rear_2: mt_wheelset@v006, exhaust: mt_exhaust@v001, tank: mt_tank@v001,
+  toolbox: mt_toolbox@v001}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'MASSING: все блоки набора на стадии 1.'
+tags: [modular_truck, transport, modular, showcase]
+rating: null
+status: built

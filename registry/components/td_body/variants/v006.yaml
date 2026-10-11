@@ -1,0 +1,9 @@
+id: v006
+parent: v003
+delta: {width: 0.34, depth: 0.42, height: 0.2, lift: 0.26}
+level: 1
+author: llm
+note: 'scout v2: корпус компактнее, выше на ногах'
+tags: [tower_defence, blockout, enemy]
+rating: null
+status: built

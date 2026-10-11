@@ -1,0 +1,14 @@
+id: v003
+parent: v002
+slots: {chassis: mt_chassis@v003, cab: mt_cabin@v003, box: mt_cargo_box@v003, axle_front: mt_wheelset@v003,
+  axle_rear_1: mt_wheelset@v008, axle_rear_2: mt_wheelset@v008, exhaust: mt_exhaust@v003, tank: mt_tank@v003,
+  toolbox: mt_toolbox@v003}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'STRUCTURE: стёкла, огни, каркас — как референс v1.'
+tags: [modular_truck, transport, modular, showcase]
+rating: null
+status: built

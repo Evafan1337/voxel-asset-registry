@@ -1,0 +1,52 @@
+{
+  "schema": "impressor/sketch-run/v1",
+  "id": "truck_cube_sheet_r001",
+  "pass": "cube_massing",
+  "view_mode": "projection_sheet",
+  "status": "generated",
+  "mode": "built_in_via_agent",
+  "prepared_at": "2026-10-11T11:06:53.094159+00:00",
+  "prompt_sha256": "18a27b711e84f3c786eeb3351c2f3c6cf9db2036234a282d4b4bcd550a9bc3c7",
+  "image": "../../assets/cube-reference-sheet.png",
+  "review": {
+    "status": "needs_review",
+    "reviewer": "agent",
+    "projection_consistency": "not_verified",
+    "observations": [
+      "Семь панелей и пустая ячейка показаны в заданном порядке; массы кубические, окна и декор отсутствуют.",
+      "В панели top кабина расположена внизу листа, что противоречит требованию +Z вверх.",
+      "На боковых проекциях видны верхние грани: ортографичность требует исправления или проверки по реальной 3D сцене.",
+      "Изображение сохранено как учебный пример предложения ImageGen; геометрическая точность и единый масштаб не подтверждены."
+    ],
+    "next_question": "Сверить числовые массы в одной 3D сцене и получить точные ортографические виды."
+  },
+  "view_contract": {
+    "schema": "impressor/projections/v1",
+    "axes": "gltf_y_up",
+    "front_axis": "+Z",
+    "orthographic_views": [
+      "front",
+      "rear",
+      "left",
+      "right",
+      "top",
+      "bottom"
+    ],
+    "angled_view": "isometric",
+    "layout": "rows_of_four"
+  },
+  "dimensions": {
+    "units": "meters",
+    "axes": "gltf_y_up",
+    "envelope_m": [
+      1.25,
+      1.5,
+      3.0
+    ],
+    "ground_y_m": 0.0
+  },
+  "generated_at": "2026-10-11T11:09:36.420514+00:00",
+  "generator_tool": "image_gen",
+  "generator_model": null,
+  "image_sha256": "ae39c5b1d6d2e39b2fc9f9f6a9238a9381788b4f5f3f6f18c4e77fa98450c55e"
+}

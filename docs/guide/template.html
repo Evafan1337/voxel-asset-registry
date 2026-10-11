@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="@@LANG@@">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="@@DESCRIPTION@@">
+  <title>@@TITLE@@ · Voxel Asset Registry</title>
+  <style>
+    :root {color-scheme:light; --ink:#1c2732; --muted:#556374; --paper:#f5f7f9; --line:#d6dee5; --brand:#176653; --soft:#e8f2ef; --code:#17262b;}
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth; scroll-padding-top:100px}
+    body {margin:0; color:var(--ink); background:var(--paper); font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a {color:var(--brand); text-underline-offset:3px}
+    button,select {font:inherit; color:inherit; border:1px solid var(--line); border-radius:7px; background:#fff; padding:7px 12px}
+    button {cursor:pointer}
+    button:hover {border-color:var(--brand)}
+    :focus-visible {outline:3px solid #9c6330; outline-offset:3px}
+    .skip {position:absolute; top:-80px; left:20px; padding:12px; background:#fff; z-index:20}
+    .skip:focus {top:12px}
+    header {position:sticky; top:0; z-index:5; border-bottom:1px solid var(--line); background:rgba(255,255,255,.97)}
+    .topbar {max-width:1500px; margin:auto; padding:14px 32px; display:flex; gap:20px; align-items:center; justify-content:space-between}
+    .brand {font-weight:700; text-decoration:none; color:var(--ink); letter-spacing:-.3px}
+    .brand span {color:var(--brand); margin-right:9px}
+    .tools {display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+    .language {display:flex; align-items:center; gap:8px; font-size:14px}
+    .layout {max-width:1450px; margin:auto; display:grid; grid-template-columns:260px minmax(0,1fr); gap:52px; padding:40px 32px 70px}
+    aside {position:sticky; top:104px; align-self:start; max-height:calc(100vh - 130px); overflow:auto; padding-right:8px}
+    aside h2 {font-size:12px; text-transform:uppercase; letter-spacing:1.2px; margin:0 0 16px; color:var(--muted)}
+    nav a {display:block; padding:8px 10px; border-radius:6px; color:var(--muted); font-size:14px; text-decoration:none; line-height:1.4; margin-bottom:3px}
+    nav a:hover, nav a[aria-current="location"] {background:var(--soft); color:var(--brand)}
+    main {min-width:0; max-width:1000px; overflow-wrap:anywhere}
+    .eyebrow {font-size:12px; color:var(--brand); font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin:0 0 16px}
+    h1 {font-size:clamp(32px,4.2vw,54px); line-height:1.12; letter-spacing:-1.8px; margin:0 0 24px; max-width:920px}
+    .subtitle {font-size:20px; line-height:1.5; color:var(--muted); max-width:850px}
+    .intro {margin:26px 0 38px; padding:18px 22px; border-left:3px solid var(--brand); background:var(--soft)}
+    .intro p:first-child {margin-top:0}.intro p:last-child {margin-bottom:0}
+    .section {padding:32px 0 40px; border-top:1px solid var(--line)}
+    .section h2 {display:flex; gap:16px; align-items:baseline; font-size:28px; line-height:1.25; letter-spacing:-.6px; margin:0 0 22px}
+    .number {font:14px/1.5 ui-monospace,monospace; color:var(--brand); min-width:28px}
+    p {margin:0 0 16px}
+    ol {padding-left:24px; margin:20px 0 24px}li {padding-left:5px; margin:0 0 9px}
+    .snippet {margin:22px 0 28px}
+    .snippet-head {display:flex; gap:12px; align-items:center; justify-content:space-between; margin-bottom:9px}
+    .snippet-head h3 {font-size:15px; margin:0; font-weight:650}
+    .copy {font-size:12px; white-space:nowrap; padding:5px 10px}
+    pre {margin:0; padding:20px 22px; border-radius:9px; background:var(--code); color:#eef4f4; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; tab-size:2}
+    .prompt pre {background:#fff; color:var(--ink); border:1px solid var(--line); font-family:inherit; font-size:15px; line-height:1.6}
+    figure {margin:28px 0 32px}
+    figure a {display:block}
+    figure img {display:block; width:100%; height:auto; border:1px solid #c5d0d9; border-radius:9px; background:#fff}
+    figcaption {font-size:13px; color:var(--muted); line-height:1.5; padding:12px 2px 0}
+    .note {font-size:13px; color:var(--muted); margin:20px 0 26px}
+    footer {margin-top:14px; border-top:1px solid var(--line); padding:26px 0; font-size:14px; color:var(--muted)}
+    .resources {display:flex; gap:16px; flex-wrap:wrap}
+    dl {display:grid; grid-template-columns:minmax(130px,180px) minmax(0,1fr); gap:14px 24px; margin:24px 0}dt {font-weight:650}dd {margin:0; color:var(--muted)}
+    .back {display:inline-block; margin-top:22px}
+    #feedback {position:fixed; bottom:22px; left:50%; transform:translateX(-50%); z-index:9; max-width:calc(100% - 32px); padding:10px 18px; border-radius:8px; background:var(--code); color:#fff; font-size:14px; box-shadow:0 3px 18px #0002}
+    #feedback:empty {display:none}
+    @media(max-width:1000px) {.layout {grid-template-columns:215px minmax(0,1fr); gap:28px}.topbar {padding:12px 24px}.layout {padding:30px 24px}}
+    @media(max-width:760px) {header {position:static}.topbar {align-items:flex-start; flex-direction:column; gap:12px; padding:18px}.tools {width:100%; justify-content:space-between; gap:8px}.language {flex-wrap:wrap}.layout {display:block; padding:26px 18px 44px}aside {position:static; max-height:none; margin-bottom:30px; padding:0}nav {display:flex; gap:6px; overflow-x:auto; padding-bottom:10px}nav a {flex:0 0 190px; border:1px solid var(--line); margin:0}h1 {letter-spacing:-1px}.section h2 {font-size:25px}.subtitle {font-size:18px}.section {padding:26px 0}pre {padding:16px}.intro {padding:16px}.tools button {padding:7px 10px}html {scroll-padding-top:18px}dl {display:block}dt {margin-top:18px}dd {margin-top:4px}}
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
+    @media print {body {background:#fff; font-size:11pt}header,aside,.copy,#feedback,.back {display:none}.layout {display:block; padding:0}main {max-width:none}h1 {font-size:28pt}.section h2 {font-size:19pt}.section {padding:20px 0}.snippet,figure {break-inside:avoid}pre {background:#f1f3f4; color:#18242b; border:1px solid #cbd3da; font-size:9pt}figure img {max-height:175mm; object-fit:contain}.intro {background:transparent}.resources a {color:#18242b}.section h2 {break-after:avoid}}
+  </style>
+</head>
+<body data-default-locale="@@LANG@@">
+  <a class="skip" href="#content" id="skip-label">@@SKIP@@</a>
+  <header><div class="topbar">
+    <a class="brand" href="#content"><span aria-hidden="true">◆</span>Voxel Asset Registry</a>
+    <div class="tools">
+      <label class="language"><span id="language-label">@@LANGUAGE_LABEL@@</span><select id="language" aria-label="@@LANGUAGE_LABEL@@">@@OPTIONS@@</select></label>
+      <button type="button" id="print">@@PRINT@@</button>
+    </div>
+  </div></header>
+  <div class="layout">
+    <aside><h2 id="contents-label">@@CONTENTS@@</h2><nav id="toc" aria-label="@@CONTENTS@@">@@TOC@@</nav></aside>
+    <main id="content" tabindex="-1">@@CONTENT@@</main>
+  </div>
+  <div id="feedback" role="status" aria-live="polite"></div>
+  <script id="guide-data" type="application/json">@@DATA@@</script>
+  <script>
+    'use strict';
+    const locales=JSON.parse(document.getElementById('guide-data').textContent);
+    const picker=document.getElementById('language');
+    const main=document.getElementById('content');
+    let locale=document.body.dataset.defaultLocale;
+    let feedbackTimer, observer;
+    const esc=(text)=>String(text??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    function snippets(items,kind,section){return (items||[]).map((item,i)=>`<div class="snippet ${kind}"><div class="snippet-head"><h3>${esc(item.label)}</h3><button type="button" class="copy" data-copy="${section}-${kind}-${i}" aria-label="${esc(locales[locale].ui.copy + ' ' + item.label)}">${esc(locales[locale].ui.copy)}</button></div><pre id="${section}-${kind}-${i}"><code>${esc(item.text)}</code></pre></div>`).join('');}
+    function sectionHTML(section,index){return `<section class="section" id="${esc(section.id)}"><h2><span class="number">${String(index+1).padStart(2,'0')}</span>${esc(section.title)}</h2>${section.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}${section.steps?.length?`<ol>${section.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>`:''}${snippets(section.code,'command',section.id)}${snippets(section.prompts,'prompt',section.id)}${(section.figures||[]).map(f=>`<figure><a href="${esc(f.src)}" target="_blank" rel="noopener"><img src="${esc(f.src)}" alt="${esc(f.alt)}" loading="lazy" decoding="async" width="1440" height="1000"></a><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}</section>`;}
+    function contentHTML(data){return `<p class="eyebrow">${esc(data.ui.documentation)}</p><h1>${esc(data.title)}</h1><p class="subtitle">${esc(data.subtitle)}</p><div class="intro">${data.intro.map(p=>`<p>${esc(p)}</p>`).join('')}</div><p class="note">${esc(data.ui.screenNote)}</p>${data.sections.map(sectionHTML).join('')}<section class="section" id="glossary"><h2>${esc(data.ui.glossary)}</h2><dl>${data.glossary.map(item=>`<dt>${esc(item.term)}</dt><dd>${esc(item.description)}</dd>`).join('')}</dl></section><footer><p>${esc(data.ui.localGuide)}</p><div class="resources"><a href="assets/verified-projections.html">mt_truck/v001 · iso/front/back/left/right/top/bottom</a><a href="resources/PROJECTION_CONTRACT.md">PROJECTION_CONTRACT.md</a><a href="resources/sketch_brief.example.yaml">sketch_brief.example.yaml</a><a href="resources/sketch_template.yaml">sketch_template.yaml</a><a href="resources/generation_brief.example.yaml">generation_brief.example.yaml</a></div><a class="back" href="#content">${esc(data.ui.top)}</a></footer>`;}
+    function observeSections(){observer?.disconnect(); observer=new IntersectionObserver(entries=>{const selected=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(!selected)return;document.querySelectorAll('#toc a').forEach(a=>{if(a.hash==='#'+selected.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});},{rootMargin:'-12% 0px -65% 0px'});document.querySelectorAll('main section').forEach(s=>observer.observe(s));}
+    function setLanguage(next){if(!locales[next])return;locale=next;const data=locales[locale];document.documentElement.lang=locale;document.title=data.title+' · Voxel Asset Registry';document.querySelector('meta[name="description"]').content=data.subtitle;picker.value=locale;document.getElementById('language-label').textContent=data.ui.language;picker.setAttribute('aria-label',data.ui.language);document.getElementById('print').textContent=data.ui.print;document.getElementById('contents-label').textContent=data.ui.contents;document.getElementById('toc').setAttribute('aria-label',data.ui.contents);document.getElementById('skip-label').textContent=data.ui.top;document.getElementById('toc').innerHTML=data.sections.map((s,i)=>`<a href="#${esc(s.id)}">${String(i+1).padStart(2,'0')} · ${esc(s.title)}</a>`).join('');main.innerHTML=contentHTML(data);observeSections();try{const url=new URL(location.href);url.searchParams.set('lang',locale);history.replaceState(null,'',url);}catch{} }
+    function notify(message){clearTimeout(feedbackTimer);document.getElementById('feedback').textContent=message;feedbackTimer=setTimeout(()=>{document.getElementById('feedback').textContent='';},4500);}
+    picker.addEventListener('change',()=>{const anchor=location.hash;setLanguage(picker.value);if(anchor)document.getElementById(anchor.slice(1))?.scrollIntoView();});
+    document.getElementById('print').addEventListener('click',()=>window.print());
+    main.addEventListener('click',async event=>{const button=event.target.closest('button[data-copy]');if(!button)return;const code=document.getElementById(button.dataset.copy);try{if(!navigator.clipboard?.writeText)throw Error();await navigator.clipboard.writeText(code.textContent);notify(locales[locale].ui.copied);}catch{const range=document.createRange();range.selectNodeContents(code);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);notify(locales[locale].ui.copyFallback);}});
+    const requested=new URLSearchParams(location.search).get('lang');
+    if(requested&&locales[requested])setLanguage(requested);else observeSections();
+  </script>
+</body>
+</html>

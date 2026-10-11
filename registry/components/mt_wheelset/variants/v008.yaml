@@ -1,0 +1,9 @@
+id: v008
+parent: v003
+delta: {dual: true}
+level: 2
+author: llm
+note: Спаренные колёса задней оси, STRUCTURE.
+tags: [modular_truck, transport, modular]
+rating: null
+status: built

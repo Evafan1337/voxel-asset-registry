@@ -1,0 +1,9 @@
+id: v009
+parent: v001
+delta: {part: body}
+level: 2
+author: llm
+note: Ключевой блок «кузов-фургон» на стадии 1.
+tags: [transport, evolution]
+rating: null
+status: built

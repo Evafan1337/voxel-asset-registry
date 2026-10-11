@@ -1,0 +1,9 @@
+id: v003
+parent: v002
+delta: {kind: tail}
+level: 2
+author: llm
+note: Красный задний фонарь с тем же монтажным контрактом и корпусом для повторного использования.
+tags: [vehicle, zuk, modular, lamp, stage3]
+rating: null
+status: draft

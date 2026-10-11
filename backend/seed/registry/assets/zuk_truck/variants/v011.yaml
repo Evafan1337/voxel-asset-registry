@@ -1,0 +1,20 @@
+id: v011
+parent: v007
+slots:
+  cab: zk_cab@v009
+  body: zk_body@v011
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 3
+author: llm
+note: 'Stage 3 A: balanced smaller arches with dark liners and supported mini top
+  caps. Same wheels, steering, suspension, compact service panels, lamps and D11–D20.'
+tags:
+- zuk
+- modular
+- impressor
+- arch_balance
+- stage3
+rating: null
+status: draft

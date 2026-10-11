@@ -1,0 +1,9 @@
+id: v007
+parent: v003
+delta: {part: cabin}
+level: 3
+author: llm
+note: Ключевой блок «кабина / нос» на стадии 3.
+tags: [transport, evolution, animated]
+rating: null
+status: built

@@ -1,0 +1,3898 @@
+{
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "sha256": "474be5e8d26b4fa73b1d791ed21be53fd87bd4e06847b9ac232d22cb626d9ebb",
+      "size": 834
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "sha256": "65fdc5d6d5fb8aaeac944e7371a51600d7964f211841b5a9b01a294aafe9de48",
+      "size": 477
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "fa61d2f5544e10787edea4d7d5545d3c4ffe93dc3818c37d422b1374b04d724d",
+      "size": 326
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "df942c92a784557e3612091f266f03fb6018d58caa800170fc68262f2c03f4cf",
+      "size": 1631
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "0cefb26463d8cdb4e204bd9d81ed4b7bec0d1590b7dd3b3e3f7d87a5663f17b4",
+      "size": 220
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "32989e08babacee7a970ca3c731c837601fdb5e24703fc8c6575651d0d4d6165",
+      "size": 2205
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "4c0860a91b0f0911e5552a6d7da3b80461c9048b2dd98ea50cfe01d29aaa566c",
+      "size": 756
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "32989e08babacee7a970ca3c731c837601fdb5e24703fc8c6575651d0d4d6165",
+      "size": 2205
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "03cc8bff64b36a9f6a97125c1963c50e7fa2639862a4f06a24dce47008738ffb",
+      "size": 2184
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "7494af241ecacf748bd6f2c8c47a2c950ef464216a7a5a8c961f57aeadf81cdd",
+      "size": 1090
+    },
+    {
+      "path": "LICENSE-ASSETS",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "size": 7048
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "2b33b3f79215e664226d856a1307ac330d15717fcf06a1edf90442058ddd8120",
+      "size": 1192
+    },
+    {
+      "path": "README.md",
+      "sha256": "70b53ab9cc130ce2e45d410e31804a7ac79ba6de75c2771f311e8dbe7b071b8a",
+      "size": 5934
+    },
+    {
+      "path": "README.ru.md",
+      "sha256": "7a45d0ba94314b04d39622ae4eb76a1e67406e44970ef094af44c908e27ffbc3",
+      "size": 6321
+    },
+    {
+      "path": "backend/__init__.py",
+      "sha256": "d83aaf0b606467a56bc73047169ac4937bae03a59dc40f5a0d2e40cd42a6cc4d",
+      "size": 111
+    },
+    {
+      "path": "backend/api.py",
+      "sha256": "8f313e06c31ada0ee121cadeff22a942e65afcfb0eb169753d7191357dc60580",
+      "size": 44900
+    },
+    {
+      "path": "backend/blockout_workbench.py",
+      "sha256": "43526f834bdf7d55557199476b074f7bd54f9bce60c34a7c8ad23b18085d9e5e",
+      "size": 17767
+    },
+    {
+      "path": "backend/builds.py",
+      "sha256": "cab75904eeb28ca17dc8433dfdc80ce09a120d770f67d1ac92e22092e4601457",
+      "size": 13846
+    },
+    {
+      "path": "backend/cli.py",
+      "sha256": "d05cb9ca5a6d406053d2e22aefef56db6e231cb9282c15dbdcdc95816136cf54",
+      "size": 30812
+    },
+    {
+      "path": "backend/config.py",
+      "sha256": "900de1387df843e52e7b4b03aab1f9ee49030546d88e176a5faa0d98682eae72",
+      "size": 7166
+    },
+    {
+      "path": "backend/frontmatter.py",
+      "sha256": "4e54261871011e4ee001ad5e169a7855c9f7d160795ec285c312127bcf65d093",
+      "size": 685
+    },
+    {
+      "path": "backend/godot.py",
+      "sha256": "b1de25aa6e52e61b34bff36bcadc8971990c33f7e2754c7674416662c1ee1809",
+      "size": 2176
+    },
+    {
+      "path": "backend/index.py",
+      "sha256": "99e7413d9abbbf88d650a0b7987e73d898d3e13efa63dc9216aa9ed83122eeec",
+      "size": 7342
+    },
+    {
+      "path": "backend/legacy.py",
+      "sha256": "90fee15ad9514254751e03b0afb5dab3b1651537b5e069a8a752f4eb0c1a47fa",
+      "size": 13835
+    },
+    {
+      "path": "backend/manual.py",
+      "sha256": "70b269d02f8bf7f66035648055504d454612ccfe051875d229bc17f818e01abe",
+      "size": 6804
+    },
+    {
+      "path": "backend/models.py",
+      "sha256": "1188f6d3bd11775a6cded1309f506f6b4f8d0a8bc7aa33ba3ca3406a855209de",
+      "size": 11787
+    },
+    {
+      "path": "backend/planner.py",
+      "sha256": "be293381c0d1010758a4c5218791a2e7c162386a84e1579947df0f873cf5c811",
+      "size": 44823
+    },
+    {
+      "path": "backend/preflight.py",
+      "sha256": "8d463c2c24bac9cf35afd38c85f93c16d85e1a2e6e1d3f4559b1e35341b04ad4",
+      "size": 6415
+    },
+    {
+      "path": "backend/references.py",
+      "sha256": "b875907b9d1de0b08d336d9f7ca3bc3599a45f4820c90e37d7051a01365ffc6e",
+      "size": 13282
+    },
+    {
+      "path": "backend/resolve.py",
+      "sha256": "f832a3f57465fdee86acd368f7b910d193a57a3a508ca17f904f741ce0f530a1",
+      "size": 13066
+    },
+    {
+      "path": "backend/seed/registry/assets/evo_heli_light/_base.md",
+      "sha256": "29ed7275145ccb2df4c68ee96248b7beab2c0fbe6e2791341a9f68f041adc115",
+      "size": 4862
+    },
+    {
+      "path": "backend/seed/registry/assets/evo_heli_light/variants/v001.yaml",
+      "sha256": "31481eb86340b59ffe82b1023b655d875b1857ad1f908b07a6edc25f156d22a7",
+      "size": 1962
+    },
+    {
+      "path": "backend/seed/registry/assets/evo_truck/_base.md",
+      "sha256": "4d1c5e66144e59afb98c0a533dcdc17013eb06ee3c1ae041af180da4c9022107",
+      "size": 4754
+    },
+    {
+      "path": "backend/seed/registry/assets/evo_truck/variants/v001.yaml",
+      "sha256": "2a56dbf3003dc67015cf80981ccc44b38aeb059e92f79abbe78b612c9845b0f6",
+      "size": 1826
+    },
+    {
+      "path": "backend/seed/registry/assets/mt_truck/_base.md",
+      "sha256": "3085118ca604d5478f78bf3be27f1739fed2ed90034b55640735f9646a1f0c6f",
+      "size": 3170
+    },
+    {
+      "path": "backend/seed/registry/assets/mt_truck/variants/v001.yaml",
+      "sha256": "764f2986d955c3692f5e3e4ffbb9ac499c23600b63d31e3cb8a6242a634e4159",
+      "size": 493
+    },
+    {
+      "path": "backend/seed/registry/assets/mt_truck/variants/v002.yaml",
+      "sha256": "f79545584a11a5d1340501ef7d8fd67e255fcf24230b1b28812d6b60764e08bd",
+      "size": 483
+    },
+    {
+      "path": "backend/seed/registry/assets/mt_truck/variants/v003.yaml",
+      "sha256": "2eb23b6d29592cd3eab85cd825ed45da36ebc2d86692b1a9ac437dfd5efab58d",
+      "size": 512
+    },
+    {
+      "path": "backend/seed/registry/assets/mt_truck/variants/v004.yaml",
+      "sha256": "63f194fdead95546f3ad4dcb554ca8bd15b1fe34565812280745de0ecac2b169",
+      "size": 485
+    },
+    {
+      "path": "backend/seed/registry/assets/mt_truck/variants/v005.yaml",
+      "sha256": "cdcb87eaefc5b8c17a5446cb489f5147320865019f3b9dc574b76515281bf662",
+      "size": 489
+    },
+    {
+      "path": "backend/seed/registry/assets/td_cover/_base.md",
+      "sha256": "137c297cd34b4a8b27e79b71a2a92b03fa9973541e7726a787f457aef07f5686",
+      "size": 830
+    },
+    {
+      "path": "backend/seed/registry/assets/td_cover/variants/v001.yaml",
+      "sha256": "55fe51ac5de596987123990c753572d35344aa018ddd937f8978ccafc7192ab4",
+      "size": 304
+    },
+    {
+      "path": "backend/seed/registry/assets/td_enemy/_base.md",
+      "sha256": "ea215b1cf1877f102a120c953857099e824e23cc84f5ae89d67854e0b2fae85d",
+      "size": 865
+    },
+    {
+      "path": "backend/seed/registry/assets/td_flyer/_base.md",
+      "sha256": "189a5d1a8a93d854403cf7816411758de55f7b3f07694eaab403e733f4237cf4",
+      "size": 647
+    },
+    {
+      "path": "backend/seed/registry/assets/td_flyer/variants/v001.yaml",
+      "sha256": "c6709524460a2fc33db143549ea1e651c865fc1666a477b3181a189ab55f6913",
+      "size": 312
+    },
+    {
+      "path": "backend/seed/registry/assets/td_gatling_tower/_base.md",
+      "sha256": "b5d2c93677270d7cdbe5af9f0d3fae62e69afee3968d54f2366d71cdfdd2613c",
+      "size": 661
+    },
+    {
+      "path": "backend/seed/registry/assets/td_gatling_tower/variants/v001.yaml",
+      "sha256": "4391c8d6e375f675fa5c719793edee69c166d35b283d22303e0386569c668abe",
+      "size": 336
+    },
+    {
+      "path": "backend/seed/registry/assets/td_gatling_tower/variants/v002.yaml",
+      "sha256": "0686ad8d26abdbf0c94899ba406d046166e44cd8378c5372def99f126d79183d",
+      "size": 219
+    },
+    {
+      "path": "backend/seed/registry/assets/td_grunt/_base.md",
+      "sha256": "98f95312a883423d73f93299c8e3c98e409c905ed0c47204f25e9425922aa992",
+      "size": 407
+    },
+    {
+      "path": "backend/seed/registry/assets/td_grunt/variants/v001.yaml",
+      "sha256": "fffa73e7cd1dec8716c6cd0d27853140f18060b6bb55c9c507ba7d8e7e59052d",
+      "size": 377
+    },
+    {
+      "path": "backend/seed/registry/assets/td_grunt/variants/v002.yaml",
+      "sha256": "de692f1ca1f041a89ebbf9693887016ca59859b21aa0ca50e715750760998898",
+      "size": 302
+    },
+    {
+      "path": "backend/seed/registry/assets/td_missile_tower/_base.md",
+      "sha256": "1f0ed72dc6886b4f7df33f1f937be8f7e54cec4d5d9674e7e30d4d2251045f8b",
+      "size": 562
+    },
+    {
+      "path": "backend/seed/registry/assets/td_missile_tower/variants/v001.yaml",
+      "sha256": "2f267a701fe3e9efe9547484b42b27b3b4f28d36e5d1fd6ef6dc9603d13391b0",
+      "size": 313
+    },
+    {
+      "path": "backend/seed/registry/assets/td_path_tile/_base.md",
+      "sha256": "045885360461517fd3da9a13afd35986ffbb6aa067ea9b7d841ab933b71d9fbd",
+      "size": 678
+    },
+    {
+      "path": "backend/seed/registry/assets/td_path_tile/variants/v001.yaml",
+      "sha256": "ee112df4fb7023068eb26dc5e2c2063e9fe2c463b4e214da733e603f4c559ee1",
+      "size": 218
+    },
+    {
+      "path": "backend/seed/registry/assets/td_scout/_base.md",
+      "sha256": "b06067d4b4218e022cbfd68f3b4f69110fb56a1f268210e5320cccf6a6e5b839",
+      "size": 286
+    },
+    {
+      "path": "backend/seed/registry/assets/td_scout/variants/v001.yaml",
+      "sha256": "c475b70ca64e9a327ef7db18ddb16e4487f12a64606b74795da9fa40f8e4d1ff",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/assets/td_scout/variants/v002.yaml",
+      "sha256": "829f6481fd1ced7309f62468e2eea2f625392a3e3b535509c3a23f3b54942c6e",
+      "size": 329
+    },
+    {
+      "path": "backend/seed/registry/assets/td_support_tower/_base.md",
+      "sha256": "9f408e1317f4feaf066ca6da04c7ea26a879e87567ef74e90c7dd78a3a83ed2b",
+      "size": 595
+    },
+    {
+      "path": "backend/seed/registry/assets/td_support_tower/variants/v001.yaml",
+      "sha256": "c25b6df339975ae1cb2293b69986faf8d24cdc8308b84fbabb459bbba3237cbd",
+      "size": 307
+    },
+    {
+      "path": "backend/seed/registry/assets/td_support_tower/variants/v002.yaml",
+      "sha256": "ad945fe99a25fcaf8dd379e8a56b65620823165f9ff46c7b57f6101ce37dc6b6",
+      "size": 198
+    },
+    {
+      "path": "backend/seed/registry/assets/td_tower/_base.md",
+      "sha256": "62b605d15da47b1d4339c2988bc9acb7a9eef252a64171ac717b5b17670d2ac6",
+      "size": 1148
+    },
+    {
+      "path": "backend/seed/registry/assets/td_walker/_base.md",
+      "sha256": "b48dc3066b7cb4e5c5576455c05ae869f0b8ce40a7a11fea1d1d8a1284228187",
+      "size": 876
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/_base.md",
+      "sha256": "5bf206a94bd054fff89c4e3c7473972c9babd455f13f85034a5cb88765770cf5",
+      "size": 5668
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v001.yaml",
+      "sha256": "fefecf36120f98565d462fceadc1856bee69e192d01fde8def5e7a59ed56c352",
+      "size": 442
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v002.yaml",
+      "sha256": "3419c19a52122c3c3dc5aad2a27531048cfacfa319c7fe710e13f461a53626f0",
+      "size": 503
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v003.yaml",
+      "sha256": "b0d6afa81ffbab69de6dfb6d225b87e1af2ec2d5c28cf53b07e06d5189fc2157",
+      "size": 596
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v005.yaml",
+      "sha256": "b0ace06276f33415ec35a9d980804ad3299dbd5a7d9cdbda6575345be7cc06ad",
+      "size": 531
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v006.yaml",
+      "sha256": "92cc90bfe5bb17580304057c425505376c91ae9569ba8d16ba981fe7b2a15360",
+      "size": 509
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v007.yaml",
+      "sha256": "1ff8d5c063cbdd899363cab62f27d769299acafbea6215b948fc62329dff518f",
+      "size": 523
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v009.yaml",
+      "sha256": "e0eaf838a56e89571f3d1d2647185e09281a42ab5b32def61416baf83cd085a5",
+      "size": 379
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v010.yaml",
+      "sha256": "8b33120727e8071aa08eeb9bcc2f6df5ab5229405385d9557d3ded71546e868c",
+      "size": 369
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v011.yaml",
+      "sha256": "88457d41247b5e5167cd4e5c451bef4c905dbdf97e9310665157cae13bb3c383",
+      "size": 402
+    },
+    {
+      "path": "backend/seed/registry/assets/zuk_truck/variants/v012.yaml",
+      "sha256": "79a1b4172dc2d1317ce5edc4e952f23a60d3d5a05788e8928ce517da8607a271",
+      "size": 399
+    },
+    {
+      "path": "backend/seed/registry/catalog_groups.yaml",
+      "sha256": "0f86214f52b75295614b8e63413c0671af145249e5127d72e60413c8a5adbc83",
+      "size": 1082
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/_base.md",
+      "sha256": "05c59fd6439b551727d2ce05ce1e92fb26cbf7abe2f3164cbf33f3d5f6c3d5a1",
+      "size": 3453
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/generator.py",
+      "sha256": "2a75c16fdc4389946af694665586e2f180110d2acdb2aafb37c7fa8344f7ed50",
+      "size": 1887
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v001.yaml",
+      "sha256": "bffe870dceca26e64e5dd0533300c35046212998ed81aea87a9678743f3f7f93",
+      "size": 206
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v002.yaml",
+      "sha256": "57e75c548afff06bbe53040c931c2ffab10742f20869c2ee200708deb64373d9",
+      "size": 307
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v003.yaml",
+      "sha256": "dba7188abfe2a36294f42934f0ff53ada71c02d1bda66c956593291b690aeb09",
+      "size": 279
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v004.yaml",
+      "sha256": "40ef5f9453c9b88cf01912b42d08abdf1b1f30f4eb97e9863d355ed1b270db09",
+      "size": 279
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v005.yaml",
+      "sha256": "2f9617f06182d7c133f283a7179a3dcc0ea723a21df48e23417812e78a10ef09",
+      "size": 279
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v006.yaml",
+      "sha256": "f457e36fe7146868b3a18a5d8ede03864ebab8ee90b3a99eefb1916b990e5699",
+      "size": 279
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v007.yaml",
+      "sha256": "772cb6879ed24a3a724373b7351c02463bf927c233420601de93bbf8a60e97e5",
+      "size": 281
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v008.yaml",
+      "sha256": "31e29210cb80eb61141b36b80196aa5903f0c3eb968a245cf2bca0c6c7b87ce8",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v009.yaml",
+      "sha256": "5417dcc595b7d1c3a1a045f2e881dd3d030ac72c74173d9a7e6e37566b571f29",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v010.yaml",
+      "sha256": "707249e7d8d5e29e9cf4e126d3f9e4f4065d76b50dcfcb79b7688b0adf0d625e",
+      "size": 326
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v011.yaml",
+      "sha256": "c368cfa4f1140afb671514c39ca9365c24f62a69bf6a4da8417cfd109f2fb874",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v012.yaml",
+      "sha256": "0e1a6b2870ef41acc2b78966074556f54b89723d92f3658d9722be7b3c0d1934",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v013.yaml",
+      "sha256": "dd65a6ddffe84f8e45e150135e693b713773b1edbd565ea15aee4b8f0fe7e695",
+      "size": 326
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v014.yaml",
+      "sha256": "12cd72e13c298a3f8101eec0ddc3d8480d00212ef5ebc5ee33740a08ccdc8f65",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v015.yaml",
+      "sha256": "50e12fec27df4bb65538c4de873303547d4d4a9f1301d7e5ff1d5176401e3b9d",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v016.yaml",
+      "sha256": "104dc5d2dd08c659b73c99a6a695c61abbe35bcd33cf8529e3738617dabeb699",
+      "size": 326
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v017.yaml",
+      "sha256": "5220f78953253373c18267bf171b7094a2dfd419d7997560389e009c6c64404d",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v018.yaml",
+      "sha256": "b93087b0b4b541218793e533542ce98218e668a2d9af58843db7a38ebe2619c0",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v019.yaml",
+      "sha256": "74054ad6075acd10792d92d785cd78e2971292025f8ae984edd72ab385fdf080",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v020.yaml",
+      "sha256": "048f7b3eb683266c0152874f8bf636999b74e72f21f7ef321f185191cfd6a9e7",
+      "size": 309
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v021.yaml",
+      "sha256": "98c2437ed0a52ede599009cc62ffd308802d651435ba2e76189b561617c2857a",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v022.yaml",
+      "sha256": "ff8d6c7e4fcf52950c7db013823066cb9a9215a16253fe85c3114e83a9068e3c",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v023.yaml",
+      "sha256": "577245fc10b362128f2db1b934bedbf0477826aec7e54618a3d4f5a82c87b655",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v024.yaml",
+      "sha256": "20b66e9454b0ad5ca0ea33b22fe05f4cdefff5ef8dbbb165a0a63c6e33b7f488",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v025.yaml",
+      "sha256": "c1a2f36a30435cdbb52de7c3ff51131b701de9bea20798e5e60cce8be315ad97",
+      "size": 279
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v026.yaml",
+      "sha256": "d0ff5b977bb30910e6b220d2eecfe9f60f84760aac033a2355812e5fef22bd20",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v027.yaml",
+      "sha256": "cd81445e4c0dbd7a206356323c0906e3df353770cd86f896686c9271b1f446cc",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v028.yaml",
+      "sha256": "55d54d24a44e96c9ae48b2a989939aca88f5245ebeabb76dee6a1d565d10de8d",
+      "size": 326
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v029.yaml",
+      "sha256": "7c8c0fc023681e87c63a49b73b8cf4e714ce0f426ce23578bdf9418ad5d9a4ad",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v030.yaml",
+      "sha256": "fb1cc39b5bea1dc3e5fe4349ecccf8e43c9680dbff412a99000174f7447bc62c",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v031.yaml",
+      "sha256": "1f1a01d4ae18fe2e9064e31e350b979c66590f2ed9cd50ccb9b5cce5be90eebd",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v032.yaml",
+      "sha256": "f8d254456dc0bfa90e27e718eac3a9d970ea7783c32e11cc15ccdd2cb3c572bf",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v033.yaml",
+      "sha256": "cb0b7bc980d9b046c03f0fef18062b9e258d59d43b298816446f5a4ed5989196",
+      "size": 322
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v034.yaml",
+      "sha256": "2b1fe8f8f859e610f100e5de80d9ad899d2e644fa5abe7180723d38b225c6cf6",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v035.yaml",
+      "sha256": "60a2f570867e6147955b7e60d996449b807cbe8daafc4590b635e78805b3bff3",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v036.yaml",
+      "sha256": "65215576530809674d7f1232084c05eb0069398d016f6bfa6b9c94347e17bcd7",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/components/ev_plinth/variants/v037.yaml",
+      "sha256": "dc0011dd664d3b40d417fcb0e5eaf1b76d59da9d71a9912b2a165fb5d509d454",
+      "size": 326
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/_base.md",
+      "sha256": "c186e41fc857d145b4793e455c584b5d16fe64d3906587a4cff48fcaaaefcb4e",
+      "size": 1856
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/generator.py",
+      "sha256": "8e09e63ac5af91300002895ae8d890d94199f3da18cccc142157d8d26d9bfdc4",
+      "size": 8395
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cabin/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/_base.md",
+      "sha256": "929a723b329e5e9aea370d986bb72ecd6009b298c8bbed2634204f7ea681b1bd",
+      "size": 1692
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/generator.py",
+      "sha256": "df3f3611acf718e8ea9039d304ace41d9663ae4ab8ce5d05bb502ec23bd4a53b",
+      "size": 5876
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_cargo_box/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/_base.md",
+      "sha256": "c812e879aa44fa23cbbcda53e02adf0d34fa0971341fa91d330d286a62cddc92",
+      "size": 2822
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/generator.py",
+      "sha256": "68d8198bcc973463aa21fb2cf7071258865d82529ca680fd2eb6d6b90c4e5713",
+      "size": 3660
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_chassis/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/_base.md",
+      "sha256": "b122b11c9f81c361fb871cbc6d77e2313c7da167785fe9a705f6b326d0e8dcec",
+      "size": 1244
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/generator.py",
+      "sha256": "fd825e6f67103150322e3949f3624247533e98f3fae601e98ff7f316735dcc7a",
+      "size": 3206
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_exhaust/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/_base.md",
+      "sha256": "0d73afd3d608e06cfcfbc78fc48f83e46be7d0902a0b48ce6bb632732f42208b",
+      "size": 1145
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/generator.py",
+      "sha256": "40e31787753854a1cfbbec27d7537d4f7ca950bcfb5789aff94124344d3b45af",
+      "size": 2083
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_tank/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/_base.md",
+      "sha256": "f2fa040d21f5885e27f5aaf2ac665dc18c82bb9de118eb51f57ce6a442ccce9d",
+      "size": 1219
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/generator.py",
+      "sha256": "743c1798e4423fdf8f38b8f2cf3d05d90ccc2aaf5060a562b01845b0565d64c9",
+      "size": 2727
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_toolbox/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/_base.md",
+      "sha256": "f791870a75237a39b4109c7431e320154b43fe19a91824223d28cf52659ffd83",
+      "size": 1618
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/generator.py",
+      "sha256": "b9d0aebbfa3271331c5772d3d3d5eafea80b67ae1435e986ab8ba075d461a721",
+      "size": 3326
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v006.yaml",
+      "sha256": "b9fa29a25bf3f5b82dd428e7075e2c30f9249708388fc21c85faeab5c7340537",
+      "size": 200
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v007.yaml",
+      "sha256": "ecc9baf12dd772f063714afe44ad9132a2e3a26a322dd45444f95767c1b121b3",
+      "size": 203
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v008.yaml",
+      "sha256": "03f270d2cccbef6cac4e469f0edd39460f4bc05064ba50ed86b7802fd05dac13",
+      "size": 202
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v009.yaml",
+      "sha256": "fa74fa085fe1cef87c09bc689778cc2cb52e5dd1e5e60aaeeb8f5aeaf2fbc11d",
+      "size": 199
+    },
+    {
+      "path": "backend/seed/registry/components/mt_wheelset/variants/v010.yaml",
+      "sha256": "39b10fe565e907fc1d6bfcfc03ea8b2d3962a6365d29054b965961f8aae4f66b",
+      "size": 197
+    },
+    {
+      "path": "backend/seed/registry/components/td_barrel/_base.md",
+      "sha256": "50880966df0c82390ad970036aee0abcd3c9e01867fc4e6b4512201130e5a85e",
+      "size": 1614
+    },
+    {
+      "path": "backend/seed/registry/components/td_barrel/generator.py",
+      "sha256": "2dbe27a587d3345d7b0f9434f25f8b53e2760459d3aa6461228027ece8f32434",
+      "size": 1485
+    },
+    {
+      "path": "backend/seed/registry/components/td_barrel/variants/v001.yaml",
+      "sha256": "2e924ba4c2e621987037165d3503797a4f1cc532e37b313562276ccc4d7aa026",
+      "size": 220
+    },
+    {
+      "path": "backend/seed/registry/components/td_barrel/variants/v002.yaml",
+      "sha256": "217d648337c42e769a87e32a29757965e33bdb61c1a94dc1b7b3dc833a410916",
+      "size": 281
+    },
+    {
+      "path": "backend/seed/registry/components/td_base/_base.md",
+      "sha256": "1eb38f73962332c5cb55ff56a17ab8e8d9d3e4183dcc6e9f51f3b49d60f1fb6c",
+      "size": 2442
+    },
+    {
+      "path": "backend/seed/registry/components/td_base/generator.py",
+      "sha256": "1fc303837c2dc11c1695c60b3eaaf6d3503e5fb7734ba5d0163772b36d6d67ef",
+      "size": 2720
+    },
+    {
+      "path": "backend/seed/registry/components/td_base/variants/v001.yaml",
+      "sha256": "0f33f3abc8048632fa536b787f311bb01c5ed5631668a87358ac858ed3f7c619",
+      "size": 221
+    },
+    {
+      "path": "backend/seed/registry/components/td_base/variants/v002.yaml",
+      "sha256": "c7914184d9659fe3b5e73b6ad53442a6cba7efe1d2c08e8ec8f0da421042e414",
+      "size": 290
+    },
+    {
+      "path": "backend/seed/registry/components/td_base/variants/v003.yaml",
+      "sha256": "617ab145cfda1fadf15bd658b98aa18888933fd07d0b5f39df9660a8ebe82cbe",
+      "size": 194
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/_base.md",
+      "sha256": "86a5984a57879475f86223d81b7de741dac1e25c4b57a47bd4a99e93b06d9919",
+      "size": 3152
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/generator.py",
+      "sha256": "0cd50feb2a11fa98c8275be0d32887af8c83cd19f43d4facab1ba0c1b53b3273",
+      "size": 2658
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v001.yaml",
+      "sha256": "1cb073d851ae9befdd223cf0deaf4a79610fb1e5d98ba7ecb7667139f4fe0344",
+      "size": 157
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v002.yaml",
+      "sha256": "474658ddfe2d2bb9b69dbbae3dec54dad4179e8668b53ea765b271f2531e5728",
+      "size": 224
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v003.yaml",
+      "sha256": "e9c4bef6abfdd3f5d93895b19f8bb8a84c41335c0a83aba0c1991a069286e045",
+      "size": 266
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v004.yaml",
+      "sha256": "f4c6efe3aa2168b3c6aadf51892d16ba7c0ffa07d0fa33feff8eab3dcc143584",
+      "size": 283
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v005.yaml",
+      "sha256": "2420d0fc0ca18a51844ae6e89d4a2b740603aee0b5338b259ca3b4cc59ffb35f",
+      "size": 262
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v006.yaml",
+      "sha256": "0434f3d24235aecc30b48bebce7721ab1e66a38bfae43dd26c6a777b04c51316",
+      "size": 246
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v007.yaml",
+      "sha256": "c38092ddff7b92bddd802834f0df3f893944ea61450de8d773a67e35b5608e55",
+      "size": 259
+    },
+    {
+      "path": "backend/seed/registry/components/td_body/variants/v008.yaml",
+      "sha256": "ad56eb4b7fe45aef09bae14e06a8a0caa18b6ad6f9e7f571f4309f501e34470b",
+      "size": 285
+    },
+    {
+      "path": "backend/seed/registry/components/td_launcher/_base.md",
+      "sha256": "39810adc74d9f8caead246457d4d2217fe39f9ff0c2ff3789738cff117b9df85",
+      "size": 1312
+    },
+    {
+      "path": "backend/seed/registry/components/td_launcher/generator.py",
+      "sha256": "2176f902ed72683d1409c988ead7bdd113d3a1f4aa3bac58f5d97f0885974a5a",
+      "size": 1623
+    },
+    {
+      "path": "backend/seed/registry/components/td_launcher/variants/v001.yaml",
+      "sha256": "a279f0943dd43f98014c44a0aa11da37bb229a3da6fa2f502c8b0e5312dc7896",
+      "size": 149
+    },
+    {
+      "path": "backend/seed/registry/components/td_leg/_base.md",
+      "sha256": "2fc48aec5767b17e7700c396a0abfaecc079ea04a3c34a37274bada0111379d8",
+      "size": 1362
+    },
+    {
+      "path": "backend/seed/registry/components/td_leg/generator.py",
+      "sha256": "2b5e116d092672ceb9e346cc5ff7271cd4f9190abb51b3055abc90a793fa77fe",
+      "size": 1152
+    },
+    {
+      "path": "backend/seed/registry/components/td_leg/variants/v001.yaml",
+      "sha256": "b485668b6ce1c10e1c614a992eed47f4a36bff1246b942ca5082d605f098ed4c",
+      "size": 184
+    },
+    {
+      "path": "backend/seed/registry/components/td_leg/variants/v002.yaml",
+      "sha256": "5ff455218d66dcfcb623679940981222139966e2d7ca908405c4cc8a5f18eb8c",
+      "size": 220
+    },
+    {
+      "path": "backend/seed/registry/components/td_leg/variants/v003.yaml",
+      "sha256": "16b9202942934c9e72275538571a56751ed920ac6506be0eb21777751e3939b6",
+      "size": 243
+    },
+    {
+      "path": "backend/seed/registry/components/td_leg/variants/v004.yaml",
+      "sha256": "d9956a269d64c4f49611470c27141f8d7dcfe7e48ab8bd4936915b4cbfed9fa6",
+      "size": 242
+    },
+    {
+      "path": "backend/seed/registry/components/td_light/_base.md",
+      "sha256": "6b9c8a87a3a0d16ad254033805b389a3e898862003f5446d4c7a625cc80192d1",
+      "size": 1034
+    },
+    {
+      "path": "backend/seed/registry/components/td_light/generator.py",
+      "sha256": "1c43dc8c4c00a4989a525ee30641bb7703f6f6818bf81ad66d6315b19c953d66",
+      "size": 916
+    },
+    {
+      "path": "backend/seed/registry/components/td_light/variants/v001.yaml",
+      "sha256": "f23ea6ec45617878da689e2f762630ee443825f5f656c4fa3dd6137d5d2fa6a9",
+      "size": 224
+    },
+    {
+      "path": "backend/seed/registry/components/td_light/variants/v002.yaml",
+      "sha256": "440e7459690293877ef128808ee6da9a791fa1e92ab437b34d70e058fdccc8ad",
+      "size": 215
+    },
+    {
+      "path": "backend/seed/registry/components/td_light/variants/v003.yaml",
+      "sha256": "775c1d8dd02d1e6c9a76a4c0b33638840a9741fab078461e205ba4c6cf03f006",
+      "size": 203
+    },
+    {
+      "path": "backend/seed/registry/components/td_light/variants/v004.yaml",
+      "sha256": "6ac694e315404b600984e457974c9f6752ee02de73dc08f7b16b1b09b95d3092",
+      "size": 220
+    },
+    {
+      "path": "backend/seed/registry/components/td_panel/_base.md",
+      "sha256": "8207388bc1211c24bc1a17ca049c2603a259ed8ab1a39988481ce2f666568f73",
+      "size": 1842
+    },
+    {
+      "path": "backend/seed/registry/components/td_panel/generator.py",
+      "sha256": "4fc27c6eaba6f4ae2b88398f95bb798346971b7c40b48120b89d9af261b27bc7",
+      "size": 1110
+    },
+    {
+      "path": "backend/seed/registry/components/td_panel/variants/v001.yaml",
+      "sha256": "fd1f56730e7f9eccc0032fec8b307da7bd5abc9a0454defc46942b34d9d83b49",
+      "size": 164
+    },
+    {
+      "path": "backend/seed/registry/components/td_panel/variants/v002.yaml",
+      "sha256": "1c6c144ebcbbb97af0a21f96aa9d1ab7717da72945db2cc6a0624d3a0be8ee80",
+      "size": 280
+    },
+    {
+      "path": "backend/seed/registry/components/td_panel/variants/v003.yaml",
+      "sha256": "653a69ebbbcf7d59ad9a95b5bb7500abc7b2ed100384de321fb9fee26764afc2",
+      "size": 298
+    },
+    {
+      "path": "backend/seed/registry/components/td_pedestal/_base.md",
+      "sha256": "ec1f06c700e5e8f15326bc614b9aa87d9bcb0732712210c09b1178254fd14cb9",
+      "size": 1896
+    },
+    {
+      "path": "backend/seed/registry/components/td_pedestal/generator.py",
+      "sha256": "1a2ced7bf7be5770187a9bf93083fb7166fbf3c95dce6b1778573ad408d57ee3",
+      "size": 1505
+    },
+    {
+      "path": "backend/seed/registry/components/td_pedestal/variants/v001.yaml",
+      "sha256": "831fbbe53e6a717abe75d0fc0863dd42c6e4fc4fa044f1478219c4179599990f",
+      "size": 176
+    },
+    {
+      "path": "backend/seed/registry/components/td_pedestal/variants/v002.yaml",
+      "sha256": "a7de51deec811f6e18dd3c1198896bb150d71dc31484e29979e77204adaee1c0",
+      "size": 221
+    },
+    {
+      "path": "backend/seed/registry/components/td_pedestal/variants/v003.yaml",
+      "sha256": "82b70ed2b1cefe90558cfe7c6f5def5d15896aa3ef74a1e3a9205006a84ff97a",
+      "size": 273
+    },
+    {
+      "path": "backend/seed/registry/components/td_ring/_base.md",
+      "sha256": "407c94688ca4ea218aaf70824e14e1466094b930d70e454b69490e0200c03988",
+      "size": 1188
+    },
+    {
+      "path": "backend/seed/registry/components/td_ring/generator.py",
+      "sha256": "d2617fbe1ea358a85f21c13778b5236a29947146f56648856a95437bac82c7ac",
+      "size": 978
+    },
+    {
+      "path": "backend/seed/registry/components/td_ring/variants/v001.yaml",
+      "sha256": "c8bc14a288d6780aec105fe2673a1529e7aabf37b4d445d24c5579332ed9e314",
+      "size": 171
+    },
+    {
+      "path": "backend/seed/registry/components/td_ring/variants/v002.yaml",
+      "sha256": "739d95b8d26afdcf89d54d092bd43baaaa96f2f09e4a07d5f8605137ab7974ea",
+      "size": 233
+    },
+    {
+      "path": "backend/seed/registry/components/td_sensor/_base.md",
+      "sha256": "595af7145a107480cddfdbdfa7f1011266110363a6f39cccc13c32f59938d70e",
+      "size": 1174
+    },
+    {
+      "path": "backend/seed/registry/components/td_sensor/generator.py",
+      "sha256": "58ee84a93dbb1f5076c14a490898843d7ca70f64b9649f09a9d8cab58fd3c9ea",
+      "size": 1009
+    },
+    {
+      "path": "backend/seed/registry/components/td_sensor/variants/v001.yaml",
+      "sha256": "e060ba6e59423753f6301cd5bb345f2471e64ec3a15f81288dcd3cb2b31802b9",
+      "size": 140
+    },
+    {
+      "path": "backend/seed/registry/components/td_sensor/variants/v002.yaml",
+      "sha256": "8eb70d204a1ea080d854534a9474db8e38ec14e426907f1a74d90feedb554507",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/td_sensor/variants/v003.yaml",
+      "sha256": "d766fab4b9890a6f50a7c7df3273e624a2520f034a87206bf6c0be8420bdff09",
+      "size": 203
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/_base.md",
+      "sha256": "6d411472c65c57b0f387857c0b3c3bf32a9e6f399d2231944069b4b4e31bfdd0",
+      "size": 3774
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/generator.py",
+      "sha256": "72eecd7bb966b04e62f104fb47f23d03b8458abc9d69a9fcc72944a6a6624b20",
+      "size": 12531
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v001.yaml",
+      "sha256": "8fe7a60f61cb61c2357f0b1e4470af9b80d28e2646fd576a5571bf39844c42a0",
+      "size": 288
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v002.yaml",
+      "sha256": "2fea4157551b6046aeae46604ad1f6bc73c08acaf56263efa355bea097123939",
+      "size": 337
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v003.yaml",
+      "sha256": "e85c941a2deb64e1f8728285931d6a2c8aa02a2ee6041d2af1ced18a3590605a",
+      "size": 329
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v004.yaml",
+      "sha256": "e5fca7e64bc1f2a88ddf5769e8bdb1751684e7e5d4ecbae873c7328fe2b2dd22",
+      "size": 306
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v005.yaml",
+      "sha256": "8cc0d963e1fc7c87ce9814e8439913979e696d028f6f6e494a56ab4a3f0ad60f",
+      "size": 290
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v006.yaml",
+      "sha256": "7490da20f881a4fe41291e766af48afe4a6aa88e8e50d97c3abf25ed4047c96e",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v007.yaml",
+      "sha256": "36c1ef6ec4e5c47500a4a9bc0240b04631ca205f6fadc017253b6c1f992b3767",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v008.yaml",
+      "sha256": "92daf18d94c5b04550b4e102e88f8b5d820b587d0762731bbca7a99364302fca",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v009.yaml",
+      "sha256": "fef68f9dd505052d398f213465a6833d9f9c1830e7a113cc52b548a0d423a833",
+      "size": 213
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v010.yaml",
+      "sha256": "c735605b091a40f13d7eb495e9d7d99b9ed7493cfe55e0484ef533f4f3a92d42",
+      "size": 213
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v011.yaml",
+      "sha256": "87e0a41c8d1149b800579576c75860e97f9a2a8107205fd7fa6aa84a0006b75f",
+      "size": 213
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v012.yaml",
+      "sha256": "e185aa3ead92ad042cff6e532c3e8f60fc8ece2cf4fc5e8bc0f6baf32ea39f35",
+      "size": 222
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v013.yaml",
+      "sha256": "c9ca155f5615ac34797df63d88bac02e6df57678dbcd7fdf491322e6d11f2b82",
+      "size": 222
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v014.yaml",
+      "sha256": "d01343bece486b1beb76c2d48b8f407bfe42849f3ba90bf0089707e04377242c",
+      "size": 222
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v015.yaml",
+      "sha256": "0a43c36a2885f25e0f3a19d2ffd88064a091d4ffadfc47b189fd151e73f7426e",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v016.yaml",
+      "sha256": "919c475b3645c36f241d9c0493e89dc85bf5e0f1658c67cf6d94f6659a0001c6",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/vh_heli_light/variants/v017.yaml",
+      "sha256": "2a91557b6d3bbf3c67edfd534e04f6596ed379a9b671d137ba5181dd134e30e0",
+      "size": 209
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/_base.md",
+      "sha256": "0f0ff154a37635d80eebb58ce610aa690856c28a163254a31b4c9ad9e3df730d",
+      "size": 4896
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/generator.py",
+      "sha256": "4a64c250160d43f9adee2c8c9d13d02a6b37b660c51650a4edb60488cde37f8a",
+      "size": 19835
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v001.yaml",
+      "sha256": "376179e48bfa8d36a22a7da02fd53627d340fddbe3897de54a89fd8cd7e77b12",
+      "size": 240
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v002.yaml",
+      "sha256": "5a56eb654c4395930a1a9f44d0e38e1f603141aa2ac5c22138d814d996c9da3f",
+      "size": 375
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v003.yaml",
+      "sha256": "5e809cf411b226548a6f545b474210969ff9bd68c9b4d8ba99f9cbc770e54b9d",
+      "size": 397
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v004.yaml",
+      "sha256": "c5d39bee8f165b9e049c8fdb24c31430be3ffe5cfe74533f9a4d904822785e49",
+      "size": 343
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v005.yaml",
+      "sha256": "6d384e3a0b49d60eab58079621b96c916d139116568f0c1108bd5883de9c574c",
+      "size": 341
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v006.yaml",
+      "sha256": "c8e974cb80400f9589f13f787a20a4120ecc4b277238c7af849e84031b86d44a",
+      "size": 188
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v007.yaml",
+      "sha256": "8b8e4665d0682964489c844ce466f00615571cc9508e09dc6941a58bfd654a78",
+      "size": 188
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v008.yaml",
+      "sha256": "4daf42b75836dfa9982b2a7ffd4c39e462bcf8f6b8ce2085eaf48de9f4e854c6",
+      "size": 188
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v009.yaml",
+      "sha256": "5c3e2e6b6fde0531325229965ea255e55ebf1864f866ccd470e512e10a738ead",
+      "size": 200
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v010.yaml",
+      "sha256": "1648d95cb51ea1dabf79ba0c34cc1375be9a3c79fa4b214646a2201716cc5e75",
+      "size": 200
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v011.yaml",
+      "sha256": "d46f7e417b545e4a4312188ca9fc1507cd1a995abf2951db876fb7a139312ea4",
+      "size": 200
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v012.yaml",
+      "sha256": "ece44c59d2f14233a8ac799b5528ad418422bac58a60ad8ec1e34459b20b5dd7",
+      "size": 214
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v013.yaml",
+      "sha256": "e6616e93b0c5a9213dddfe224afeb402ecb0a64a33e034a308db0153bbf5fa8f",
+      "size": 214
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v014.yaml",
+      "sha256": "5f2f72a922c72857895c7dace1f0230aa416d64fc232b1c6808db985a71dd3ba",
+      "size": 214
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v015.yaml",
+      "sha256": "8bdebb255600699e11d7085c6367670a8742503e9d955f2eb9126ebe2627a452",
+      "size": 205
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v016.yaml",
+      "sha256": "35d67a144f4fd69bad0232e53772dc35b85911280f7138fe5835d0aaf64b94c9",
+      "size": 205
+    },
+    {
+      "path": "backend/seed/registry/components/vh_truck/variants/v017.yaml",
+      "sha256": "a192e865b481533f70658b5c1db8b6fea517ec21b3d8dd3ece012a71f21b456d",
+      "size": 205
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/_base.md",
+      "sha256": "5741b663528c4c5700ceb1c49816f0808654364343e871d1b5d599664be3e540",
+      "size": 5400
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/generator.py",
+      "sha256": "b36744d991452983b1894a66390bdcd4a59b2b06b21042a3066d7f4e2ba1b6d0",
+      "size": 161
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v001.yaml",
+      "sha256": "2505bd3f673a26bc20d914bd38b64c318acea409822a21327a440a8948db6284",
+      "size": 256
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v002.yaml",
+      "sha256": "b7241951532332ea0cc2c0a69e7f79f8bf5adf5e1c2b7b144554ec32a13a05fa",
+      "size": 261
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v003.yaml",
+      "sha256": "b60a68596bcadf4d9efdad9dfa04f2a7342cd7238c17fe619d6cb3457297c352",
+      "size": 327
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v004.yaml",
+      "sha256": "7cab1642a6246d28786af1a773c8a75352c940c63839b442e8483a2aa01371ce",
+      "size": 282
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v006.yaml",
+      "sha256": "5b2e456b117a235efd0f3b89471250286a5a7666097818e9d81fefe77acb8a4f",
+      "size": 272
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v007.yaml",
+      "sha256": "ade18f03769628d3c190cf9bfc353a481164f7d01b79f6ce103fbe9f0b3051af",
+      "size": 265
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v008.yaml",
+      "sha256": "8fa56a5543a883c6d61b16053f271390449393d0b970c85738baefe82be042c7",
+      "size": 313
+    },
+    {
+      "path": "backend/seed/registry/components/zk_axle/variants/v009.yaml",
+      "sha256": "199300e7df55d9fe0613dd7f0503a220ad43b780ff2921ea2f68f2471b339e8b",
+      "size": 301
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/_base.md",
+      "sha256": "e2449b9aad3405de0aa1b20cf140b2048deebc563bd420cb750804f593dfae50",
+      "size": 5591
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/generator.py",
+      "sha256": "7da31dfd6bb2f9e3f75e292e12980f208f343e75f145748f8d430b2c07600913",
+      "size": 7201
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v001.yaml",
+      "sha256": "0ba1b69d1b65b32b26827717d29bc2f010be63f7f388156f77333ac8d82963dd",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v002.yaml",
+      "sha256": "a071b0cab6530272d9ed96470a287882ac478136c9538394333ffcc3b9a15f15",
+      "size": 307
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v003.yaml",
+      "sha256": "6b211e59e43183589a5074b1ab77c82fde8d084e65790dff4bd9f07acd1a22a8",
+      "size": 316
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v005.yaml",
+      "sha256": "79cfa049cf6d772b2432157a4439d889b2046e7d7ca7fd26550e7a6bdb3edbba",
+      "size": 383
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v006.yaml",
+      "sha256": "1615200f19106d0268e7c447f78fda51a71afad7ae883f270c46c0f02c239abc",
+      "size": 383
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v007.yaml",
+      "sha256": "1702145b4f0e0ed8f695ed5a9b12b0593b345b068189a00892f5ea6cb10957f2",
+      "size": 379
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v009.yaml",
+      "sha256": "e957fdcbf6331ea59275efee26a2c7fee8ca762900288dbfe0d61e3657120eda",
+      "size": 444
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v010.yaml",
+      "sha256": "eb2ec8102c280e4c323d2122881c89447924d217751f749b446275f96512dfd7",
+      "size": 428
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v011.yaml",
+      "sha256": "754ae46c27353bb0955b8ede2114853c92c60f234fcb57c5ece6880d20245488",
+      "size": 393
+    },
+    {
+      "path": "backend/seed/registry/components/zk_body/variants/v012.yaml",
+      "sha256": "982dca4bd0efcc31af1eb448c0c5b081fb44e7909b9a0a83a3ba144c35efd723",
+      "size": 408
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/_base.md",
+      "sha256": "874fc46ce1da88ed637607379524a03948fa7e26aa5916bc03cde443c626d503",
+      "size": 5608
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/generator.py",
+      "sha256": "e7b112761889d1c07b7b0436fd2a654fee24b3b5b149e06a8a7d52d28958fe7e",
+      "size": 9723
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v001.yaml",
+      "sha256": "0ba1b69d1b65b32b26827717d29bc2f010be63f7f388156f77333ac8d82963dd",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v002.yaml",
+      "sha256": "a071b0cab6530272d9ed96470a287882ac478136c9538394333ffcc3b9a15f15",
+      "size": 307
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v003.yaml",
+      "sha256": "6b211e59e43183589a5074b1ab77c82fde8d084e65790dff4bd9f07acd1a22a8",
+      "size": 316
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v004.yaml",
+      "sha256": "e80cbf041e3ce6eb54f26e2aed0526f2be0cdbd30b1b52012915f31ea15826ba",
+      "size": 379
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v005.yaml",
+      "sha256": "2a2f5ed1f02b5009a28a0e38e8ba6b963b2f3416bac4345bf33ee779c8a48ace",
+      "size": 383
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v006.yaml",
+      "sha256": "cc2a0d55b9fb511fce67f2c5146fade7a61545e5fdfa2fc2554672c994901652",
+      "size": 379
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v007.yaml",
+      "sha256": "86abcaae952afbafd29b5b1f78ff8949572caa25f82a33179e0d5a5aa1e25044",
+      "size": 451
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v008.yaml",
+      "sha256": "d51153492bb9a370885778dc2548bed06c6f07ba92f6b875319125196ba8ac57",
+      "size": 452
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v009.yaml",
+      "sha256": "a8ebfc9a515a710c27c0b2a1b1a260c4ac6aec56fa93dadeced158913324d41f",
+      "size": 372
+    },
+    {
+      "path": "backend/seed/registry/components/zk_cab/variants/v010.yaml",
+      "sha256": "1c7caeb23c177d4171bde7111fc13bf2bd8f5e4b2b8d3783d13359b5fbb3d1a4",
+      "size": 425
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/_base.md",
+      "sha256": "bb4243b1e56236d0f65740b717838117702b46b20c0f071c965ff505eca8056b",
+      "size": 3872
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/generator.py",
+      "sha256": "1f4eb21e6cb8a84fa2db92bf5595dd1ee34df749325cdea47da70052de553857",
+      "size": 3154
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/variants/v001.yaml",
+      "sha256": "0ba1b69d1b65b32b26827717d29bc2f010be63f7f388156f77333ac8d82963dd",
+      "size": 277
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/variants/v002.yaml",
+      "sha256": "a071b0cab6530272d9ed96470a287882ac478136c9538394333ffcc3b9a15f15",
+      "size": 307
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/variants/v003.yaml",
+      "sha256": "6b211e59e43183589a5074b1ab77c82fde8d084e65790dff4bd9f07acd1a22a8",
+      "size": 316
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/variants/v004.yaml",
+      "sha256": "eea3f78ac86b4bf2afd4f39d7c4111c9396e893207d052a26fc88cae8f0b228e",
+      "size": 383
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/variants/v005.yaml",
+      "sha256": "2a2f5ed1f02b5009a28a0e38e8ba6b963b2f3416bac4345bf33ee779c8a48ace",
+      "size": 383
+    },
+    {
+      "path": "backend/seed/registry/components/zk_chassis/variants/v006.yaml",
+      "sha256": "cc2a0d55b9fb511fce67f2c5146fade7a61545e5fdfa2fc2554672c994901652",
+      "size": 379
+    },
+    {
+      "path": "backend/seed/registry/components/zk_lamp/_base.md",
+      "sha256": "c72482a38cf9aa2c55ad53d534a18d6ec9268d4ae7145115c10bfdeef8286834",
+      "size": 2828
+    },
+    {
+      "path": "backend/seed/registry/components/zk_lamp/generator.py",
+      "sha256": "484d8341fab71286845abcf96e759b1e33bf0410670134b2c2b4a41096df965c",
+      "size": 233
+    },
+    {
+      "path": "backend/seed/registry/components/zk_lamp/variants/v001.yaml",
+      "sha256": "444d26e245f305286cef50a81ebf2b8b55070cc7ab5484ed73e04acd2c7b3d84",
+      "size": 283
+    },
+    {
+      "path": "backend/seed/registry/components/zk_lamp/variants/v002.yaml",
+      "sha256": "11cdd4d7a6d90db106dcffd4e7d95f84978fd42448ef640ec7f84f3da3ccddf2",
+      "size": 315
+    },
+    {
+      "path": "backend/seed/registry/components/zk_lamp/variants/v003.yaml",
+      "sha256": "9e30726c824a6188d06c489e47d459d5a9313f48bb5cd1e4a19d5717fca52eab",
+      "size": 312
+    },
+    {
+      "path": "backend/seed/registry/material_presets.yaml",
+      "sha256": "c5e1e0aad4b41469daddebd5473e442f77eed99110b0370cbb3129d5f0ad7c05",
+      "size": 12276
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/_base.md",
+      "sha256": "3b18b5ef5b8dd53454308246611e83c767b51871e9a8a5581f04403dd45d7f33",
+      "size": 3789
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/blender.py",
+      "sha256": "7ad4296ca3b584c3e854a237b5fea4412e459f72ea749a217e12c27f423027bc",
+      "size": 8724
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/toon.gdshader",
+      "sha256": "104dd181772bb93af2eb4422d098d0e04194953c6a4c65c4bd7d6757727a3432",
+      "size": 2536
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/toon_outline.gdshader",
+      "sha256": "970cfe4e98966c243ed7f08997c415c51b5ae6102cb8115e030557b119215e89",
+      "size": 825
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/toon_screen_outline.gdshader",
+      "sha256": "d5eb001598e43d9c5deff9d75781565557b63cc1d0ab9617eb8b3d89eaa0a357",
+      "size": 1515
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/variants/v001.yaml",
+      "sha256": "46e177ca7eb8798ef24a24065a8a15dc10620f6df818d79070553b71d4722871",
+      "size": 201
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/variants/v002.yaml",
+      "sha256": "ccb5ea8993a60f454ec6431b7cc6e96922ea9d09f0cd4cabb1d33743503566a1",
+      "size": 324
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/variants/v003.yaml",
+      "sha256": "dd0342ed501d077aee5fabff7cbe0d2ad1bcc2e54dacebcc2c16d4bc83f7bda0",
+      "size": 335
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/variants/v004.yaml",
+      "sha256": "bb22834a94d464875de5075100abfd315e1f1f30f15e34f636e97438e6bd29ca",
+      "size": 348
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/variants/v005.yaml",
+      "sha256": "3c6fe6d35028634cb6254ebca5c970fe30d616160e30f669b3905bb7a66b1393",
+      "size": 238
+    },
+    {
+      "path": "backend/seed/registry/materials/toon/variants/v006.yaml",
+      "sha256": "6b62ef377e3630ec7b3a6082297c8403b6fe3f0fccf6183387911a810f01bcd6",
+      "size": 231
+    },
+    {
+      "path": "backend/seed/registry/palette.yaml",
+      "sha256": "8359c97198653b31c40f05404cc83b2a05730c04ca20a71bc916f00c4ccdedfb",
+      "size": 2307
+    },
+    {
+      "path": "backend/store.py",
+      "sha256": "2985d913d361d87cfee8a56d0866cf21a58817095dbead656cad3a326244557b",
+      "size": 14067
+    },
+    {
+      "path": "backend/tags.py",
+      "sha256": "ab99c474ff299407169d071f8fd74780b77b82adace4e20a7325eededa437584",
+      "size": 13790
+    },
+    {
+      "path": "builder/blender_session.py",
+      "sha256": "60f462862bfc40c794eb9fd9c5b4d0d6057ef0776de60367fb1e387658826f57",
+      "size": 14485
+    },
+    {
+      "path": "builder/blockout.py",
+      "sha256": "c9df0bb3ad0bb16e235eb1dc99b899e7300e3b95fe0aa3b41ad21272377c2add",
+      "size": 22403
+    },
+    {
+      "path": "builder/blockout_sheet.py",
+      "sha256": "dcdcd054b6a58cd2d6f0c75c10e4fed28b2bc912648039d0defb767cb63b38dd",
+      "size": 17751
+    },
+    {
+      "path": "builder/build.py",
+      "sha256": "d62ead2dd3c2dacc6688049044757c4e02b4801e180c72fdd631f8ff25a98c25",
+      "size": 30354
+    },
+    {
+      "path": "builder/charlib.py",
+      "sha256": "56a06951a4c92bec1fa5083fcfc75605ecd0e4f3279f5fb305fbc2054506c0ca",
+      "size": 32038
+    },
+    {
+      "path": "builder/chartemplate.py",
+      "sha256": "fe0dbcfcb4b9fc2fa56d1c06b4c473b0549828f6ac811ff52eeabe2c13355ed2",
+      "size": 43749
+    },
+    {
+      "path": "builder/charwear.py",
+      "sha256": "409c0508ee05d8f448bad1962ba1c6fd16db3f847bf0e0c379be12cec25161ef",
+      "size": 39622
+    },
+    {
+      "path": "builder/checks.py",
+      "sha256": "545a7a4d6676c2e3556f8ee8d54108ef0e42285b6cf0067b093ef454d484277a",
+      "size": 12068
+    },
+    {
+      "path": "builder/humanoid.py",
+      "sha256": "ebb6c8529a177df6f9952d6dbad959f6d28fb30ea5fb50556772beda7ed88911",
+      "size": 16197
+    },
+    {
+      "path": "builder/legacy_build.py",
+      "sha256": "822e04def638ae01115044b0406ad82bd2ddcbf3a5d14c0c2d6db8f38c0150b6",
+      "size": 7391
+    },
+    {
+      "path": "builder/material_build.py",
+      "sha256": "330aea62ca64c088d198d444eb1a4dccd4aac7bf5ae360164c031f086752e723",
+      "size": 4852
+    },
+    {
+      "path": "builder/mechlib.py",
+      "sha256": "ad2812bc5d9e598e94a8a6a2c36e7abe54f4db3ee7aa23054eedee11bb7cac78",
+      "size": 10886
+    },
+    {
+      "path": "builder/metal_texture.py",
+      "sha256": "9ce6971054590cf386c75ef7e97bbddf081480f1101bb87cf169191bf9664c77",
+      "size": 2039
+    },
+    {
+      "path": "builder/preview.py",
+      "sha256": "fd604fa8a2a8e5fb721721381783721f2da7cbe80fe16686758382d0da6e1b3e",
+      "size": 5002
+    },
+    {
+      "path": "builder/projection_views.py",
+      "sha256": "a69acfc9939e2415a4e944cbe524191ec105193a91c9937d131355544568be6d",
+      "size": 635
+    },
+    {
+      "path": "builder/reference_lab.py",
+      "sha256": "cf14db10afa3b6c80e0c11d0e427e0143302206bfd69ff13dddd2360959b9b24",
+      "size": 30975
+    },
+    {
+      "path": "builder/semantic.py",
+      "sha256": "e57c53394c463a96ade5be7c1979a851a38f246013f773d9d9b698367955ffb1",
+      "size": 9567
+    },
+    {
+      "path": "builder/structure.py",
+      "sha256": "d1b4137116507bf6fad82bdaf37380f5970a459c7e42aa9d0d552f6874844cca",
+      "size": 11839
+    },
+    {
+      "path": "builder/trucklib.py",
+      "sha256": "4b3933b0560f89bc6d0f0c5aac10d62083c8d72b8b79e35af4ac5acaa43681db",
+      "size": 2677
+    },
+    {
+      "path": "builder/unit_motion.py",
+      "sha256": "7cd52e7968147321c92b09ba67763be400769a7e2a47e6e568ede5fd207d4e2c",
+      "size": 6405
+    },
+    {
+      "path": "builder/vehicle_finish.py",
+      "sha256": "b225a5b4edbd7566c9d75f4104f368a0294c1370f48a47e2669e1581cb46fc08",
+      "size": 621
+    },
+    {
+      "path": "builder/vehlib.py",
+      "sha256": "fb11698f9b72d6b906e1bbdddbe8471b4b42b8d11248d874411394096abe08e4",
+      "size": 13125
+    },
+    {
+      "path": "builder/voxlib.py",
+      "sha256": "8b0c4ee9122f79291a330b102b6e323a0cfa9920d4199849868083d166bfcb3f",
+      "size": 32278
+    },
+    {
+      "path": "builder/zfight.py",
+      "sha256": "1d2945633503d249ad0b0838c93c543d1e3f53a81a9514a8bb78b1eb118e6983",
+      "size": 12838
+    },
+    {
+      "path": "builder/zuk_arches.py",
+      "sha256": "8adf37184050f078900db0903f4f35460774db19237aa1cb5791fb4cff3baa99",
+      "size": 8959
+    },
+    {
+      "path": "builder/zuk_lamps.py",
+      "sha256": "c87a744a6ae67e066c79078883d8acc7594d334153612564459279196dae6e66",
+      "size": 5078
+    },
+    {
+      "path": "builder/zuk_wheels.py",
+      "sha256": "9ffcb7697aecec4168dd5290ebf4d899f975413e25da9ab9398476c60308de4f",
+      "size": 9887
+    },
+    {
+      "path": "builder/zuklib.py",
+      "sha256": "a5537e30e9ed49e6dc3e0124a990e45b34486ee4d7924aaa253a393c05d0c083",
+      "size": 3395
+    },
+    {
+      "path": "config.example.yaml",
+      "sha256": "389ee9a15e8fd7ae434142e33325e7e72e07ed4b2c427bbe6726b1bb2af1584e",
+      "size": 531
+    },
+    {
+      "path": "config.yaml",
+      "sha256": "389ee9a15e8fd7ae434142e33325e7e72e07ed4b2c427bbe6726b1bb2af1584e",
+      "size": 531
+    },
+    {
+      "path": "constraints.txt",
+      "sha256": "18adabe39e34d269cc1a5047f00da5de9f6f9bf94e5baf068a2c286ef190beca",
+      "size": 658
+    },
+    {
+      "path": "docs/LICENSE_POLICY.md",
+      "sha256": "6653706ae83219098f394c5ec850bbde2ce701d890dfdf86616b1f6fec5e1b1e",
+      "size": 942
+    },
+    {
+      "path": "docs/STARTER_PACKS.md",
+      "sha256": "42932311da2e7a31ab8b4f7ea483567eb144fbbd458d8c001477f0f6c53c082e",
+      "size": 2357
+    },
+    {
+      "path": "docs/STARTER_ROADMAP.md",
+      "sha256": "15023918ab0eb5ac16cf90a908deb3e5b5407787f6db30b058961c91924db318",
+      "size": 2075
+    },
+    {
+      "path": "docs/guide/README.md",
+      "sha256": "f011159f2e85927b50054f9bfce929b4e0efb8211f938f8aaefe0f03d0cc8460",
+      "size": 2836
+    },
+    {
+      "path": "docs/guide/assets/blockout-sheet.png",
+      "sha256": "370b0785bc15182796b6196b450794933bf676ef223e80b75556523cad87c9e6",
+      "size": 320968
+    },
+    {
+      "path": "docs/guide/assets/compose.png",
+      "sha256": "4575da06cb03b59bde52f32ea714140795ac40440e4878f42a82922077acb8c8",
+      "size": 180630
+    },
+    {
+      "path": "docs/guide/assets/cube-reference-sheet.png",
+      "sha256": "ae39c5b1d6d2e39b2fc9f9f6a9238a9381788b4f5f3f6f18c4e77fa98450c55e",
+      "size": 1167840
+    },
+    {
+      "path": "docs/guide/assets/entity.png",
+      "sha256": "de77effb6c030478d2ab7780ced64c9e6e32452152190b44e888f6b0c2d05063",
+      "size": 270513
+    },
+    {
+      "path": "docs/guide/assets/materials.png",
+      "sha256": "ee389336dce95d08020d36d0d57d89bd1f790850f0c251b1427c9a644c55b522",
+      "size": 289530
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_back.png",
+      "sha256": "2841992846641ece3f95090ddb1b162a37da83a791ca00404985e54e94064a11",
+      "size": 254867
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_bottom.png",
+      "sha256": "e5537b70307edf26e2b0e7aed7611a10cf5f16d8c03c79a0e7ce0ae76d99285e",
+      "size": 260878
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_front.png",
+      "sha256": "ea2cde2b64365a99324ccd933f3911287aabfc9efe7b0cf02d0ef5c25037d99c",
+      "size": 255048
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_iso.png",
+      "sha256": "8fca0b2c7f02d00241c40a95a1f6c89d181fcb766e80dbffdd834fd7aaa90f3b",
+      "size": 275607
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_left.png",
+      "sha256": "0fc2895b8c62acf6d1d6cf3d6305e2481825d3f24fd04fae89f44d7bd316d8c4",
+      "size": 254128
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_right.png",
+      "sha256": "8b193a345037582dd2be24e296e0a093d3a832ba04107871d895a84bb5281a67",
+      "size": 256294
+    },
+    {
+      "path": "docs/guide/assets/projections/preview_top.png",
+      "sha256": "c9b2f4228c034bf1feb5f9bddbcbb120eb1ab87e394b399e337fe1867330ea10",
+      "size": 253081
+    },
+    {
+      "path": "docs/guide/assets/projections/source.json",
+      "sha256": "72ace9d794a56b58d90293e4da150d6b39dca74e3c008e27987ac2ef5d7e662b",
+      "size": 843
+    },
+    {
+      "path": "docs/guide/assets/registry.png",
+      "sha256": "d85e90ef58e0e9617194315d7a2e3128578fe95f8436b9399325ffe2632828f6",
+      "size": 165334
+    },
+    {
+      "path": "docs/guide/assets/screenshots.json",
+      "sha256": "ea03a2a7e4b536dd67e480098f1e98153de0e408fe8ec0b1005266838c8354f3",
+      "size": 1393
+    },
+    {
+      "path": "docs/guide/assets/verified-projections.html",
+      "sha256": "43b4885dcdb07fccf57ddd51fcff8e33a27d0183251f2f747e030b4de1829daa",
+      "size": 1416
+    },
+    {
+      "path": "docs/guide/assets/verified-truck-sheet.png",
+      "sha256": "823c805f225ecaf3476d5a2c8fed0677d0c3ef08b495bf315c24fece0ab189c2",
+      "size": 367797
+    },
+    {
+      "path": "docs/guide/build.py",
+      "sha256": "d33f8f6ed20c776936466304680c75eaa2e96ab38531e9d354ea3a7205ee6020",
+      "size": 5729
+    },
+    {
+      "path": "docs/guide/de.html",
+      "sha256": "e28683cb1af15b7785870ed7b30d5e78bdd209669d7d54b333c8f48e42b5c87e",
+      "size": 236032
+    },
+    {
+      "path": "docs/guide/en.html",
+      "sha256": "5a24fb6aa706d60ecbf4ccc350cfbaae30f02f6e3521b433c9ff83972c602a47",
+      "size": 235167
+    },
+    {
+      "path": "docs/guide/es.html",
+      "sha256": "d9a6b7e76a99fbdbb76cfd9a2c51f9159a28d6d2761facfd8bf5353801031ab4",
+      "size": 236704
+    },
+    {
+      "path": "docs/guide/fr.html",
+      "sha256": "5b0a144de90d18d5108a784c5f8c0c94a981df0c1ecab507aa74a6b50cf4560f",
+      "size": 237082
+    },
+    {
+      "path": "docs/guide/index.html",
+      "sha256": "49779ca72667073e5df1cb37bf0e1ebf777f3938a2cff618bcaa9b5bf05c4deb",
+      "size": 254340
+    },
+    {
+      "path": "docs/guide/locales/de.json",
+      "sha256": "99fdb67fe42f80642ff3d9ba9bd875fe933286790e61bac4af653e38f9bac27f",
+      "size": 28260
+    },
+    {
+      "path": "docs/guide/locales/en.json",
+      "sha256": "ce0df22449c78a426b4b5167c30996310f816a2ab635adbfede6ded6750ddd46",
+      "size": 27588
+    },
+    {
+      "path": "docs/guide/locales/es.json",
+      "sha256": "9eb12a9b554a9171a93687efb2cc356ff87df14d3249261a425e1166326303c7",
+      "size": 28959
+    },
+    {
+      "path": "docs/guide/locales/fr.json",
+      "sha256": "3f1e58446728cbb693066e26fb07650a7546f29e815c637409e7f23e2b193c75",
+      "size": 29296
+    },
+    {
+      "path": "docs/guide/locales/pt-BR.json",
+      "sha256": "d316db6e2afed6c918509d74bd22f92257f2e153034bccc4928d5410ad167c5f",
+      "size": 28116
+    },
+    {
+      "path": "docs/guide/locales/ru.json",
+      "sha256": "8faba48e93ecf087111a3a0398aa268a894daf68e268740b9b799105304643ef",
+      "size": 45375
+    },
+    {
+      "path": "docs/guide/locales/zh-Hans.json",
+      "sha256": "a40689573e435a01bfac98073fc52e3ca82057ec7a96ac86aba692d21de61a7d",
+      "size": 23873
+    },
+    {
+      "path": "docs/guide/pt-BR.html",
+      "sha256": "1e1e8186027dd031ee3049073b81a081d2941aa34deca1c4e0f472190c79bddf",
+      "size": 235831
+    },
+    {
+      "path": "docs/guide/resources/PROJECTION_CONTRACT.md",
+      "sha256": "297626a374e18c0eb1bfd1837003083500c32ff2bea0beb63b700492a8f5f32e",
+      "size": 15327
+    },
+    {
+      "path": "docs/guide/resources/generation_brief.example.yaml",
+      "sha256": "a1791c85802b3fab9e213ebc57fd3140f44aa16d0d638a8f278ddc7f3a033247",
+      "size": 3599
+    },
+    {
+      "path": "docs/guide/resources/imagegen-proposal/brief.resolved.yaml",
+      "sha256": "ef038a35d4e9ef78097c71439430f65a8e09f7c719b67ec3b1fc9767f70bd111",
+      "size": 2157
+    },
+    {
+      "path": "docs/guide/resources/imagegen-proposal/imagegen_request.json",
+      "sha256": "53e0cf774ebbe918dd1f688dc69ea98aeb07c28ff7f00b96c467ee548b63e397",
+      "size": 5089
+    },
+    {
+      "path": "docs/guide/resources/imagegen-proposal/manifest.json",
+      "sha256": "6c476c23075653843f3a7898fb08c3636693af6a02cb90fdb384b7d9cf54063f",
+      "size": 2147
+    },
+    {
+      "path": "docs/guide/resources/imagegen-proposal/prompt.txt",
+      "sha256": "18a27b711e84f3c786eeb3351c2f3c6cf9db2036234a282d4b4bcd550a9bc3c7",
+      "size": 5012
+    },
+    {
+      "path": "docs/guide/resources/imagegen-proposal/template.resolved.yaml",
+      "sha256": "c8305a2dc018b84b66fda2bd633049d2ba9fc2a05942bab4f4ef8e2dcae8c20a",
+      "size": 2846
+    },
+    {
+      "path": "docs/guide/resources/sketch_brief.example.yaml",
+      "sha256": "a1afd97eb463858827dcd34e83aaea8f0e158bf68276ace3158e1fdcdbb82ca9",
+      "size": 2319
+    },
+    {
+      "path": "docs/guide/resources/sketch_template.yaml",
+      "sha256": "cc484d9dce2c9d159c18ec0570481b40e6e03622477c3a0fb495571191be9f4e",
+      "size": 2751
+    },
+    {
+      "path": "docs/guide/ru.html",
+      "sha256": "49779ca72667073e5df1cb37bf0e1ebf777f3938a2cff618bcaa9b5bf05c4deb",
+      "size": 254340
+    },
+    {
+      "path": "docs/guide/template.html",
+      "sha256": "2360a07bf68fafafb44947c1771853d61b50feb9dd453f0072a5d39eb0b86644",
+      "size": 12427
+    },
+    {
+      "path": "docs/guide/zh-Hans.html",
+      "sha256": "bbbc4ec96eb78a21fe81510c73028b53cc4a236a4eb1b4217366394f63d2e34e",
+      "size": 231300
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "d7abb2e79730168a92f34f215347c9c2b87fb10c6d2e4377c59991f04e7918fb",
+      "size": 714
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "f9848afb5f524963f4b1b09ff1f48fb4ad189087545d1bb03adbe2965af096c2",
+      "size": 40135
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "2ba3595055c2a672ec2149235fcffc5ad315a1a4470b4ca4986d4d53baa21671",
+      "size": 447
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "sha256": "adb941c61033f504d0d0819181a92425a924e70368ca1d0b0e4857856882aa76",
+      "size": 18453
+    },
+    {
+      "path": "frontend/src/branchForm.ts",
+      "sha256": "59d1a7c0872b0f09d569cfa751e45c1b870b3e62a3227eb1d05334852ac1192e",
+      "size": 8807
+    },
+    {
+      "path": "frontend/src/dom.ts",
+      "sha256": "8f8bdbe66b1e9a198355c3b67958d08c53437105f3a6a6b930ce21c0123af523",
+      "size": 4638
+    },
+    {
+      "path": "frontend/src/events.ts",
+      "sha256": "003c071f60b0e224e9147ac48c93876c0c66a3b13318d6d0a08b630504c027ee",
+      "size": 975
+    },
+    {
+      "path": "frontend/src/i18n/catalog.ts",
+      "sha256": "987989ed0d3c08243c36d519f5f5b6c2cb132650d9b160725555b7455797f145",
+      "size": 145657
+    },
+    {
+      "path": "frontend/src/i18n/index.ts",
+      "sha256": "214cb19ca69f5865336071c66601c97f2d2bc8bce30124e4f4f566d823aa9d98",
+      "size": 10544
+    },
+    {
+      "path": "frontend/src/labViewer.ts",
+      "sha256": "916a6576169e60591f632e7ed3ba5a96b347ff4e7c2e113e2006b11e71ec6f2a",
+      "size": 20291
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "sha256": "72a670d27fca3512bc253447d0297e3794becaed6efcb14aa81b336b5978bfe5",
+      "size": 8381
+    },
+    {
+      "path": "frontend/src/pages/blockoutSheet.ts",
+      "sha256": "d182b9dd75dbd98fbc8259e574f9f047d6bd77b90b36ca21bea032ec71271545",
+      "size": 13871
+    },
+    {
+      "path": "frontend/src/pages/cast.ts",
+      "sha256": "e3f4c1d91378d76096a7590462bcbbe8297582ebf510a0a470a991cd21451628",
+      "size": 2274
+    },
+    {
+      "path": "frontend/src/pages/compose.ts",
+      "sha256": "3431e33462890790bcd874c605a24356a3574e09c32eec3d28bc556bcbb01c20",
+      "size": 9294
+    },
+    {
+      "path": "frontend/src/pages/createAsset.css",
+      "sha256": "604ecaa62e228ffbbe1638331fa63487534105f860a680bea444ddd742d80199",
+      "size": 2493
+    },
+    {
+      "path": "frontend/src/pages/createAsset.ts",
+      "sha256": "bb16b240f2939c48697f298ceee4498ef9c846c0aa8e1b5d9c66add5bd58a9a4",
+      "size": 11957
+    },
+    {
+      "path": "frontend/src/pages/edit.ts",
+      "sha256": "cfc2fbcae4342471f358088ffc55bb057009f69b0f7c7e651f91a961b30d23a9",
+      "size": 12504
+    },
+    {
+      "path": "frontend/src/pages/entity.ts",
+      "sha256": "b61e6ad41e110cf7efbf7724f30f0452ce1dbf8f14ad35081ba254103aaf539b",
+      "size": 31586
+    },
+    {
+      "path": "frontend/src/pages/legacy.ts",
+      "sha256": "cf0f3118d0d2d5d1da82e364aa7ece360ccdf567b3202b4e0408743081e0797c",
+      "size": 13370
+    },
+    {
+      "path": "frontend/src/pages/material.ts",
+      "sha256": "c46d2d36fb806cf9a2e54c438c39e02035d3f93b71c65964baea1f64a1df645e",
+      "size": 22132
+    },
+    {
+      "path": "frontend/src/pages/referenceLab.ts",
+      "sha256": "889ba23e5bfda343f2922086995496e87838fbdefb4716a1df9431b34db4ede0",
+      "size": 16102
+    },
+    {
+      "path": "frontend/src/pages/registry.ts",
+      "sha256": "c6e9e975c6298ec4b5de5760d08c49c6b328ac2bb94eef00f1c0d030eef5fd66",
+      "size": 31747
+    },
+    {
+      "path": "frontend/src/pages/registryGroups.css",
+      "sha256": "9f4f469e2bee54865a2281fa459cf0c8d960978e8e36ad52045d96621bf918de",
+      "size": 5292
+    },
+    {
+      "path": "frontend/src/previews.ts",
+      "sha256": "8810e0fae1cabfebac128f6c48b7b77cff6a84d9468c791cda8c130499c9563e",
+      "size": 1358
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "sha256": "c4a62bac24de267ef6d92f03dc0a28fe51d6ac075d2edf1980eadcfd331393c0",
+      "size": 33298
+    },
+    {
+      "path": "frontend/src/tagManager.css",
+      "sha256": "bf3a36635003facf3a2ed7dbd417e480e87e2a59bacdb6143e43eb1d3a4a6a00",
+      "size": 2678
+    },
+    {
+      "path": "frontend/src/tagManager.ts",
+      "sha256": "762194937ac92ebd76c6b09c484c60154c38924c141679b3155cccacd4fe1d84",
+      "size": 12124
+    },
+    {
+      "path": "frontend/src/toon.ts",
+      "sha256": "0bb7c0516b2fb845a34e32f59b9d732479d2288382eef64a8198ab1045dd9ffe",
+      "size": 10754
+    },
+    {
+      "path": "frontend/src/tree.ts",
+      "sha256": "4e8752ae4cf1e460e9bd06383c0f5815b8de18a9a8fc53cd46a5e2864cba6284",
+      "size": 4483
+    },
+    {
+      "path": "frontend/src/version.ts",
+      "sha256": "206933ad3a2dc78ca2c3e699d24d101427394c9811ee9657215d0b2f617d128d",
+      "size": 44
+    },
+    {
+      "path": "frontend/src/viewer.ts",
+      "sha256": "e094efc1703ae6061fa57034d1e179e980dbad6a91544cd18688874e458280a3",
+      "size": 45292
+    },
+    {
+      "path": "frontend/src/viewerPanel.ts",
+      "sha256": "e58382ee98514fa77eacb4be8ab4840ee22b1ec5c9e2734fa6a5e5b1a9f05897",
+      "size": 12458
+    },
+    {
+      "path": "frontend/tests/i18n.test.mjs",
+      "sha256": "f76098d5326380a3a336d6a3e2394eb0327650911b4cd575fe6e65ad5dbd09a2",
+      "size": 7750
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "sha256": "44b8e3f9e33bad983d5a858250a6758d7522d164bc96ea88ca0864d56006ed27",
+      "size": 386
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "7063e34cdd0c26d7f2ca4fcb0dcb2fe546fbce7cc5cf967da11b2a7889d1b555",
+      "size": 484
+    },
+    {
+      "path": "impressor/ASSET_ITERATION.md",
+      "sha256": "9465f213d1eccab9fc194de5181c58bb58be09b41935cdd9b5a4f67e38e7276d",
+      "size": 23196
+    },
+    {
+      "path": "impressor/BLOCKOUT_PRACTICES.md",
+      "sha256": "5cc0713d12229b47058cc25db25201e3644c6e4efade9034d81eda3721fbbf86",
+      "size": 19545
+    },
+    {
+      "path": "impressor/PROJECTION_CONTRACT.md",
+      "sha256": "f513966bf29e11ca421313cafc1415b8337b80c181c3a9e6c3e92fa8e1c005ef",
+      "size": 15325
+    },
+    {
+      "path": "impressor/README.md",
+      "sha256": "c7302f64bd700aaca77cfc7515c0486760258f649a1acaff9ab8d717a57e8676",
+      "size": 12128
+    },
+    {
+      "path": "impressor/REFERENCE_ITERATION.md",
+      "sha256": "7ac0a8e0fc20621256044803ed0fc32a6e4efe599cadfd379b92511f629bf805",
+      "size": 21719
+    },
+    {
+      "path": "impressor/SKETCH_GENERATION.md",
+      "sha256": "c3fbc0f69d6500356bedf1c029061b668b68757ca2c4dea5183f901bc2ca0780",
+      "size": 13418
+    },
+    {
+      "path": "impressor/__init__.py",
+      "sha256": "77fd7fe878e75faf8da1a20fd1885e9ad0728022e54d4987bfaafd702a81bdec",
+      "size": 87
+    },
+    {
+      "path": "impressor/__main__.py",
+      "sha256": "eb42a68c26b2c6a3cc9586caa9f6f323f3d48ba364551731899b86ca4c563937",
+      "size": 956
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/README.md",
+      "sha256": "860919cbb5a46a537523f259913b44d37bea9adcbb6f091bbfb2f22690206388",
+      "size": 1825
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/brief.resolved.yaml",
+      "sha256": "e25cef1f7fe634d34356b0fb8b01d6d7b1e82af517b8a93b90a552845ddf2779",
+      "size": 1784
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/imagegen_request.json",
+      "sha256": "cd18ff472af616a604f65d28bf9a8c5dda5139e71b1e9582bc5ed42271eb03a7",
+      "size": 3501
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/manifest.json",
+      "sha256": "ad9f8b6503cd08aeed243b5d7a66dfa8b6fb571f612b5b69e08962d18bf5470e",
+      "size": 1505
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/prompt.txt",
+      "sha256": "e7be6d633ecb3e0932a9d3500e4afba68727fa135ddb1b4f201f11cfb493f5f8",
+      "size": 3425
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/sketch.png",
+      "sha256": "176ec5e9fa33b755fda4ef207e3236440207fbe3ff5c9e76d6d9712cf1ce5103",
+      "size": 1483361
+    },
+    {
+      "path": "impressor/examples/truck_cube_r001/template.resolved.yaml",
+      "sha256": "a363efcd5f5d07624e308a371b0c67d99e85ad103443a3834f382899acd63db2",
+      "size": 2405
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/README.md",
+      "sha256": "f339bf3d429b344ad1721313d9afcb664245e663b9e7b1437eac6629dc19115a",
+      "size": 1270
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/brief.resolved.yaml",
+      "sha256": "ef038a35d4e9ef78097c71439430f65a8e09f7c719b67ec3b1fc9767f70bd111",
+      "size": 2157
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/imagegen_request.json",
+      "sha256": "53e0cf774ebbe918dd1f688dc69ea98aeb07c28ff7f00b96c467ee548b63e397",
+      "size": 5089
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/manifest.json",
+      "sha256": "3fb7aed8eda14fecf1f42342a090add8c633b3845f7e83da6567c926eb35246a",
+      "size": 2120
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/prompt.txt",
+      "sha256": "18a27b711e84f3c786eeb3351c2f3c6cf9db2036234a282d4b4bcd550a9bc3c7",
+      "size": 5012
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/sketch.png",
+      "sha256": "ae39c5b1d6d2e39b2fc9f9f6a9238a9381788b4f5f3f6f18c4e77fa98450c55e",
+      "size": 1167840
+    },
+    {
+      "path": "impressor/examples/truck_cube_sheet_r001/template.resolved.yaml",
+      "sha256": "c8305a2dc018b84b66fda2bd633049d2ba9fc2a05942bab4f4ef8e2dcae8c20a",
+      "size": 2846
+    },
+    {
+      "path": "impressor/sketch.py",
+      "sha256": "53abad2657ad46a533462221d7745a25187f548ab9326ebb34689625e4c7c110",
+      "size": 12029
+    },
+    {
+      "path": "impressor/templates/generation_brief.example.yaml",
+      "sha256": "a1791c85802b3fab9e213ebc57fd3140f44aa16d0d638a8f278ddc7f3a033247",
+      "size": 3599
+    },
+    {
+      "path": "impressor/templates/iteration_review.example.yaml",
+      "sha256": "e3a76c72920a85cc6fa4544a7ac11f5471b1532ac4c401d317be18d528878314",
+      "size": 1985
+    },
+    {
+      "path": "impressor/templates/sketch_brief.example.yaml",
+      "sha256": "a1afd97eb463858827dcd34e83aaea8f0e158bf68276ace3158e1fdcdbb82ca9",
+      "size": 2319
+    },
+    {
+      "path": "impressor/templates/sketch_prompt.template.txt",
+      "sha256": "7e76e6cde6da81c993ae7f39492cc6be44a32f427bddc3856a267bba07ec40c8",
+      "size": 704
+    },
+    {
+      "path": "impressor/templates/sketch_template.yaml",
+      "sha256": "cc484d9dce2c9d159c18ec0570481b40e6e03622477c3a0fb495571191be9f4e",
+      "size": 2751
+    },
+    {
+      "path": "impressor/templates/style_profile.example.yaml",
+      "sha256": "d4167a7643d12df48fac2fae2e8d4b227200c4ba4d50d0dfb91c9a1080cf5ff6",
+      "size": 3256
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "6c6ccf864e8f2d2e0223ee8e39bfde660c12435aa37d81e2b14000a6bee15003",
+      "size": 42
+    },
+    {
+      "path": "registry/__init__.py",
+      "sha256": "651724c9846f487655cd6dc271984d1fa0c6c3a9168beb0350014a046f2b4db8",
+      "size": 151
+    },
+    {
+      "path": "registry/__main__.py",
+      "sha256": "44dea907c9d22dc932dd78a6faa22579110f18090dd6afb318b3df82d4587f21",
+      "size": 55
+    },
+    {
+      "path": "registry/assets/evo_heli_light/_base.md",
+      "sha256": "29ed7275145ccb2df4c68ee96248b7beab2c0fbe6e2791341a9f68f041adc115",
+      "size": 4862
+    },
+    {
+      "path": "registry/assets/evo_heli_light/variants/v001.yaml",
+      "sha256": "31481eb86340b59ffe82b1023b655d875b1857ad1f908b07a6edc25f156d22a7",
+      "size": 1962
+    },
+    {
+      "path": "registry/assets/evo_truck/_base.md",
+      "sha256": "4d1c5e66144e59afb98c0a533dcdc17013eb06ee3c1ae041af180da4c9022107",
+      "size": 4754
+    },
+    {
+      "path": "registry/assets/evo_truck/variants/v001.yaml",
+      "sha256": "2a56dbf3003dc67015cf80981ccc44b38aeb059e92f79abbe78b612c9845b0f6",
+      "size": 1826
+    },
+    {
+      "path": "registry/assets/mt_truck/_base.md",
+      "sha256": "3085118ca604d5478f78bf3be27f1739fed2ed90034b55640735f9646a1f0c6f",
+      "size": 3170
+    },
+    {
+      "path": "registry/assets/mt_truck/variants/v001.yaml",
+      "sha256": "764f2986d955c3692f5e3e4ffbb9ac499c23600b63d31e3cb8a6242a634e4159",
+      "size": 493
+    },
+    {
+      "path": "registry/assets/mt_truck/variants/v002.yaml",
+      "sha256": "f79545584a11a5d1340501ef7d8fd67e255fcf24230b1b28812d6b60764e08bd",
+      "size": 483
+    },
+    {
+      "path": "registry/assets/mt_truck/variants/v003.yaml",
+      "sha256": "2eb23b6d29592cd3eab85cd825ed45da36ebc2d86692b1a9ac437dfd5efab58d",
+      "size": 512
+    },
+    {
+      "path": "registry/assets/mt_truck/variants/v004.yaml",
+      "sha256": "63f194fdead95546f3ad4dcb554ca8bd15b1fe34565812280745de0ecac2b169",
+      "size": 485
+    },
+    {
+      "path": "registry/assets/mt_truck/variants/v005.yaml",
+      "sha256": "cdcb87eaefc5b8c17a5446cb489f5147320865019f3b9dc574b76515281bf662",
+      "size": 489
+    },
+    {
+      "path": "registry/assets/td_cover/_base.md",
+      "sha256": "137c297cd34b4a8b27e79b71a2a92b03fa9973541e7726a787f457aef07f5686",
+      "size": 830
+    },
+    {
+      "path": "registry/assets/td_cover/variants/v001.yaml",
+      "sha256": "55fe51ac5de596987123990c753572d35344aa018ddd937f8978ccafc7192ab4",
+      "size": 304
+    },
+    {
+      "path": "registry/assets/td_enemy/_base.md",
+      "sha256": "ea215b1cf1877f102a120c953857099e824e23cc84f5ae89d67854e0b2fae85d",
+      "size": 865
+    },
+    {
+      "path": "registry/assets/td_flyer/_base.md",
+      "sha256": "189a5d1a8a93d854403cf7816411758de55f7b3f07694eaab403e733f4237cf4",
+      "size": 647
+    },
+    {
+      "path": "registry/assets/td_flyer/variants/v001.yaml",
+      "sha256": "c6709524460a2fc33db143549ea1e651c865fc1666a477b3181a189ab55f6913",
+      "size": 312
+    },
+    {
+      "path": "registry/assets/td_gatling_tower/_base.md",
+      "sha256": "b5d2c93677270d7cdbe5af9f0d3fae62e69afee3968d54f2366d71cdfdd2613c",
+      "size": 661
+    },
+    {
+      "path": "registry/assets/td_gatling_tower/variants/v001.yaml",
+      "sha256": "4391c8d6e375f675fa5c719793edee69c166d35b283d22303e0386569c668abe",
+      "size": 336
+    },
+    {
+      "path": "registry/assets/td_gatling_tower/variants/v002.yaml",
+      "sha256": "0686ad8d26abdbf0c94899ba406d046166e44cd8378c5372def99f126d79183d",
+      "size": 219
+    },
+    {
+      "path": "registry/assets/td_grunt/_base.md",
+      "sha256": "98f95312a883423d73f93299c8e3c98e409c905ed0c47204f25e9425922aa992",
+      "size": 407
+    },
+    {
+      "path": "registry/assets/td_grunt/variants/v001.yaml",
+      "sha256": "fffa73e7cd1dec8716c6cd0d27853140f18060b6bb55c9c507ba7d8e7e59052d",
+      "size": 377
+    },
+    {
+      "path": "registry/assets/td_grunt/variants/v002.yaml",
+      "sha256": "de692f1ca1f041a89ebbf9693887016ca59859b21aa0ca50e715750760998898",
+      "size": 302
+    },
+    {
+      "path": "registry/assets/td_missile_tower/_base.md",
+      "sha256": "1f0ed72dc6886b4f7df33f1f937be8f7e54cec4d5d9674e7e30d4d2251045f8b",
+      "size": 562
+    },
+    {
+      "path": "registry/assets/td_missile_tower/variants/v001.yaml",
+      "sha256": "2f267a701fe3e9efe9547484b42b27b3b4f28d36e5d1fd6ef6dc9603d13391b0",
+      "size": 313
+    },
+    {
+      "path": "registry/assets/td_path_tile/_base.md",
+      "sha256": "045885360461517fd3da9a13afd35986ffbb6aa067ea9b7d841ab933b71d9fbd",
+      "size": 678
+    },
+    {
+      "path": "registry/assets/td_path_tile/variants/v001.yaml",
+      "sha256": "ee112df4fb7023068eb26dc5e2c2063e9fe2c463b4e214da733e603f4c559ee1",
+      "size": 218
+    },
+    {
+      "path": "registry/assets/td_scout/_base.md",
+      "sha256": "b06067d4b4218e022cbfd68f3b4f69110fb56a1f268210e5320cccf6a6e5b839",
+      "size": 286
+    },
+    {
+      "path": "registry/assets/td_scout/variants/v001.yaml",
+      "sha256": "c475b70ca64e9a327ef7db18ddb16e4487f12a64606b74795da9fa40f8e4d1ff",
+      "size": 322
+    },
+    {
+      "path": "registry/assets/td_scout/variants/v002.yaml",
+      "sha256": "829f6481fd1ced7309f62468e2eea2f625392a3e3b535509c3a23f3b54942c6e",
+      "size": 329
+    },
+    {
+      "path": "registry/assets/td_support_tower/_base.md",
+      "sha256": "9f408e1317f4feaf066ca6da04c7ea26a879e87567ef74e90c7dd78a3a83ed2b",
+      "size": 595
+    },
+    {
+      "path": "registry/assets/td_support_tower/variants/v001.yaml",
+      "sha256": "c25b6df339975ae1cb2293b69986faf8d24cdc8308b84fbabb459bbba3237cbd",
+      "size": 307
+    },
+    {
+      "path": "registry/assets/td_support_tower/variants/v002.yaml",
+      "sha256": "ad945fe99a25fcaf8dd379e8a56b65620823165f9ff46c7b57f6101ce37dc6b6",
+      "size": 198
+    },
+    {
+      "path": "registry/assets/td_tower/_base.md",
+      "sha256": "62b605d15da47b1d4339c2988bc9acb7a9eef252a64171ac717b5b17670d2ac6",
+      "size": 1148
+    },
+    {
+      "path": "registry/assets/td_walker/_base.md",
+      "sha256": "b48dc3066b7cb4e5c5576455c05ae869f0b8ce40a7a11fea1d1d8a1284228187",
+      "size": 876
+    },
+    {
+      "path": "registry/assets/zuk_truck/_base.md",
+      "sha256": "5bf206a94bd054fff89c4e3c7473972c9babd455f13f85034a5cb88765770cf5",
+      "size": 5668
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v001.yaml",
+      "sha256": "fefecf36120f98565d462fceadc1856bee69e192d01fde8def5e7a59ed56c352",
+      "size": 442
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v002.yaml",
+      "sha256": "3419c19a52122c3c3dc5aad2a27531048cfacfa319c7fe710e13f461a53626f0",
+      "size": 503
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v003.yaml",
+      "sha256": "b0d6afa81ffbab69de6dfb6d225b87e1af2ec2d5c28cf53b07e06d5189fc2157",
+      "size": 596
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v005.yaml",
+      "sha256": "b0ace06276f33415ec35a9d980804ad3299dbd5a7d9cdbda6575345be7cc06ad",
+      "size": 531
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v006.yaml",
+      "sha256": "92cc90bfe5bb17580304057c425505376c91ae9569ba8d16ba981fe7b2a15360",
+      "size": 509
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v007.yaml",
+      "sha256": "1ff8d5c063cbdd899363cab62f27d769299acafbea6215b948fc62329dff518f",
+      "size": 523
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v009.yaml",
+      "sha256": "e0eaf838a56e89571f3d1d2647185e09281a42ab5b32def61416baf83cd085a5",
+      "size": 379
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v010.yaml",
+      "sha256": "8b33120727e8071aa08eeb9bcc2f6df5ab5229405385d9557d3ded71546e868c",
+      "size": 369
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v011.yaml",
+      "sha256": "88457d41247b5e5167cd4e5c451bef4c905dbdf97e9310665157cae13bb3c383",
+      "size": 402
+    },
+    {
+      "path": "registry/assets/zuk_truck/variants/v012.yaml",
+      "sha256": "79a1b4172dc2d1317ce5edc4e952f23a60d3d5a05788e8928ce517da8607a271",
+      "size": 399
+    },
+    {
+      "path": "registry/catalog_groups.yaml",
+      "sha256": "0f86214f52b75295614b8e63413c0671af145249e5127d72e60413c8a5adbc83",
+      "size": 1082
+    },
+    {
+      "path": "registry/components/ev_plinth/_base.md",
+      "sha256": "05c59fd6439b551727d2ce05ce1e92fb26cbf7abe2f3164cbf33f3d5f6c3d5a1",
+      "size": 3453
+    },
+    {
+      "path": "registry/components/ev_plinth/generator.py",
+      "sha256": "2a75c16fdc4389946af694665586e2f180110d2acdb2aafb37c7fa8344f7ed50",
+      "size": 1887
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v001.yaml",
+      "sha256": "bffe870dceca26e64e5dd0533300c35046212998ed81aea87a9678743f3f7f93",
+      "size": 206
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v002.yaml",
+      "sha256": "57e75c548afff06bbe53040c931c2ffab10742f20869c2ee200708deb64373d9",
+      "size": 307
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v003.yaml",
+      "sha256": "dba7188abfe2a36294f42934f0ff53ada71c02d1bda66c956593291b690aeb09",
+      "size": 279
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v004.yaml",
+      "sha256": "40ef5f9453c9b88cf01912b42d08abdf1b1f30f4eb97e9863d355ed1b270db09",
+      "size": 279
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v005.yaml",
+      "sha256": "2f9617f06182d7c133f283a7179a3dcc0ea723a21df48e23417812e78a10ef09",
+      "size": 279
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v006.yaml",
+      "sha256": "f457e36fe7146868b3a18a5d8ede03864ebab8ee90b3a99eefb1916b990e5699",
+      "size": 279
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v007.yaml",
+      "sha256": "772cb6879ed24a3a724373b7351c02463bf927c233420601de93bbf8a60e97e5",
+      "size": 281
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v008.yaml",
+      "sha256": "31e29210cb80eb61141b36b80196aa5903f0c3eb968a245cf2bca0c6c7b87ce8",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v009.yaml",
+      "sha256": "5417dcc595b7d1c3a1a045f2e881dd3d030ac72c74173d9a7e6e37566b571f29",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v010.yaml",
+      "sha256": "707249e7d8d5e29e9cf4e126d3f9e4f4065d76b50dcfcb79b7688b0adf0d625e",
+      "size": 326
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v011.yaml",
+      "sha256": "c368cfa4f1140afb671514c39ca9365c24f62a69bf6a4da8417cfd109f2fb874",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v012.yaml",
+      "sha256": "0e1a6b2870ef41acc2b78966074556f54b89723d92f3658d9722be7b3c0d1934",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v013.yaml",
+      "sha256": "dd65a6ddffe84f8e45e150135e693b713773b1edbd565ea15aee4b8f0fe7e695",
+      "size": 326
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v014.yaml",
+      "sha256": "12cd72e13c298a3f8101eec0ddc3d8480d00212ef5ebc5ee33740a08ccdc8f65",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v015.yaml",
+      "sha256": "50e12fec27df4bb65538c4de873303547d4d4a9f1301d7e5ff1d5176401e3b9d",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v016.yaml",
+      "sha256": "104dc5d2dd08c659b73c99a6a695c61abbe35bcd33cf8529e3738617dabeb699",
+      "size": 326
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v017.yaml",
+      "sha256": "5220f78953253373c18267bf171b7094a2dfd419d7997560389e009c6c64404d",
+      "size": 322
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v018.yaml",
+      "sha256": "b93087b0b4b541218793e533542ce98218e668a2d9af58843db7a38ebe2619c0",
+      "size": 322
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v019.yaml",
+      "sha256": "74054ad6075acd10792d92d785cd78e2971292025f8ae984edd72ab385fdf080",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v020.yaml",
+      "sha256": "048f7b3eb683266c0152874f8bf636999b74e72f21f7ef321f185191cfd6a9e7",
+      "size": 309
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v021.yaml",
+      "sha256": "98c2437ed0a52ede599009cc62ffd308802d651435ba2e76189b561617c2857a",
+      "size": 277
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v022.yaml",
+      "sha256": "ff8d6c7e4fcf52950c7db013823066cb9a9215a16253fe85c3114e83a9068e3c",
+      "size": 277
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v023.yaml",
+      "sha256": "577245fc10b362128f2db1b934bedbf0477826aec7e54618a3d4f5a82c87b655",
+      "size": 277
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v024.yaml",
+      "sha256": "20b66e9454b0ad5ca0ea33b22fe05f4cdefff5ef8dbbb165a0a63c6e33b7f488",
+      "size": 277
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v025.yaml",
+      "sha256": "c1a2f36a30435cdbb52de7c3ff51131b701de9bea20798e5e60cce8be315ad97",
+      "size": 279
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v026.yaml",
+      "sha256": "d0ff5b977bb30910e6b220d2eecfe9f60f84760aac033a2355812e5fef22bd20",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v027.yaml",
+      "sha256": "cd81445e4c0dbd7a206356323c0906e3df353770cd86f896686c9271b1f446cc",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v028.yaml",
+      "sha256": "55d54d24a44e96c9ae48b2a989939aca88f5245ebeabb76dee6a1d565d10de8d",
+      "size": 326
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v029.yaml",
+      "sha256": "7c8c0fc023681e87c63a49b73b8cf4e714ce0f426ce23578bdf9418ad5d9a4ad",
+      "size": 322
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v030.yaml",
+      "sha256": "fb1cc39b5bea1dc3e5fe4349ecccf8e43c9680dbff412a99000174f7447bc62c",
+      "size": 322
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v031.yaml",
+      "sha256": "1f1a01d4ae18fe2e9064e31e350b979c66590f2ed9cd50ccb9b5cce5be90eebd",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v032.yaml",
+      "sha256": "f8d254456dc0bfa90e27e718eac3a9d970ea7783c32e11cc15ccdd2cb3c572bf",
+      "size": 322
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v033.yaml",
+      "sha256": "cb0b7bc980d9b046c03f0fef18062b9e258d59d43b298816446f5a4ed5989196",
+      "size": 322
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v034.yaml",
+      "sha256": "2b1fe8f8f859e610f100e5de80d9ad899d2e644fa5abe7180723d38b225c6cf6",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v035.yaml",
+      "sha256": "60a2f570867e6147955b7e60d996449b807cbe8daafc4590b635e78805b3bff3",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v036.yaml",
+      "sha256": "65215576530809674d7f1232084c05eb0069398d016f6bfa6b9c94347e17bcd7",
+      "size": 324
+    },
+    {
+      "path": "registry/components/ev_plinth/variants/v037.yaml",
+      "sha256": "dc0011dd664d3b40d417fcb0e5eaf1b76d59da9d71a9912b2a165fb5d509d454",
+      "size": 326
+    },
+    {
+      "path": "registry/components/mt_cabin/_base.md",
+      "sha256": "c186e41fc857d145b4793e455c584b5d16fe64d3906587a4cff48fcaaaefcb4e",
+      "size": 1856
+    },
+    {
+      "path": "registry/components/mt_cabin/generator.py",
+      "sha256": "8e09e63ac5af91300002895ae8d890d94199f3da18cccc142157d8d26d9bfdc4",
+      "size": 8395
+    },
+    {
+      "path": "registry/components/mt_cabin/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_cabin/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_cabin/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_cabin/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_cabin/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_cargo_box/_base.md",
+      "sha256": "929a723b329e5e9aea370d986bb72ecd6009b298c8bbed2634204f7ea681b1bd",
+      "size": 1692
+    },
+    {
+      "path": "registry/components/mt_cargo_box/generator.py",
+      "sha256": "df3f3611acf718e8ea9039d304ace41d9663ae4ab8ce5d05bb502ec23bd4a53b",
+      "size": 5876
+    },
+    {
+      "path": "registry/components/mt_cargo_box/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_cargo_box/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_cargo_box/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_cargo_box/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_cargo_box/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_chassis/_base.md",
+      "sha256": "c812e879aa44fa23cbbcda53e02adf0d34fa0971341fa91d330d286a62cddc92",
+      "size": 2822
+    },
+    {
+      "path": "registry/components/mt_chassis/generator.py",
+      "sha256": "68d8198bcc973463aa21fb2cf7071258865d82529ca680fd2eb6d6b90c4e5713",
+      "size": 3660
+    },
+    {
+      "path": "registry/components/mt_chassis/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_chassis/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_chassis/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_chassis/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_chassis/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_exhaust/_base.md",
+      "sha256": "b122b11c9f81c361fb871cbc6d77e2313c7da167785fe9a705f6b326d0e8dcec",
+      "size": 1244
+    },
+    {
+      "path": "registry/components/mt_exhaust/generator.py",
+      "sha256": "fd825e6f67103150322e3949f3624247533e98f3fae601e98ff7f316735dcc7a",
+      "size": 3206
+    },
+    {
+      "path": "registry/components/mt_exhaust/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_exhaust/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_exhaust/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_exhaust/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_exhaust/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_tank/_base.md",
+      "sha256": "0d73afd3d608e06cfcfbc78fc48f83e46be7d0902a0b48ce6bb632732f42208b",
+      "size": 1145
+    },
+    {
+      "path": "registry/components/mt_tank/generator.py",
+      "sha256": "40e31787753854a1cfbbec27d7537d4f7ca950bcfb5789aff94124344d3b45af",
+      "size": 2083
+    },
+    {
+      "path": "registry/components/mt_tank/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_tank/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_tank/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_tank/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_tank/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_toolbox/_base.md",
+      "sha256": "f2fa040d21f5885e27f5aaf2ac665dc18c82bb9de118eb51f57ce6a442ccce9d",
+      "size": 1219
+    },
+    {
+      "path": "registry/components/mt_toolbox/generator.py",
+      "sha256": "743c1798e4423fdf8f38b8f2cf3d05d90ccc2aaf5060a562b01845b0565d64c9",
+      "size": 2727
+    },
+    {
+      "path": "registry/components/mt_toolbox/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_toolbox/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_toolbox/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_toolbox/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_toolbox/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_wheelset/_base.md",
+      "sha256": "f791870a75237a39b4109c7431e320154b43fe19a91824223d28cf52659ffd83",
+      "size": 1618
+    },
+    {
+      "path": "registry/components/mt_wheelset/generator.py",
+      "sha256": "b9d0aebbfa3271331c5772d3d3d5eafea80b67ae1435e986ab8ba075d461a721",
+      "size": 3326
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v001.yaml",
+      "sha256": "dd4c5e5e06daf6fa15003907b579975650abc4046f2d3d6cd53f83b9e47ac00f",
+      "size": 174
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v002.yaml",
+      "sha256": "8ac2c1a400f3024c249862c74dfc5b93be899ea0ec9b67c09f143d82a7b8ece4",
+      "size": 164
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v003.yaml",
+      "sha256": "d756df559677ecb2f555a9d2ce0bfbb01132a58ae8353eebb8c33e4d4cbb0a9f",
+      "size": 209
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v004.yaml",
+      "sha256": "479f8782736d88d0a0a3cf61b361221c954bbbf5f9aad860b8d7b733ff80b3cd",
+      "size": 182
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v005.yaml",
+      "sha256": "5b016c2812b180b05cb8ad42361d8b67270f895b60129075d829bf6b7df78fea",
+      "size": 241
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v006.yaml",
+      "sha256": "b9fa29a25bf3f5b82dd428e7075e2c30f9249708388fc21c85faeab5c7340537",
+      "size": 200
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v007.yaml",
+      "sha256": "ecc9baf12dd772f063714afe44ad9132a2e3a26a322dd45444f95767c1b121b3",
+      "size": 203
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v008.yaml",
+      "sha256": "03f270d2cccbef6cac4e469f0edd39460f4bc05064ba50ed86b7802fd05dac13",
+      "size": 202
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v009.yaml",
+      "sha256": "fa74fa085fe1cef87c09bc689778cc2cb52e5dd1e5e60aaeeb8f5aeaf2fbc11d",
+      "size": 199
+    },
+    {
+      "path": "registry/components/mt_wheelset/variants/v010.yaml",
+      "sha256": "39b10fe565e907fc1d6bfcfc03ea8b2d3962a6365d29054b965961f8aae4f66b",
+      "size": 197
+    },
+    {
+      "path": "registry/components/td_barrel/_base.md",
+      "sha256": "50880966df0c82390ad970036aee0abcd3c9e01867fc4e6b4512201130e5a85e",
+      "size": 1614
+    },
+    {
+      "path": "registry/components/td_barrel/generator.py",
+      "sha256": "2dbe27a587d3345d7b0f9434f25f8b53e2760459d3aa6461228027ece8f32434",
+      "size": 1485
+    },
+    {
+      "path": "registry/components/td_barrel/variants/v001.yaml",
+      "sha256": "2e924ba4c2e621987037165d3503797a4f1cc532e37b313562276ccc4d7aa026",
+      "size": 220
+    },
+    {
+      "path": "registry/components/td_barrel/variants/v002.yaml",
+      "sha256": "217d648337c42e769a87e32a29757965e33bdb61c1a94dc1b7b3dc833a410916",
+      "size": 281
+    },
+    {
+      "path": "registry/components/td_base/_base.md",
+      "sha256": "1eb38f73962332c5cb55ff56a17ab8e8d9d3e4183dcc6e9f51f3b49d60f1fb6c",
+      "size": 2442
+    },
+    {
+      "path": "registry/components/td_base/generator.py",
+      "sha256": "1fc303837c2dc11c1695c60b3eaaf6d3503e5fb7734ba5d0163772b36d6d67ef",
+      "size": 2720
+    },
+    {
+      "path": "registry/components/td_base/variants/v001.yaml",
+      "sha256": "0f33f3abc8048632fa536b787f311bb01c5ed5631668a87358ac858ed3f7c619",
+      "size": 221
+    },
+    {
+      "path": "registry/components/td_base/variants/v002.yaml",
+      "sha256": "c7914184d9659fe3b5e73b6ad53442a6cba7efe1d2c08e8ec8f0da421042e414",
+      "size": 290
+    },
+    {
+      "path": "registry/components/td_base/variants/v003.yaml",
+      "sha256": "617ab145cfda1fadf15bd658b98aa18888933fd07d0b5f39df9660a8ebe82cbe",
+      "size": 194
+    },
+    {
+      "path": "registry/components/td_body/_base.md",
+      "sha256": "86a5984a57879475f86223d81b7de741dac1e25c4b57a47bd4a99e93b06d9919",
+      "size": 3152
+    },
+    {
+      "path": "registry/components/td_body/generator.py",
+      "sha256": "0cd50feb2a11fa98c8275be0d32887af8c83cd19f43d4facab1ba0c1b53b3273",
+      "size": 2658
+    },
+    {
+      "path": "registry/components/td_body/variants/v001.yaml",
+      "sha256": "1cb073d851ae9befdd223cf0deaf4a79610fb1e5d98ba7ecb7667139f4fe0344",
+      "size": 157
+    },
+    {
+      "path": "registry/components/td_body/variants/v002.yaml",
+      "sha256": "474658ddfe2d2bb9b69dbbae3dec54dad4179e8668b53ea765b271f2531e5728",
+      "size": 224
+    },
+    {
+      "path": "registry/components/td_body/variants/v003.yaml",
+      "sha256": "e9c4bef6abfdd3f5d93895b19f8bb8a84c41335c0a83aba0c1991a069286e045",
+      "size": 266
+    },
+    {
+      "path": "registry/components/td_body/variants/v004.yaml",
+      "sha256": "f4c6efe3aa2168b3c6aadf51892d16ba7c0ffa07d0fa33feff8eab3dcc143584",
+      "size": 283
+    },
+    {
+      "path": "registry/components/td_body/variants/v005.yaml",
+      "sha256": "2420d0fc0ca18a51844ae6e89d4a2b740603aee0b5338b259ca3b4cc59ffb35f",
+      "size": 262
+    },
+    {
+      "path": "registry/components/td_body/variants/v006.yaml",
+      "sha256": "0434f3d24235aecc30b48bebce7721ab1e66a38bfae43dd26c6a777b04c51316",
+      "size": 246
+    },
+    {
+      "path": "registry/components/td_body/variants/v007.yaml",
+      "sha256": "c38092ddff7b92bddd802834f0df3f893944ea61450de8d773a67e35b5608e55",
+      "size": 259
+    },
+    {
+      "path": "registry/components/td_body/variants/v008.yaml",
+      "sha256": "ad56eb4b7fe45aef09bae14e06a8a0caa18b6ad6f9e7f571f4309f501e34470b",
+      "size": 285
+    },
+    {
+      "path": "registry/components/td_launcher/_base.md",
+      "sha256": "39810adc74d9f8caead246457d4d2217fe39f9ff0c2ff3789738cff117b9df85",
+      "size": 1312
+    },
+    {
+      "path": "registry/components/td_launcher/generator.py",
+      "sha256": "2176f902ed72683d1409c988ead7bdd113d3a1f4aa3bac58f5d97f0885974a5a",
+      "size": 1623
+    },
+    {
+      "path": "registry/components/td_launcher/variants/v001.yaml",
+      "sha256": "a279f0943dd43f98014c44a0aa11da37bb229a3da6fa2f502c8b0e5312dc7896",
+      "size": 149
+    },
+    {
+      "path": "registry/components/td_leg/_base.md",
+      "sha256": "2fc48aec5767b17e7700c396a0abfaecc079ea04a3c34a37274bada0111379d8",
+      "size": 1362
+    },
+    {
+      "path": "registry/components/td_leg/generator.py",
+      "sha256": "2b5e116d092672ceb9e346cc5ff7271cd4f9190abb51b3055abc90a793fa77fe",
+      "size": 1152
+    },
+    {
+      "path": "registry/components/td_leg/variants/v001.yaml",
+      "sha256": "b485668b6ce1c10e1c614a992eed47f4a36bff1246b942ca5082d605f098ed4c",
+      "size": 184
+    },
+    {
+      "path": "registry/components/td_leg/variants/v002.yaml",
+      "sha256": "5ff455218d66dcfcb623679940981222139966e2d7ca908405c4cc8a5f18eb8c",
+      "size": 220
+    },
+    {
+      "path": "registry/components/td_leg/variants/v003.yaml",
+      "sha256": "16b9202942934c9e72275538571a56751ed920ac6506be0eb21777751e3939b6",
+      "size": 243
+    },
+    {
+      "path": "registry/components/td_leg/variants/v004.yaml",
+      "sha256": "d9956a269d64c4f49611470c27141f8d7dcfe7e48ab8bd4936915b4cbfed9fa6",
+      "size": 242
+    },
+    {
+      "path": "registry/components/td_light/_base.md",
+      "sha256": "6b9c8a87a3a0d16ad254033805b389a3e898862003f5446d4c7a625cc80192d1",
+      "size": 1034
+    },
+    {
+      "path": "registry/components/td_light/generator.py",
+      "sha256": "1c43dc8c4c00a4989a525ee30641bb7703f6f6818bf81ad66d6315b19c953d66",
+      "size": 916
+    },
+    {
+      "path": "registry/components/td_light/variants/v001.yaml",
+      "sha256": "f23ea6ec45617878da689e2f762630ee443825f5f656c4fa3dd6137d5d2fa6a9",
+      "size": 224
+    },
+    {
+      "path": "registry/components/td_light/variants/v002.yaml",
+      "sha256": "440e7459690293877ef128808ee6da9a791fa1e92ab437b34d70e058fdccc8ad",
+      "size": 215
+    },
+    {
+      "path": "registry/components/td_light/variants/v003.yaml",
+      "sha256": "775c1d8dd02d1e6c9a76a4c0b33638840a9741fab078461e205ba4c6cf03f006",
+      "size": 203
+    },
+    {
+      "path": "registry/components/td_light/variants/v004.yaml",
+      "sha256": "6ac694e315404b600984e457974c9f6752ee02de73dc08f7b16b1b09b95d3092",
+      "size": 220
+    },
+    {
+      "path": "registry/components/td_panel/_base.md",
+      "sha256": "8207388bc1211c24bc1a17ca049c2603a259ed8ab1a39988481ce2f666568f73",
+      "size": 1842
+    },
+    {
+      "path": "registry/components/td_panel/generator.py",
+      "sha256": "4fc27c6eaba6f4ae2b88398f95bb798346971b7c40b48120b89d9af261b27bc7",
+      "size": 1110
+    },
+    {
+      "path": "registry/components/td_panel/variants/v001.yaml",
+      "sha256": "fd1f56730e7f9eccc0032fec8b307da7bd5abc9a0454defc46942b34d9d83b49",
+      "size": 164
+    },
+    {
+      "path": "registry/components/td_panel/variants/v002.yaml",
+      "sha256": "1c6c144ebcbbb97af0a21f96aa9d1ab7717da72945db2cc6a0624d3a0be8ee80",
+      "size": 280
+    },
+    {
+      "path": "registry/components/td_panel/variants/v003.yaml",
+      "sha256": "653a69ebbbcf7d59ad9a95b5bb7500abc7b2ed100384de321fb9fee26764afc2",
+      "size": 298
+    },
+    {
+      "path": "registry/components/td_pedestal/_base.md",
+      "sha256": "ec1f06c700e5e8f15326bc614b9aa87d9bcb0732712210c09b1178254fd14cb9",
+      "size": 1896
+    },
+    {
+      "path": "registry/components/td_pedestal/generator.py",
+      "sha256": "1a2ced7bf7be5770187a9bf93083fb7166fbf3c95dce6b1778573ad408d57ee3",
+      "size": 1505
+    },
+    {
+      "path": "registry/components/td_pedestal/variants/v001.yaml",
+      "sha256": "831fbbe53e6a717abe75d0fc0863dd42c6e4fc4fa044f1478219c4179599990f",
+      "size": 176
+    },
+    {
+      "path": "registry/components/td_pedestal/variants/v002.yaml",
+      "sha256": "a7de51deec811f6e18dd3c1198896bb150d71dc31484e29979e77204adaee1c0",
+      "size": 221
+    },
+    {
+      "path": "registry/components/td_pedestal/variants/v003.yaml",
+      "sha256": "82b70ed2b1cefe90558cfe7c6f5def5d15896aa3ef74a1e3a9205006a84ff97a",
+      "size": 273
+    },
+    {
+      "path": "registry/components/td_ring/_base.md",
+      "sha256": "407c94688ca4ea218aaf70824e14e1466094b930d70e454b69490e0200c03988",
+      "size": 1188
+    },
+    {
+      "path": "registry/components/td_ring/generator.py",
+      "sha256": "d2617fbe1ea358a85f21c13778b5236a29947146f56648856a95437bac82c7ac",
+      "size": 978
+    },
+    {
+      "path": "registry/components/td_ring/variants/v001.yaml",
+      "sha256": "c8bc14a288d6780aec105fe2673a1529e7aabf37b4d445d24c5579332ed9e314",
+      "size": 171
+    },
+    {
+      "path": "registry/components/td_ring/variants/v002.yaml",
+      "sha256": "739d95b8d26afdcf89d54d092bd43baaaa96f2f09e4a07d5f8605137ab7974ea",
+      "size": 233
+    },
+    {
+      "path": "registry/components/td_sensor/_base.md",
+      "sha256": "595af7145a107480cddfdbdfa7f1011266110363a6f39cccc13c32f59938d70e",
+      "size": 1174
+    },
+    {
+      "path": "registry/components/td_sensor/generator.py",
+      "sha256": "58ee84a93dbb1f5076c14a490898843d7ca70f64b9649f09a9d8cab58fd3c9ea",
+      "size": 1009
+    },
+    {
+      "path": "registry/components/td_sensor/variants/v001.yaml",
+      "sha256": "e060ba6e59423753f6301cd5bb345f2471e64ec3a15f81288dcd3cb2b31802b9",
+      "size": 140
+    },
+    {
+      "path": "registry/components/td_sensor/variants/v002.yaml",
+      "sha256": "8eb70d204a1ea080d854534a9474db8e38ec14e426907f1a74d90feedb554507",
+      "size": 209
+    },
+    {
+      "path": "registry/components/td_sensor/variants/v003.yaml",
+      "sha256": "d766fab4b9890a6f50a7c7df3273e624a2520f034a87206bf6c0be8420bdff09",
+      "size": 203
+    },
+    {
+      "path": "registry/components/vh_heli_light/_base.md",
+      "sha256": "6d411472c65c57b0f387857c0b3c3bf32a9e6f399d2231944069b4b4e31bfdd0",
+      "size": 3774
+    },
+    {
+      "path": "registry/components/vh_heli_light/generator.py",
+      "sha256": "72eecd7bb966b04e62f104fb47f23d03b8458abc9d69a9fcc72944a6a6624b20",
+      "size": 12531
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v001.yaml",
+      "sha256": "8fe7a60f61cb61c2357f0b1e4470af9b80d28e2646fd576a5571bf39844c42a0",
+      "size": 288
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v002.yaml",
+      "sha256": "2fea4157551b6046aeae46604ad1f6bc73c08acaf56263efa355bea097123939",
+      "size": 337
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v003.yaml",
+      "sha256": "e85c941a2deb64e1f8728285931d6a2c8aa02a2ee6041d2af1ced18a3590605a",
+      "size": 329
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v004.yaml",
+      "sha256": "e5fca7e64bc1f2a88ddf5769e8bdb1751684e7e5d4ecbae873c7328fe2b2dd22",
+      "size": 306
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v005.yaml",
+      "sha256": "8cc0d963e1fc7c87ce9814e8439913979e696d028f6f6e494a56ab4a3f0ad60f",
+      "size": 290
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v006.yaml",
+      "sha256": "7490da20f881a4fe41291e766af48afe4a6aa88e8e50d97c3abf25ed4047c96e",
+      "size": 209
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v007.yaml",
+      "sha256": "36c1ef6ec4e5c47500a4a9bc0240b04631ca205f6fadc017253b6c1f992b3767",
+      "size": 209
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v008.yaml",
+      "sha256": "92daf18d94c5b04550b4e102e88f8b5d820b587d0762731bbca7a99364302fca",
+      "size": 209
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v009.yaml",
+      "sha256": "fef68f9dd505052d398f213465a6833d9f9c1830e7a113cc52b548a0d423a833",
+      "size": 213
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v010.yaml",
+      "sha256": "c735605b091a40f13d7eb495e9d7d99b9ed7493cfe55e0484ef533f4f3a92d42",
+      "size": 213
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v011.yaml",
+      "sha256": "87e0a41c8d1149b800579576c75860e97f9a2a8107205fd7fa6aa84a0006b75f",
+      "size": 213
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v012.yaml",
+      "sha256": "e185aa3ead92ad042cff6e532c3e8f60fc8ece2cf4fc5e8bc0f6baf32ea39f35",
+      "size": 222
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v013.yaml",
+      "sha256": "c9ca155f5615ac34797df63d88bac02e6df57678dbcd7fdf491322e6d11f2b82",
+      "size": 222
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v014.yaml",
+      "sha256": "d01343bece486b1beb76c2d48b8f407bfe42849f3ba90bf0089707e04377242c",
+      "size": 222
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v015.yaml",
+      "sha256": "0a43c36a2885f25e0f3a19d2ffd88064a091d4ffadfc47b189fd151e73f7426e",
+      "size": 209
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v016.yaml",
+      "sha256": "919c475b3645c36f241d9c0493e89dc85bf5e0f1658c67cf6d94f6659a0001c6",
+      "size": 209
+    },
+    {
+      "path": "registry/components/vh_heli_light/variants/v017.yaml",
+      "sha256": "2a91557b6d3bbf3c67edfd534e04f6596ed379a9b671d137ba5181dd134e30e0",
+      "size": 209
+    },
+    {
+      "path": "registry/components/vh_truck/_base.md",
+      "sha256": "0f0ff154a37635d80eebb58ce610aa690856c28a163254a31b4c9ad9e3df730d",
+      "size": 4896
+    },
+    {
+      "path": "registry/components/vh_truck/generator.py",
+      "sha256": "4a64c250160d43f9adee2c8c9d13d02a6b37b660c51650a4edb60488cde37f8a",
+      "size": 19835
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v001.yaml",
+      "sha256": "376179e48bfa8d36a22a7da02fd53627d340fddbe3897de54a89fd8cd7e77b12",
+      "size": 240
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v002.yaml",
+      "sha256": "5a56eb654c4395930a1a9f44d0e38e1f603141aa2ac5c22138d814d996c9da3f",
+      "size": 375
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v003.yaml",
+      "sha256": "5e809cf411b226548a6f545b474210969ff9bd68c9b4d8ba99f9cbc770e54b9d",
+      "size": 397
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v004.yaml",
+      "sha256": "c5d39bee8f165b9e049c8fdb24c31430be3ffe5cfe74533f9a4d904822785e49",
+      "size": 343
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v005.yaml",
+      "sha256": "6d384e3a0b49d60eab58079621b96c916d139116568f0c1108bd5883de9c574c",
+      "size": 341
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v006.yaml",
+      "sha256": "c8e974cb80400f9589f13f787a20a4120ecc4b277238c7af849e84031b86d44a",
+      "size": 188
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v007.yaml",
+      "sha256": "8b8e4665d0682964489c844ce466f00615571cc9508e09dc6941a58bfd654a78",
+      "size": 188
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v008.yaml",
+      "sha256": "4daf42b75836dfa9982b2a7ffd4c39e462bcf8f6b8ce2085eaf48de9f4e854c6",
+      "size": 188
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v009.yaml",
+      "sha256": "5c3e2e6b6fde0531325229965ea255e55ebf1864f866ccd470e512e10a738ead",
+      "size": 200
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v010.yaml",
+      "sha256": "1648d95cb51ea1dabf79ba0c34cc1375be9a3c79fa4b214646a2201716cc5e75",
+      "size": 200
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v011.yaml",
+      "sha256": "d46f7e417b545e4a4312188ca9fc1507cd1a995abf2951db876fb7a139312ea4",
+      "size": 200
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v012.yaml",
+      "sha256": "ece44c59d2f14233a8ac799b5528ad418422bac58a60ad8ec1e34459b20b5dd7",
+      "size": 214
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v013.yaml",
+      "sha256": "e6616e93b0c5a9213dddfe224afeb402ecb0a64a33e034a308db0153bbf5fa8f",
+      "size": 214
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v014.yaml",
+      "sha256": "5f2f72a922c72857895c7dace1f0230aa416d64fc232b1c6808db985a71dd3ba",
+      "size": 214
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v015.yaml",
+      "sha256": "8bdebb255600699e11d7085c6367670a8742503e9d955f2eb9126ebe2627a452",
+      "size": 205
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v016.yaml",
+      "sha256": "35d67a144f4fd69bad0232e53772dc35b85911280f7138fe5835d0aaf64b94c9",
+      "size": 205
+    },
+    {
+      "path": "registry/components/vh_truck/variants/v017.yaml",
+      "sha256": "a192e865b481533f70658b5c1db8b6fea517ec21b3d8dd3ece012a71f21b456d",
+      "size": 205
+    },
+    {
+      "path": "registry/components/zk_axle/_base.md",
+      "sha256": "5741b663528c4c5700ceb1c49816f0808654364343e871d1b5d599664be3e540",
+      "size": 5400
+    },
+    {
+      "path": "registry/components/zk_axle/generator.py",
+      "sha256": "b36744d991452983b1894a66390bdcd4a59b2b06b21042a3066d7f4e2ba1b6d0",
+      "size": 161
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v001.yaml",
+      "sha256": "2505bd3f673a26bc20d914bd38b64c318acea409822a21327a440a8948db6284",
+      "size": 256
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v002.yaml",
+      "sha256": "b7241951532332ea0cc2c0a69e7f79f8bf5adf5e1c2b7b144554ec32a13a05fa",
+      "size": 261
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v003.yaml",
+      "sha256": "b60a68596bcadf4d9efdad9dfa04f2a7342cd7238c17fe619d6cb3457297c352",
+      "size": 327
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v004.yaml",
+      "sha256": "7cab1642a6246d28786af1a773c8a75352c940c63839b442e8483a2aa01371ce",
+      "size": 282
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v006.yaml",
+      "sha256": "5b2e456b117a235efd0f3b89471250286a5a7666097818e9d81fefe77acb8a4f",
+      "size": 272
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v007.yaml",
+      "sha256": "ade18f03769628d3c190cf9bfc353a481164f7d01b79f6ce103fbe9f0b3051af",
+      "size": 265
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v008.yaml",
+      "sha256": "8fa56a5543a883c6d61b16053f271390449393d0b970c85738baefe82be042c7",
+      "size": 313
+    },
+    {
+      "path": "registry/components/zk_axle/variants/v009.yaml",
+      "sha256": "199300e7df55d9fe0613dd7f0503a220ad43b780ff2921ea2f68f2471b339e8b",
+      "size": 301
+    },
+    {
+      "path": "registry/components/zk_body/_base.md",
+      "sha256": "e2449b9aad3405de0aa1b20cf140b2048deebc563bd420cb750804f593dfae50",
+      "size": 5591
+    },
+    {
+      "path": "registry/components/zk_body/generator.py",
+      "sha256": "7da31dfd6bb2f9e3f75e292e12980f208f343e75f145748f8d430b2c07600913",
+      "size": 7201
+    },
+    {
+      "path": "registry/components/zk_body/variants/v001.yaml",
+      "sha256": "0ba1b69d1b65b32b26827717d29bc2f010be63f7f388156f77333ac8d82963dd",
+      "size": 277
+    },
+    {
+      "path": "registry/components/zk_body/variants/v002.yaml",
+      "sha256": "a071b0cab6530272d9ed96470a287882ac478136c9538394333ffcc3b9a15f15",
+      "size": 307
+    },
+    {
+      "path": "registry/components/zk_body/variants/v003.yaml",
+      "sha256": "6b211e59e43183589a5074b1ab77c82fde8d084e65790dff4bd9f07acd1a22a8",
+      "size": 316
+    },
+    {
+      "path": "registry/components/zk_body/variants/v005.yaml",
+      "sha256": "79cfa049cf6d772b2432157a4439d889b2046e7d7ca7fd26550e7a6bdb3edbba",
+      "size": 383
+    },
+    {
+      "path": "registry/components/zk_body/variants/v006.yaml",
+      "sha256": "1615200f19106d0268e7c447f78fda51a71afad7ae883f270c46c0f02c239abc",
+      "size": 383
+    },
+    {
+      "path": "registry/components/zk_body/variants/v007.yaml",
+      "sha256": "1702145b4f0e0ed8f695ed5a9b12b0593b345b068189a00892f5ea6cb10957f2",
+      "size": 379
+    },
+    {
+      "path": "registry/components/zk_body/variants/v009.yaml",
+      "sha256": "e957fdcbf6331ea59275efee26a2c7fee8ca762900288dbfe0d61e3657120eda",
+      "size": 444
+    },
+    {
+      "path": "registry/components/zk_body/variants/v010.yaml",
+      "sha256": "eb2ec8102c280e4c323d2122881c89447924d217751f749b446275f96512dfd7",
+      "size": 428
+    },
+    {
+      "path": "registry/components/zk_body/variants/v011.yaml",
+      "sha256": "754ae46c27353bb0955b8ede2114853c92c60f234fcb57c5ece6880d20245488",
+      "size": 393
+    },
+    {
+      "path": "registry/components/zk_body/variants/v012.yaml",
+      "sha256": "982dca4bd0efcc31af1eb448c0c5b081fb44e7909b9a0a83a3ba144c35efd723",
+      "size": 408
+    },
+    {
+      "path": "registry/components/zk_cab/_base.md",
+      "sha256": "874fc46ce1da88ed637607379524a03948fa7e26aa5916bc03cde443c626d503",
+      "size": 5608
+    },
+    {
+      "path": "registry/components/zk_cab/generator.py",
+      "sha256": "e7b112761889d1c07b7b0436fd2a654fee24b3b5b149e06a8a7d52d28958fe7e",
+      "size": 9723
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v001.yaml",
+      "sha256": "0ba1b69d1b65b32b26827717d29bc2f010be63f7f388156f77333ac8d82963dd",
+      "size": 277
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v002.yaml",
+      "sha256": "a071b0cab6530272d9ed96470a287882ac478136c9538394333ffcc3b9a15f15",
+      "size": 307
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v003.yaml",
+      "sha256": "6b211e59e43183589a5074b1ab77c82fde8d084e65790dff4bd9f07acd1a22a8",
+      "size": 316
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v004.yaml",
+      "sha256": "e80cbf041e3ce6eb54f26e2aed0526f2be0cdbd30b1b52012915f31ea15826ba",
+      "size": 379
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v005.yaml",
+      "sha256": "2a2f5ed1f02b5009a28a0e38e8ba6b963b2f3416bac4345bf33ee779c8a48ace",
+      "size": 383
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v006.yaml",
+      "sha256": "cc2a0d55b9fb511fce67f2c5146fade7a61545e5fdfa2fc2554672c994901652",
+      "size": 379
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v007.yaml",
+      "sha256": "86abcaae952afbafd29b5b1f78ff8949572caa25f82a33179e0d5a5aa1e25044",
+      "size": 451
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v008.yaml",
+      "sha256": "d51153492bb9a370885778dc2548bed06c6f07ba92f6b875319125196ba8ac57",
+      "size": 452
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v009.yaml",
+      "sha256": "a8ebfc9a515a710c27c0b2a1b1a260c4ac6aec56fa93dadeced158913324d41f",
+      "size": 372
+    },
+    {
+      "path": "registry/components/zk_cab/variants/v010.yaml",
+      "sha256": "1c7caeb23c177d4171bde7111fc13bf2bd8f5e4b2b8d3783d13359b5fbb3d1a4",
+      "size": 425
+    },
+    {
+      "path": "registry/components/zk_chassis/_base.md",
+      "sha256": "bb4243b1e56236d0f65740b717838117702b46b20c0f071c965ff505eca8056b",
+      "size": 3872
+    },
+    {
+      "path": "registry/components/zk_chassis/generator.py",
+      "sha256": "1f4eb21e6cb8a84fa2db92bf5595dd1ee34df749325cdea47da70052de553857",
+      "size": 3154
+    },
+    {
+      "path": "registry/components/zk_chassis/variants/v001.yaml",
+      "sha256": "0ba1b69d1b65b32b26827717d29bc2f010be63f7f388156f77333ac8d82963dd",
+      "size": 277
+    },
+    {
+      "path": "registry/components/zk_chassis/variants/v002.yaml",
+      "sha256": "a071b0cab6530272d9ed96470a287882ac478136c9538394333ffcc3b9a15f15",
+      "size": 307
+    },
+    {
+      "path": "registry/components/zk_chassis/variants/v003.yaml",
+      "sha256": "6b211e59e43183589a5074b1ab77c82fde8d084e65790dff4bd9f07acd1a22a8",
+      "size": 316
+    },
+    {
+      "path": "registry/components/zk_chassis/variants/v004.yaml",
+      "sha256": "eea3f78ac86b4bf2afd4f39d7c4111c9396e893207d052a26fc88cae8f0b228e",
+      "size": 383
+    },
+    {
+      "path": "registry/components/zk_chassis/variants/v005.yaml",
+      "sha256": "2a2f5ed1f02b5009a28a0e38e8ba6b963b2f3416bac4345bf33ee779c8a48ace",
+      "size": 383
+    },
+    {
+      "path": "registry/components/zk_chassis/variants/v006.yaml",
+      "sha256": "cc2a0d55b9fb511fce67f2c5146fade7a61545e5fdfa2fc2554672c994901652",
+      "size": 379
+    },
+    {
+      "path": "registry/components/zk_lamp/_base.md",
+      "sha256": "c72482a38cf9aa2c55ad53d534a18d6ec9268d4ae7145115c10bfdeef8286834",
+      "size": 2828
+    },
+    {
+      "path": "registry/components/zk_lamp/generator.py",
+      "sha256": "484d8341fab71286845abcf96e759b1e33bf0410670134b2c2b4a41096df965c",
+      "size": 233
+    },
+    {
+      "path": "registry/components/zk_lamp/variants/v001.yaml",
+      "sha256": "444d26e245f305286cef50a81ebf2b8b55070cc7ab5484ed73e04acd2c7b3d84",
+      "size": 283
+    },
+    {
+      "path": "registry/components/zk_lamp/variants/v002.yaml",
+      "sha256": "11cdd4d7a6d90db106dcffd4e7d95f84978fd42448ef640ec7f84f3da3ccddf2",
+      "size": 315
+    },
+    {
+      "path": "registry/components/zk_lamp/variants/v003.yaml",
+      "sha256": "9e30726c824a6188d06c489e47d459d5a9313f48bb5cd1e4a19d5717fca52eab",
+      "size": 312
+    },
+    {
+      "path": "registry/material_presets.yaml",
+      "sha256": "c5e1e0aad4b41469daddebd5473e442f77eed99110b0370cbb3129d5f0ad7c05",
+      "size": 12276
+    },
+    {
+      "path": "registry/materials/toon/_base.md",
+      "sha256": "3b18b5ef5b8dd53454308246611e83c767b51871e9a8a5581f04403dd45d7f33",
+      "size": 3789
+    },
+    {
+      "path": "registry/materials/toon/blender.py",
+      "sha256": "7ad4296ca3b584c3e854a237b5fea4412e459f72ea749a217e12c27f423027bc",
+      "size": 8724
+    },
+    {
+      "path": "registry/materials/toon/toon.gdshader",
+      "sha256": "104dd181772bb93af2eb4422d098d0e04194953c6a4c65c4bd7d6757727a3432",
+      "size": 2536
+    },
+    {
+      "path": "registry/materials/toon/toon_outline.gdshader",
+      "sha256": "970cfe4e98966c243ed7f08997c415c51b5ae6102cb8115e030557b119215e89",
+      "size": 825
+    },
+    {
+      "path": "registry/materials/toon/toon_screen_outline.gdshader",
+      "sha256": "d5eb001598e43d9c5deff9d75781565557b63cc1d0ab9617eb8b3d89eaa0a357",
+      "size": 1515
+    },
+    {
+      "path": "registry/materials/toon/variants/v001.yaml",
+      "sha256": "46e177ca7eb8798ef24a24065a8a15dc10620f6df818d79070553b71d4722871",
+      "size": 201
+    },
+    {
+      "path": "registry/materials/toon/variants/v002.yaml",
+      "sha256": "ccb5ea8993a60f454ec6431b7cc6e96922ea9d09f0cd4cabb1d33743503566a1",
+      "size": 324
+    },
+    {
+      "path": "registry/materials/toon/variants/v003.yaml",
+      "sha256": "dd0342ed501d077aee5fabff7cbe0d2ad1bcc2e54dacebcc2c16d4bc83f7bda0",
+      "size": 335
+    },
+    {
+      "path": "registry/materials/toon/variants/v004.yaml",
+      "sha256": "bb22834a94d464875de5075100abfd315e1f1f30f15e34f636e97438e6bd29ca",
+      "size": 348
+    },
+    {
+      "path": "registry/materials/toon/variants/v005.yaml",
+      "sha256": "3c6fe6d35028634cb6254ebca5c970fe30d616160e30f669b3905bb7a66b1393",
+      "size": 238
+    },
+    {
+      "path": "registry/materials/toon/variants/v006.yaml",
+      "sha256": "6b62ef377e3630ec7b3a6082297c8403b6fe3f0fccf6183387911a810f01bcd6",
+      "size": 231
+    },
+    {
+      "path": "registry/palette.yaml",
+      "sha256": "8359c97198653b31c40f05404cc83b2a05730c04ca20a71bc916f00c4ccdedfb",
+      "size": 2307
+    },
+    {
+      "path": "release/starter-packs.yaml",
+      "sha256": "05fa93cd67ec6b947ec7c952fc63e75f6656d1ad045c19fe9fa13c352bd3fc5b",
+      "size": 2089
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "d8051f37f45da475d5b993671bf8c0e87d980a5bcd5ca9aa3e7e3ce99079e1d3",
+      "size": 48
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "61ffe9ed4c22b47b37a85367a544c9a83028bb1badf10df43abba9551b8d52bd",
+      "size": 184
+    },
+    {
+      "path": "run.sh",
+      "sha256": "3c18ef977d350785a93dc97eefd1c559e8b3b072dd3f5b77a166cd4f724227b0",
+      "size": 8292
+    },
+    {
+      "path": "tests/test_build_failures.py",
+      "sha256": "63e94ce25ea3db439097c818915f94585194d7646b95dec3bc6c1de199d542d9",
+      "size": 4621
+    },
+    {
+      "path": "tests/test_impressor_sketch.py",
+      "sha256": "a9938a25dfadacc87e58e24230a670c5bf2aac8757373fd00ce92446276aed37",
+      "size": 6880
+    },
+    {
+      "path": "tests/test_public_materials.py",
+      "sha256": "957d34f5c8144f17188813e297fe9e71aa50b815ffe2aaccd7c7f29636eee855",
+      "size": 2585
+    },
+    {
+      "path": "tests/test_public_models.py",
+      "sha256": "1953bb3493bdf7dd3973471fb5cfeac411bb6fb364ce55bc9d3bdfec2d62807d",
+      "size": 10051
+    },
+    {
+      "path": "tests/test_public_release.py",
+      "sha256": "0ebe7c21241f77f5a73b81d4734b0ae7dc4b0a37309738208d7f7a1d390e78c4",
+      "size": 10732
+    },
+    {
+      "path": "tests/test_public_runtime.py",
+      "sha256": "7b88f38424549e8bcfbcf1bb1dc2d0c9aec0ac08a299c44a26de01e6ea81796b",
+      "size": 12010
+    },
+    {
+      "path": "tests/test_public_web.py",
+      "sha256": "3f0a170fb5a80f5a7035619deec0e34849c7f2b3c5f7b3b470b77f2964f940b5",
+      "size": 1508
+    },
+    {
+      "path": "tests/test_slot_previews.py",
+      "sha256": "5de4547b4dd1482dd4b725141c8f0e9ab3d2cf342d4bb90d64ed014e50ba10ca",
+      "size": 4623
+    },
+    {
+      "path": "tools/blender_checked_exit.py",
+      "sha256": "a72acc1c5636c196da2d8968ac49dcbd147c50d2234122be95ebc555f1f0c67f",
+      "size": 481
+    },
+    {
+      "path": "tools/blender_checked_launch.py",
+      "sha256": "10fecef5cc483827ca701149bf55f916d0764d1c46d4adfde6a48d5d6110227a",
+      "size": 888
+    },
+    {
+      "path": "tools/godot_check/check.gd",
+      "sha256": "4677af007ee3a85d5cd2005ccb7051a04bb6f395b63a167d2fd5bdaf523bcbbb",
+      "size": 2044
+    },
+    {
+      "path": "tools/godot_check/project.godot",
+      "sha256": "6972429f5f1508671fb3693731283017b82cf20fd10410778134f0b12ee63412",
+      "size": 226
+    },
+    {
+      "path": "tools/godot_preview/project.godot",
+      "sha256": "ce7596704320c8488ce054b49f8b48198b018486da73fd34e1ade0ca9d5464f7",
+      "size": 302
+    },
+    {
+      "path": "tools/godot_preview/render.gd",
+      "sha256": "7445cab7cf574aade274ec62c66dc1e696befe01dcbb7f3cd4c7a39a3eaa466c",
+      "size": 3877
+    },
+    {
+      "path": "tools/public_models.py",
+      "sha256": "8d0ccaf34b53bd7f5f88c41c05dd183758dcbe1533e78a86b5535661f8cd5a03",
+      "size": 14841
+    },
+    {
+      "path": "tools/public_release.py",
+      "sha256": "fa06e5f80c5fffe98e86eae68acafe7590e14ba917b60ea099486ffd981e18a6",
+      "size": 26456
+    }
+  ],
+  "registry": {
+    "entities": 41,
+    "variants": 216
+  },
+  "schema": "public-source-export/v1",
+  "transforms": [
+    {
+      "change": "public example defaults",
+      "path": "config.yaml"
+    },
+    {
+      "change": "pin previews to starter models",
+      "path": "registry/materials/toon/_base.md"
+    },
+    {
+      "change": "only starter pack entities",
+      "path": "registry/catalog_groups.yaml"
+    }
+  ]
+}

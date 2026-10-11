@@ -1,0 +1,20 @@
+id: v010
+parent: v006
+slots:
+  cab: zk_cab@v008
+  body: zk_body@v010
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'Stage 2: smaller arch throat, recessed inner wheelhouses and compact top caps;
+  all D01–D10, running gear and lights retained.'
+tags:
+- zuk
+- modular
+- impressor
+- arch_balance
+- stage2
+rating: null
+status: draft

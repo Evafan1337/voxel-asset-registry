@@ -1,0 +1,43 @@
+schema: impressor/sketch-template/v1
+id: cubic_projection_sketch_v1
+view_mode: projection_sheet
+view_contract:
+  schema: impressor/projections/v1
+  axes: gltf_y_up
+  front_axis: +Z
+  orthographic_views: [front, rear, left, right, top, bottom]
+  angled_view: isometric
+  layout: rows_of_four
+style: Clean grayscale industrial design sketch with straight construction edges and simple flat shaded planes. Low fidelity programmer art; crisp silhouette, no painterly decoration.
+background: Plain off-white background; no environment or props. A subtle ground contact shadow is allowed only in the angled view.
+composition: Seven views of one shared object in a two-row projection sheet, with six orthographic projections and one separate isometric view.
+single_composition: One object, entirely visible, centered with clear margins, front three-quarter isometric view, near-orthographic projection. No collage or alternative views within this image.
+lighting: Soft neutral studio light; readable large planes, restrained contrast.
+constraints:
+  - Show only the requested object and its named functional masses.
+  - Keep the same view layout, shared scale, light and background across iterations.
+  - Separate large masses through shape and placement, not decorative details.
+avoid:
+  - People, surroundings, extra objects and dramatic perspective.
+  - Tiny decorative features and visually busy shading.
+passes:
+  cube_massing:
+    geometry: All masses are simple axis-aligned box placeholders. Preserve gaps needed to distinguish the masses.
+    materials: Neutral matte grey.
+    avoid: [Curved shapes and decorative details.]
+  silhouette:
+    geometry: Keep the accepted mass layout. Introduce wedges, low-sided cylinders or a few bevels only where they improve the object's silhouette.
+    materials: Neutral matte grey, without textures.
+    avoid: [Internal mechanics, surface decoration and fine panel lines.]
+  structure:
+    geometry: Keep the accepted silhouette. Show functional supports, joints and necessary openings as simple low-poly forms.
+    materials: Neutral matte grey, without textures.
+    avoid: [Decorative mechanisms, tiny bolts and unnecessary support struts.]
+  detail:
+    geometry: Keep large forms and joints. Add only the useful large details explicitly named in the brief.
+    materials: Neutral matte grey, without textures.
+    avoid: [Microdetails, noisy seams and unspecified decoration.]
+  game_check:
+    geometry: Keep the accepted shape and detail density. This image is a material reference, not a validation of a Godot scene.
+    materials: Use only material distinctions explicitly requested in the brief; retain simple flat shading.
+    avoid: [New geometry, dramatic glossy lighting and unrequested wear.]

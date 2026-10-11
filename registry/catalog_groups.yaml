@@ -1,0 +1,21 @@
+groups:
+- id: zuk_truck
+  title: Zuk modular truck
+  items: [assets/zuk_truck, components/zk_axle, components/zk_body, components/zk_cab, components/zk_chassis,
+    components/zk_lamp]
+- id: td
+  title: Tower defence kit
+  items: [assets/td_cover, assets/td_flyer, assets/td_gatling_tower, assets/td_grunt, assets/td_missile_tower,
+    assets/td_path_tile, assets/td_scout, assets/td_support_tower, components/td_barrel, components/td_base,
+    components/td_body, components/td_launcher, components/td_leg, components/td_light, components/td_panel,
+    components/td_pedestal, components/td_ring, components/td_sensor]
+- id: evo_truck
+  title: Truck evolution
+  items: [assets/evo_truck, components/ev_plinth, components/vh_truck]
+- id: mt_truck
+  title: Modular cargo truck
+  items: [assets/mt_truck, components/mt_cabin, components/mt_cargo_box, components/mt_chassis, components/mt_exhaust,
+    components/mt_tank, components/mt_toolbox, components/mt_wheelset]
+- id: evo_heli_light
+  title: Light helicopter evolution
+  items: [assets/evo_heli_light, components/vh_heli_light]

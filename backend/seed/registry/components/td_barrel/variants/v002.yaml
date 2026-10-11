@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {count: 1, barrel_length: 0.2, barrel_radius: 0.06, taper: 0.9, collar: false, muzzle: false, palette_color: steel_dark}
+level: 1
+author: llm
+note: шип под днищем дрона
+tags: [tower_defence, blockout, enemy]
+rating: null
+status: built

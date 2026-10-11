@@ -1,0 +1,9 @@
+id: v004
+parent: v003
+delta: {width: 0.6, depth: 0.72, height: 0.36, lift: 0.3, chamfer: 0.1, taper: 0.15}
+level: 1
+author: llm
+note: 'корпус grunt: та же архитектура, крупнее и выше'
+tags: [tower_defence, blockout, enemy]
+rating: null
+status: built

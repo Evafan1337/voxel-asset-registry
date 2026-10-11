@@ -1,0 +1,17 @@
+id: v009
+parent: v005
+delta:
+  arch_balance: mini_cap
+level: 2
+author: llm
+note: 'Баланс арок A, стадия 1: прежний макро-проём и две коробчатые внутренние стенки.
+  Накладка появляется только со стадии 2; оси и габариты сохранены.'
+tags:
+- zuk
+- sheet_study
+- stage1
+- inset
+- arch_balance
+- mini_cap
+rating: null
+status: draft

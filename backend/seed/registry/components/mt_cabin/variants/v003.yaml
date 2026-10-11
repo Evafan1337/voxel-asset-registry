@@ -1,0 +1,9 @@
+id: v003
+parent: v002
+delta: {stage: 3}
+level: 2
+author: llm
+note: 'STRUCTURE: стёкла, огни, каркас (референс v1).'
+tags: [modular_truck, transport, modular]
+rating: null
+status: built

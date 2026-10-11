@@ -1,0 +1,9 @@
+id: v004
+parent: v002
+delta: {leg_length: 0.34, thickness: 0.09, knee_out: 0.16, foot_size: 0.14}
+level: 1
+author: llm
+note: 'grunt v2: толстая длинная нога'
+tags: [tower_defence, enemy, blockout]
+rating: null
+status: built

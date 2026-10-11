@@ -1,0 +1,22 @@
+Voxel Asset Registry public alpha
+
+Software, Python generators, shaders, installation scripts and documentation:
+MIT, see LICENSE.
+
+The curated starter recipe data, palette, original demo geometry and demo
+exports in the public release: CC0-1.0, see LICENSE-ASSETS.
+Recipe data means registry YAML and entity _base.md files, including the
+matching data in backend/seed/registry. Python and shader files in those
+directories remain MIT.
+
+The release manifest identifies the five starter families and their required
+components. They are produced from project procedural recipes. The release
+does not contain external character meshes, production body templates,
+private reference images, manual Blender sources or personal iteration logs.
+Dependency packages and the separately installed Blender/Godot applications
+retain their own licenses; they are not relicensed by this project.
+
+Your own imported references and created models retain the rights and license
+you assign to them. The software license does not automatically apply CC0 to
+your work. Optional ImageGen use requires a separately available image tool;
+the local Impressor CLI prepares a request and does not provide that service.

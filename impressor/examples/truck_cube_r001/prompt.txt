@@ -1,0 +1,22 @@
+Use case: stylized-concept
+Asset type: game asset blockout sketch for Impressor
+Primary request: Create a reference sketch of Небольшой грузовик с кабиной и закрытым грузовым кузовом..
+Purpose: Выбрать крупные массы грузовика перед процедурной сборкой игрового ассета.
+Iteration question: Различимы ли кабина, грузовой кузов и опора на колёса без окон и деталей?
+Workflow pass: cube_massing
+Scene/backdrop: Plain off-white background and a subtle ground contact shadow; no environment or props.
+Style/medium: Clean grayscale industrial design sketch with straight construction edges and simple flat shaded planes. Low fidelity programmer art; crisp silhouette, no painterly decoration.
+Composition/framing: One object, entirely visible, centered with clear margins, front three-quarter isometric view, near-orthographic projection. No collage or alternative views within this image.
+Lighting/mood: Soft neutral studio light; readable large planes, restrained contrast.
+Functional masses and placement:
+- Кабина — один прямоугольный блок спереди, ниже и короче грузового кузова.
+- Закрытый грузовой кузов — один крупный прямоугольный блок позади кабины.
+- Шасси — один тонкий горизонтальный прямоугольный блок под кабиной и кузовом.
+- Четыре колеса — четыре кубических заменителя по бокам шасси, по два на ось; дальние могут быть скрыты ракурсом.
+Proportions: Длина примерно вдвое больше общей высоты; ширина немного меньше высоты.; Кабина занимает примерно треть длины, кузов около двух третей.; Между кабиной и кузовом небольшой читаемый зазор.
+Geometry: ONLY cubes and rectangular cuboids with orthogonal faces. All masses are simple axis-aligned box placeholders. Preserve gaps needed to distinguish the masses.
+Materials/textures: Uniform neutral matte grey; no textures or colored accents.
+Constraints: Show only the requested object and its named functional masses.; Keep the same camera, framing, light and background across iterations.; Separate large masses through shape and placement, not decorative details.; Use box placeholders for every curved part, including wheels; no curved geometry.; Preserve: Компоновка с передней кабиной, задним кузовом и двумя осями.
+Text: No text, labels, dimensions, logos or watermark anywhere in the image.
+Avoid: People, surroundings, extra objects and dramatic perspective.; Tiny decorative features and visually busy shading.; Curved shapes and decorative details.; Окна, бамперы, зеркала, ручки, решётки и круглые колёса на этом проходе.; cylinders, spheres, wedges, bevels, round wheels; windows, panel seams, bolts, lamps, decals, textures
+Output intent: A readable visual hypothesis for later procedural modeling, not a CAD drawing or a finished 3D asset.

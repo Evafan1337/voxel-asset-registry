@@ -1,0 +1,13 @@
+id: v006
+parent: v002
+slots: {chassis: zk_chassis@v005, cab: zk_cab@v005, body: zk_body@v006, axle_front: zk_axle@v007, axle_rear: zk_axle@v007}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'Stage 2, structural correction: та же посадка узких колёс и фасетные сквозные арки; D01–D10 и мировые
+  якоря деталей сохранены.'
+tags: [zuk, modular, impressor, arch_fix, stage2]
+rating: null
+status: draft

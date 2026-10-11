@@ -1,0 +1,10 @@
+id: v002
+parent: v001
+slots: {ring: td_ring@v002}
+params_delta: {}
+level: 1
+author: llm
+note: 'v2: массивнее кольцо'
+tags: [tower_defence, tower, blockout]
+rating: null
+status: built

@@ -1,0 +1,16 @@
+{
+  "registry_ref": "assets/mt_truck/v001",
+  "build_hash": "c69b32640f82eb3c",
+  "source": "one_procedural_3d_model",
+  "top_display_rotation_deg": 180,
+  "files": {
+    "preview_front.png": "ea2cde2b64365a99324ccd933f3911287aabfc9efe7b0cf02d0ef5c25037d99c",
+    "preview_back.png": "2841992846641ece3f95090ddb1b162a37da83a791ca00404985e54e94064a11",
+    "preview_left.png": "0fc2895b8c62acf6d1d6cf3d6305e2481825d3f24fd04fae89f44d7bd316d8c4",
+    "preview_right.png": "8b193a345037582dd2be24e296e0a093d3a832ba04107871d895a84bb5281a67",
+    "preview_top.png": "c9b2f4228c034bf1feb5f9bddbcbb120eb1ab87e394b399e337fe1867330ea10",
+    "preview_bottom.png": "e5537b70307edf26e2b0e7aed7611a10cf5f16d8c03c79a0e7ce0ae76d99285e",
+    "preview_iso.png": "8fca0b2c7f02d00241c40a95a1f6c89d181fcb766e80dbffdd834fd7aaa90f3b"
+  },
+  "report_status": "ok"
+}

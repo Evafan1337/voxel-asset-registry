@@ -1,0 +1,9 @@
+id: v008
+parent: v001
+delta: {width: 0.5, depth: 0.56, height: 0.3, taper: 0.08}
+level: 1
+author: llm
+note: 'голова gatling v2: шире и длиннее — горизонтальный корпус пушки'
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

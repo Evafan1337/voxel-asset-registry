@@ -1,0 +1,10 @@
+id: v007
+parent: v003
+delta: {wheel_fit: inset}
+level: 2
+author: llm
+note: 'Отдельная структурная ветка inset: колёса внутри кузова и настоящие сквозные арки; остальные параметры
+  наследуются.'
+tags: [zuk, sheet_study, stage3, inset, structural_correction]
+rating: null
+status: draft

@@ -1,0 +1,9 @@
+id: v006
+parent: v001
+delta: {dual: true}
+level: 2
+author: llm
+note: Спаренные колёса задней оси, MASSING.
+tags: [modular_truck, transport, modular]
+rating: null
+status: built

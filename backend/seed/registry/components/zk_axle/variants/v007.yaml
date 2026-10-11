@@ -1,0 +1,9 @@
+id: v007
+parent: v002
+delta: {wheel_fit: inset}
+level: 2
+author: llm
+note: 'Stage 2 inset: 12-гранные колёса утоплены под кузов, общие неподвижные опоры.'
+tags: [zuk, inset, running_gear]
+rating: null
+status: draft

@@ -1,0 +1,8 @@
+; Explicit project context keeps headless GLTFDocument checks independent of the current directory.
+config_version=5
+
+[application]
+config/name="Registry Import Check"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

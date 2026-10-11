@@ -1,0 +1,357 @@
+{
+  "lang": "de",
+  "direction": "ltr",
+  "title": "Vom Prompt zum Spiel-Asset",
+  "subtitle": "Voxel Asset Registry und Impressor · vollständiger Alpha-Workflow",
+  "ui": {
+    "language": "Sprache",
+    "nav": "Navigation im Leitfaden",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "copyFallback": "Text auswählen und manuell kopieren",
+    "download": "Herunterladen",
+    "print": "Drucken oder als PDF speichern",
+    "contents": "Inhalt",
+    "documentation": "Dokumentation",
+    "prompt": "Prompt für den Agenten",
+    "command": "Befehl",
+    "screenNote": "Die Screenshots zeigen die englische Oberfläche der öffentlichen Alpha. Die Sprache lässt sich in der App wechseln; technische IDs bleiben gleich.",
+    "top": "Nach oben",
+    "localGuide": "Lokaler Leitfaden",
+    "status": "Alpha-Workflow",
+    "noscript": "Aktiviere JavaScript zur Sprachauswahl. Der Standardleitfaden bleibt unten verfügbar.",
+    "glossary": "Glossar"
+  },
+  "intro": [
+    "Beginne mit der Funktion des Objekts und einigen Quadern. Wähle anhand eines Referenzblatts eine Anordnung, bilde sie als prozedurale Geometrie nach, prüfe alle Seiten und ergänze nur Formen, Struktur und Materialien, die dem Spiel-Asset helfen.",
+    "Ein generiertes Bild ist ein Entwurfsvorschlag. Maße, Symmetrie, Sockets und übereinstimmende Ansichten werden erst durch Renderings desselben realen 3D-Modells bestätigt. Impressor dokumentiert diesen Unterschied im gesamten Workflow."
+  ],
+  "sections": [
+    {
+      "id": "start",
+      "title": "Registry einrichten und öffnen",
+      "paragraphs": [
+        "Führe Befehle im Repository-Stamm aus. Benötigt werden Python 3.11+, Blender 5.1+ und Node.js passend zur festgelegten Vite-Version: Node 20.19+ oder 22.12+. Setze blender_bin in config.yaml, falls Blender nicht in PATH liegt. Für die Spielphase ist Godot 4 nötig.",
+        "run.sh erstellt die Python-Umgebung, installiert Abhängigkeiten und baut bei Bedarf die Oberfläche. Normalbetrieb: http://127.0.0.1:8000; Entwicklung: http://127.0.0.1:5173. Die bestehende Registry wird vom Datenträger gelesen. Initialisiere nicht über vorhandener Arbeit."
+      ],
+      "code": [
+        {
+          "label": "Anwendung starten",
+          "text": "./run.sh"
+        },
+        {
+          "label": "Entwicklungsmodus",
+          "text": "./run.sh --dev"
+        },
+        {
+          "label": "Registry-Rezepte prüfen",
+          "text": ".venv/bin/python -m registry check"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/registry.png",
+          "alt": "Registry-Katalog mit Kategorien, Suche und Eintragskarten",
+          "caption": "Suche im Katalog nach vorhandenen Komponenten oder Assets: über Name, ID oder Tag, mit Filter nach Level."
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "title": "Vor dem Generieren einen Auftrag schreiben",
+      "paragraphs": [
+        "Beschreibe ein Objekt, seine Funktion, die Spielkamera, Außenmaße in Metern und große funktionale Massen. Beim Lkw: Fahrgestell, Fahrerhaus, Ladebereich und Rad-Platzhalter. Dokumentiere Maßstab zu Kachel oder Charakter, Bodenkontakt, Freiräume und feste Verbindungen.",
+        "Jede Iteration hat eine Frage, erlaubte Änderungen und eine Abschlussbedingung. Das Stilprofil definiert die Familie, der Auftrag die aktuelle Aufgabe. Skizzen-YAML ist kein Registry-Rezept: _base.md, generator.py und variants/vNNN.yaml bleiben die Modellquellen.",
+        "Nutze impressor/templates/sketch_brief.example.yaml für Bilder, style_profile.example.yaml für Familienregeln, generation_brief.example.yaml für Modellierung und iteration_review.example.yaml für die Prüfung. Die Impressor-CLI liest nur das Skizzenformat; die übrigen Vorlagen leiten den Agenten an."
+      ],
+      "steps": [
+        "Beschreibe die Funktion in einem Satz.",
+        "Benenne etwa 4–8 sinnvolle Massengruppen, bei einfachen Komponenten weniger.",
+        "Dokumentiere Maße, Achsen, Pivot und zu erhaltende Anker.",
+        "Wähle cube_massing und ein Referenzblatt mit sieben Ansichten für den ersten Durchgang.",
+        "Lege fest, welche Beobachtung den nächsten Durchgang rechtfertigt."
+      ],
+      "prompts": [
+        {
+          "label": "Auftrag für einen Quader-Lkw",
+          "text": "Impressor: Erstelle einen Auftrag für einen kleinen Liefer-Lkw, Durchgang cube_massing. Funktion: erkennbarer Gütertransport aus isometrischer RTS-Kamera. Außenmaße: 3.0 m lang, 1.25 m breit, 1.5 m hoch. Massen: Fahrgestell, kurzes vorderes Fahrerhaus, Ladeblock und vier Quader als Rad-Platzhalter. Frage: Ist das Verhältnis von Fahrerhaus und Ladebereich klar? Erhalte Bodenebene, Radstand und Außenmaße. Erzeuge sieben Ansichten gemäß impressor/PROJECTION_CONTRACT.md."
+        }
+      ]
+    },
+    {
+      "id": "projections",
+      "title": "Sechs Projektionen und eine Winkelansicht verwenden",
+      "paragraphs": [
+        "Das Standardblatt zeigt vorne, hinten, links, rechts, oben und unten orthografisch sowie eine isometrische Ansicht. Alle Felder beschreiben dasselbe Objekt und dieselbe Iteration. Verwende gleichen Maßstab, feste Orientierung, ausgerichtete Mittelpunkte und einen hellen neutralen Hintergrund. Die Winkelansicht erklärt das Volumen, ersetzt aber keine Projektion. Eine zusätzliche Dreiviertelansicht kann außerhalb des Standardvertrags zur Prüfung dienen.",
+        "Im ersten Durchgang ist jede sichtbare Masse ein Würfel oder Quader, auch als Platzhalter für gekrümmte Teile. Nutze neutrales mattes Grau, klare Silhouetten und einfaches Licht. Keine Zylinder, runden Räder, Fasen, Fenster, Fugen, Schrauben, Decals oder Texturen vor dem passenden späteren Durchgang.",
+        "Fordere von ImageGen gleiche Teilezahl, Proportionen und Verbindungen in allen Feldern. Prüfe Abweichungen: Der Generator kann eine andere Unterseite erfinden, eine Achse versetzen oder nur eine Ansicht spiegeln. Ein plausibles Blatt bleibt ein Vorschlag, keine maßhaltige Zeichnung.",
+        "Das abschließende Prüfblatt muss aus einer einzigen akzeptierten 3D-Szene mit orthografischen Kameras stammen. Notiere echte Außenmaße und Ankerkoordinaten im Modellvertrag. Leite Weltkoordinaten nicht direkt aus Pixeln ab und behandle generierte Beschriftungen nicht als verbindliche Maße.",
+        "Drehe preview_top.png beim Vergleich mit dem Impressor-Blatt um 180 Grad: Der aktuelle Builder richtet die Vorderseite anders aus als die Impressor-Konvention, die +Z am oberen Seitenrand verlangt. Die Rückansicht heißt preview_back.png, die Winkelansicht preview_iso.png. Diese Bilddrehung ändert weder Modellgeometrie noch dokumentierte Achsen."
+      ],
+      "prompts": [
+        {
+          "label": "Konsistentes Referenzblatt",
+          "text": "Erstelle ein Referenzblatt desselben cube_massing-Lkw in sieben Feldern: vorne, hinten, links, rechts, oben, unten und isometrisch. Die sechs Projektionen sind orthografisch, maßstabsgleich und achsengleich. Alle Ansichten haben exakt gleiche Massen, Radstand, Fahrerhaushöhe, Lademaße und Verbindungen. Nutze nur neutralgraue Quader. Keine Perspektive in den sechs Projektionen und keine dekorativen Details. Das Blatt ist ein Vorschlag; markiere Widersprüche zur späteren 3D-Prüfung."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/cube-reference-sheet.png",
+          "alt": "ImageGen-Vorschlag eines Quader-Lkw aus sechs Richtungen und isometrisch",
+          "caption": "ImageGen-Vorschlag: sieben Ansichten eines Quader-Lkw. Draufsicht und Seitenansichten brauchen noch Korrektur oder Prüfung; das Blatt ist kein akzeptierter Geometrievertrag."
+        }
+      ]
+    },
+    {
+      "id": "imagegen",
+      "title": "Skizze generieren und sichern",
+      "paragraphs": [
+        "Bitte den Agenten, das Bild über integriertes ImageGen zu erstellen. Der lokale Befehl erzeugt nur prompt.txt, imagegen_request.json, aufgelöstes YAML und manifest.json; er ruft weder das Netz auf noch generiert er selbst ein Bild.",
+        "Verwende pro Iteration einen neuen Ausgabeordner. Arbeitsstände gehören nach var/impressor/, das Git ignoriert. Ein ausgewähltes öffentliches Beispiel kann mit Prompt und Herkunft unter impressor/examples/ liegen. Der Agent speichert das echte Bild und dokumentiert das Ergebnis; prepared bedeutet nicht generated.",
+        "Zum Bearbeiten gib source_image, ein einzelnes change und eine ausdrückliche preserve-Liste an. Die Vorbereitung kopiert das Quellbild in die neue Iteration und dokumentiert seinen Hash. Ein reiner Text-Neustart garantiert keinen Erhalt des akzeptierten Designs."
+      ],
+      "code": [
+        {
+          "label": "Anfrage vorbereiten",
+          "text": ".venv/bin/python -m impressor sketch impressor/templates/sketch_brief.example.yaml --out var/impressor/truck_sheet_r001"
+        }
+      ],
+      "prompts": [
+        {
+          "label": "Vorbereitete Anfrage generieren",
+          "text": "Erzeuge mit integriertem ImageGen ein Bild anhand von var/impressor/truck_sheet_r001/imagegen_request.json. Speichere es in diesem Iterationsordner, behalte Prompt und aufgelösten Auftrag und prüfe die sechs orthografischen Felder plus Winkelansicht anhand des Projektionsvertrags."
+        },
+        {
+          "label": "Eine Proportion ändern",
+          "text": "Impressor: Bearbeite das akzeptierte Lkw-Blatt als neue Iteration. Reduziere nur die Fahrerhaushöhe um etwa 10 %. Erhalte Fahrgestell, Radstand, Ladeabmessungen, Teilezahl, Verbindungen, Kamerarichtungen und gleichen orthografischen Maßstab. Übertrage dieselbe Änderung auf jede Ansicht. Melde Widersprüche vor dem Fortfahren."
+        }
+      ]
+    },
+    {
+      "id": "reference-lab",
+      "title": "Referenzen im passenden Werkzeug untersuchen",
+      "paragraphs": [
+        "Speichere generierte Lkw- oder Gebäudeblätter und Prüfnotizen in der Impressor-Iteration. Das aktuelle Reference Lab dient externen Charaktermeshes und Vorlagen; es ist kein allgemeiner ImageGen-Bildupload.",
+        "Öffne Reference Lab im Charakterbereich. Wähle Quellen links und einen Registry-Charakter rechts. Vergleiche nebeneinander, überlagert, als Silhouette oder Drahtgitter; prüfe Solid, Wireframe, Normals, Armature und Weights. Nutze Front-, Seiten-, Rück- und 3/4-Kameras.",
+        "Importierte Referenzen sind Studienquellen. Prüfe Berechtigungen und Herkunft vor Ableitungen oder öffentlichen Produktionsvorlagen. Ein Mesh-Import macht noch kein exportiertes Spiel-Asset daraus."
+      ],
+      "code": [
+        {
+          "label": "Charakterreferenz importieren",
+          "text": ".venv/bin/python -m registry reference import /path/to/reference.blend --id my_reference"
+        }
+      ]
+    },
+    {
+      "id": "cubes",
+      "title": "Den Vorschlag als Quader-Blockout nachbauen",
+      "paragraphs": [
+        "Suche vor dem Schreiben von Geometrie in Komponenten und Assets nach wiederverwendbaren Funktionen. Baue die akzeptierte Anordnung mit echten Maßen, Ankern und ausschließlich Quadern nach. Details gleichen falsche Proportionen nicht aus.",
+        "Die Registry-Schnittstelle nutzt Meter und glTF/Godot-Achsen: Y nach oben, Front nach +Z. Blender verwendet Z nach oben. Lies jedes Parameterschema; ältere Parameter zählen teils Voxel statt Meter. Strukturanker nutzen das 0.25-m-Raster, Detailanker 0.0625 m.",
+        "Eine Komponente ist eine wiederverwendbare Funktion mit Schnittstelle, nicht eine Komponente je Würfel. Definiere maximalen Bauraum, unteren mittigen Pivot sowie kompatible Befestigungen und Sockets. Leite Positionen aus Host-Grenzen, Flächen, Regionen und Ports ab, damit Parameter die Struktur nicht zerstören.",
+        "Die mt_truck-Varianten zeigen prozedurale Verfeinerung, besitzen aber schon früh gekrümmte Räder. Sie belegen keinen strikt quaderbasierten ersten Durchgang. Erstelle zum Testen dieses Ablaufs einen neuen Entwurf."
+      ],
+      "prompts": [
+        {
+          "label": "Ersten prozeduralen Entwurf erstellen",
+          "text": "Erstelle einen neuen prozeduralen cube_massing-Lkw-Entwurf aus dem akzeptierten Siebenansichten-Vorschlag. Liste zuerst wiederverwendete Komponenten, Massen, Maße und Ankerbeziehungen. Verwende nur Quader, auch für Räder, ohne Details oder Animation. Löse Widersprüche mit numerischen Außenmaßen und einer konsistenten 3D-Anordnung. Erhalte Bodenebene und Radstand. Schreibe eine neue Variante mit author: llm und status: draft. Führe registry check aus, baue sie und prüfe Bericht, alle gerenderten Projektionen und Isometrie."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/entity.png",
+          "alt": "Eintragsseite mit Variantenbaum, 3D-Modell und Build-Informationen",
+          "caption": "Wähle eine Variante im Baum. Mit Umschalt-Klick auf eine zweite vergleichst du synchronisierte Kameras und Parameterunterschiede."
+        }
+      ]
+    },
+    {
+      "id": "sheet",
+      "title": "Komponentenblatt und echte Projektionen prüfen",
+      "paragraphs": [
+        "Ein Asset kann ein Blockout-Blatt für seine Komponentengruppe anbieten. Öffne Blockout-Übersicht (Blockout-Blatt) auf der Asset-Seite. Teile stehen einzeln auf einem gemeinsamen Tisch, möglichst mit den gewählten Komponentenvarianten des Assets. So prüfst du Proportionen und planst Wiederverwendung.",
+        "Nutze Erstellen детали (Teile bauen), wenn Modelle fehlen. In Blender öffnen (In Blender öffnen) bereitet den Tisch vor; Projektionen erstellen (Projektionen erstellen) erzeugt sechs Ansichten. Sind sie vorhanden, scrollt Projektionen (Projektionen) dorthin. .blend herunterladen (.blend herunterladen) erscheint nach der Vorbereitung.",
+        "Wähle in Blender alle Objekte einer Teile-Collection; Shift+D dupliziert, G verschiebt. Das Blatt zeigt den Fangschritt. Freies Platzieren ist eine Studie: Ein akzeptiertes prozedurales Rezept muss reale Sockets, Hosts und relative Anker weiter ausdrücklich beschreiben.",
+        "Bei einer Variante baut Projektionen erstellen (Projektionen erstellen) neu, wenn sechs Bilder fehlen; Projektionen (Projektionen) öffnet den fertigen Bereich. Vergleiche vorne/hinten, links/rechts, oben/unten und Isometrie. Prüfe Stützen, Überschneidungen, Asymmetrie und Unterseite."
+      ],
+      "figures": [
+        {
+          "src": "assets/blockout-sheet.png",
+          "alt": "Blockout-Blatt mit Komponenten auf einem Tisch und Projektionssteuerung",
+          "caption": "Echte Geometrie liefert geprüfte Projektionen. Der Komponententisch ist vom zusammengesetzten Asset zu unterscheiden."
+        }
+      ]
+    },
+    {
+      "id": "refinement",
+      "title": "Silhouette und wiederverwendbare Komponenten verfeinern",
+      "paragraphs": [
+        "Gehe erst bei klarer vorheriger Entscheidung durch cube_massing, silhouette, structure und detail. Füge Keile, Zylinder und Fasen für bessere Erkennung oder Konstruktion hinzu. Erhalte Bauraum und Anker; geänderte Stützen oder Befestigungen brauchen einen eigenen Strukturzweig.",
+        "Teste Standard-, kleine und große Werte sowie riskante Kombinationen: schmale Stütze mit großem Überhang, maximale Wiederholungen in minimaler Breite oder extreme Höhen. Ein einzeln gültiger Parameter bestätigt nicht alle Kombinationen.",
+        "Registry level reicht von 0–3: Blockout, Silhouette, Detail, Animation. blockout.Plan.stage reicht von 1–5: Masse, Form, Struktur, Detail, Akzent. Impressor-Durchgänge setzen keine dieser Skalen automatisch. Animation braucht ausdrückliche Knoten, Pivots und Bewegungsfreiräume; prüfe den ganzen Zyklus."
+      ],
+      "prompts": [
+        {
+          "label": "Silhouettendurchgang",
+          "text": "Verfeinere den akzeptierten Quader-Lkw zu einem Silhouettenentwurf. Ändere nur Geometrie für bessere Erkennung: Fahrerhausprofil und Radform. Erhalte numerischen Bauraum, Radstand, Lademaße, Bodenkontakt, Sockets und Strukturanker. Bleibe bei neutralem Grau ohne kleine Details. Vergleiche beide Modelle aus sechs Richtungen und der Spielkamera; speichere eine neue Kindvariante."
+        },
+        {
+          "label": "Wiederverwendbare Komponente",
+          "text": "Entwirf ein wiederverwendbares Stützmodul für diese Familie. Prüfe vorhandene Komponenten, definiere dann Funktion, maximalen Bauraum, Pivot, Befestigungen, Sockets, Teile und Beziehungen. Beginne mit Quadern und leite Geometrie aus Host-Grenzen und Ankern ab. Teste Standard, Minimum, Maximum und schmale Stütze mit maximalem Überhang. Zeige Prüfungen, sechs Projektionen und isometrische Vorschau vor Details."
+        }
+      ]
+    },
+    {
+      "id": "assembly",
+      "title": "Asset aus kompatiblen Modulen zusammensetzen",
+      "paragraphs": [
+        "Beginne mit einer Hauptmasse, einem dominanten Funktionsmerkmal, höchstens zwei Nebenmerkmalen und bewusst ruhigen Flächen. Leere Sockets sind erlaubt. Ein Socket ermöglicht Anbauten, verlangt aber keine Belegung jedes verfügbaren Punkts.",
+        "Der Baugraph benennt jeden Host, Socket und kompatible Komponenten. Verschachtelte Sockets wie frame.gear_a gehören zur Komponente dieses Slots. Prüfe max_grid, Pflicht-Slots, Durchgangsbreiten, Kontakt und Bewegungsfreiräume.",
+        "Die Kompositionsseite wählt Elternvariante, kompatible Komponenten, Parameter, Level, Notiz und Tags. Erstellen (Zusammensetzen) erstellt eine neue Asset-Variante und reiht den Build ein. Prüfe das Gesamtbild: Gute Einzelteile können eine unklare Silhouette ergeben."
+      ],
+      "prompts": [
+        {
+          "label": "Asset einer Familie zusammensetzen",
+          "text": "Baue eine kompakte Werkstatt aus kompatiblen vorhandenen Komponenten des gewählten Stilprofils. Zeige zuerst Quader: eine Hauptmasse, ein Funktionsmerkmal, höchstens zwei Nebenakzente und einen klaren Eingang. Erhalte Grundfläche und Durchgang. Ersetze dann durch Module über deklarierte Sockets und Anker. Lasse ungenutzte Sockets leer, entferne unnötige Anbauten, baue einen neuen Entwurf und vergleiche sieben Ansichten plus Spielkamera mit dem Vorgänger."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/compose.png",
+          "alt": "Kompositionsformular mit Elternvariante, Komponenten-Slots und Parametern",
+          "caption": "Das Formular speichert den Aufbau als neue Variante. Das dateibasierte Rezept bleibt die maßgebliche Quelle."
+        }
+      ]
+    },
+    {
+      "id": "validation",
+      "title": "Bauen und das tatsächliche Ergebnis prüfen",
+      "paragraphs": [
+        "Prüfe zuerst Rezepte, baue dann die gewählte Variante. build nennt den Ordner build/<hash>. Lies report.json: Gesamtstatus, Prüfungen, Strukturprobleme, Komposition und Statistik. Bei Fehlern zuerst build.log ansehen, bevor du unbeteiligte Geometrie änderst.",
+        "Prüfe preview_iso.png, preview_front.png und preview_top.png; öffne oder erzeuge übrige Projektionen in der Oberfläche. Kontrolliere Bauraum, Pivot, Palette, Geometrie, Sockets, Stützen und gegebenenfalls Polygonbudget. Ein grüner Bericht bestätigt Technik, nicht visuelle Qualität.",
+        "Prüfe das Asset schließlich aus echter Spielkameradistanz, neben anderen Objekten und mit Charakter oder Kachel als Maßstab. Kleine Details, Schatten und Materialakzente können anders wirken als in der Browser-Nahansicht."
+      ],
+      "code": [
+        {
+          "label": "Vorhandenes Beispiel prüfen und bauen",
+          "text": ".venv/bin/python -m registry check\n.venv/bin/python -m registry build assets/mt_truck/v001"
+        }
+      ],
+      "steps": [
+        "Behebe zuerst Vertrags-, Geometrie- und Stützfehler.",
+        "Vergleiche sechs orthografische Ansichten und Winkelansicht desselben gebauten Modells.",
+        "Prüfe die Silhouette aus Spielkamera und als Miniatur.",
+        "Dokumentiere beobachtete Probleme getrennt von vermuteten Ursachen.",
+        "Gehe weiter, wenn die Frage des aktuellen Durchgangs beantwortet ist."
+      ]
+    },
+    {
+      "id": "materials",
+      "title": "Materialien nach gelungener Form anwenden",
+      "paragraphs": [
+        "Das Projekt bietet benannte Palettenfarben, Oberflächeneigenschaften, Presets und generierte Albedo-/ORM-Texturen. Material Lab bearbeitet Toon-Shading eines gebauten Modells, vergleicht Varianten oder PBR und speichert Änderungen als neuen Materialzweig.",
+        "Nutze die aktuelle Palette und deklarierte Komponentenparameter. Halte Geometrie und Kamera beim Finish-Vergleich gleich. Regler steuern Lichtbänder, Schatten, Glanz, Randlicht, Raster und Konturen. Als Verzweigung speichern (Als Zweig speichern) schreibt ein Material-Delta, kein neues Mesh.",
+        "Farbe und physische Oberfläche sind teilweise noch gekoppelt. Rollenbasiertes SurfaceMaterial, AssetLook und erweiterte Verschleiß-/Texturbindungen sind Vorschläge im Materialplan, keine aktuellen Bedienelemente. Geringe roughness allein macht ein Fenster nicht transparent.",
+        "Prüfe das Finish in Blender-Vorschau, Three.js-Viewer und Godot. Dokumentiere beabsichtigte Unterschiede zwischen Renderern, statt identische Pixel anzunehmen."
+      ],
+      "prompts": [
+        {
+          "label": "Materialstudie mit aktuellen Funktionen",
+          "text": "Erstelle zwei Finish-Varianten des akzeptierten Modells nur mit deklarierter Palette und Materialparametern: neutrale Prüfung und zurückhaltendes Industrie-Finish. Erhalte Geometrie, Anker und Kamera. Prüfe matten Körper, Metallbeschläge, Räder und Fenster mit vorhandenen Presets. Vergleiche PBR und Toon, bestätige den gewählten Stand in Godot. Benenne Eigenschaften, die das Format nicht ausdrücken kann; erfinde keine ununterstützten Materialfelder."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/materials.png",
+          "alt": "Material Lab mit Modell, Materialvariantenbaum und Toon-Reglern",
+          "caption": "Material Lab verändert den Renderstil gebauten Modells. Die neue Architektur physischer Materialien bleibt ein eigener Entwicklungsplan."
+        }
+      ]
+    },
+    {
+      "id": "godot",
+      "title": "Nach Godot exportieren und prüfen",
+      "paragraphs": [
+        "Exportiere eine gebaute Variante in ein bestehendes Godot-Projekt. Ersetze den Beispielpfad durch deinen Projektordner. export-godot kopiert GLB und Metadaten; Materialvarianten haben ihren Godot-Shader-/Materialexport. Erfolgreiches Kopieren allein bestätigt keine vollständige Integration.",
+        "Öffne die Zielszene und prüfe Metermaßstab, +Z-Ausrichtung, Pivot, Bodenkontakt, Materialien, Silhouette und vorhandene Animation. Prüfe Freiräume bei Bewegung und vergleiche mit Nachbarobjekten.",
+        "godot-check konzentriert sich derzeit auf Charakter-Rig, Skin, Clips und Maßstab. Es ersetzt keine Szenenprüfung für Lkw oder Gebäude. Die Spielszene ist der letzte Abnahmepunkt."
+      ],
+      "code": [
+        {
+          "label": "Gebautes Lkw-Beispiel exportieren",
+          "text": ".venv/bin/python -m registry export-godot /path/to/godot_project assets/mt_truck/v001"
+        }
+      ]
+    },
+    {
+      "id": "iterations",
+      "title": "Jede Entscheidung als neue Iteration speichern",
+      "paragraphs": [
+        "Erstelle eine neue vNNN.yaml mit parent, der kleinsten sinnvollen Änderung, author: llm, status: draft und aussagekräftiger Notiz. Komponenten verwenden delta; Assets verwenden geänderte slots und params_delta. Bewahre das vorige Rezept. Ein Mensch setzt approved nach der Prüfung. Der Agent ändert keine manuellen .blend-Quelldateien; beginne bei einem prozeduralen Vorfahren.",
+        "Dokumentiere Auftrag, Stilversion, Eingabebilder, finalen Prompt, bekanntes Bildwerkzeug/-modell, Coderevision oder Snapshot, Palette, Werkzeugversionen, Variantenreferenzen, Build-Hashes, Berichtspfade und alle geprüften Ansichten. Der aktuelle Build-Hash erfasst nicht sämtliche externen Abhängigkeiten vollständig.",
+        "Wähle nach jedem Durchgang refine, advance, rollback oder Strukturzweig. Lösen zwei gezielte Änderungen die Platzierung nicht, gehe zurück zu Masse, Anker oder Host-Region. Dekoration repariert keine kaputte Beziehung.",
+        "Bei Änderungen an generator.py oder dem zugehörigen blender.py erhöhe generator_version. Änderungen am gemeinsamen Builder erfordern BUILDER_VERSION; Charakterbibliotheken haben zusätzliche Versionsregeln. Dokumentiere die Versionen, damit alte Artefakte nicht mit dem neuen Ergebnis verwechselt werden."
+      ],
+      "steps": [
+        "Benenne das beobachtete Problem in einer konkreten Ansicht.",
+        "Wähle eine zu prüfende Ursache und erlaubte Änderungen.",
+        "Dokumentiere Maße, Schnittstellen und akzeptierte Entscheidungen ausdrücklich.",
+        "Erzeuge oder baue eine neue Iteration mit denselben Prüfansichten.",
+        "Notiere Entscheidung und nächste Frage; entferne nutzlose Details."
+      ],
+      "prompts": [
+        {
+          "label": "Eine gezielte prozedurale Korrektur",
+          "text": "Erstelle einen neuen Kindentwurf der zuletzt akzeptierten prozeduralen Variante. Problem: Das Fahrerhaus wirkt aus der Spielkamera zu hoch. Ändere nur dessen Höhe im deklarierten Bereich. Erhalte Radstand, Lademaße, Sockets, Bodenkontakt und Materialien. Baue neu, vergleiche synchronisierte Ansichten, prüfe sechs Projektionen, Isometrie und Spielkamera und dokumentiere den Erfolg."
+        }
+      ]
+    },
+    {
+      "id": "contract",
+      "title": "Abnahmecheckliste und Quelldokumente",
+      "paragraphs": [
+        "Eine nutzbare Iteration hat klaren Zweck, ein kohärentes 3D-Modell, sechs Projektionen und Winkelansicht, ausdrückliche Maße und Anker, gültige Rezepte, passende Build-Prüfungen und Spielkameraprüfung. Der erste Durchgang ist strikt quaderbasiert. Spätere Geometrie dient der aktuellen Frage.",
+        "Kennzeichne das Referenzblatt bis zur Geometrieprüfung als Vorschlag. Generierte Ansichten können widersprechen; löse das im numerischen Modellvertrag und rendere erneut vom Modell. Behaupte keine präzise Rekonstruktion allein aus einem Bild.",
+        "Detaillierte Regeln stehen in CLAUDE.md, impressor/PROJECTION_CONTRACT.md, impressor/BLOCKOUT_PRACTICES.md, impressor/REFERENCE_ITERATION.md, impressor/ASSET_ITERATION.md und impressor/SKETCH_GENERATION.md. Open-Source-, Lokalisierungs- und Materialpläne liegen in docs/. Dieser Leitfaden beschreibt die aktuelle Alpha; Zukunftsfunktionen bleiben als Pläne markiert."
+      ],
+      "steps": [
+        "Auftrag und versionierter Stil sind gespeichert.",
+        "Alle Referenzfelder beschreiben dieselbe Iteration; Abweichungen sind dokumentiert.",
+        "Echte Projektionen stammen vom selben akzeptierten Modell.",
+        "Maße, Raster, Achsen, Pivot, Anker und Sockets sind eindeutig.",
+        "Technischer Bericht sowie visuelle und Spielprüfungen sind abgeschlossen.",
+        "Das Ergebnis ist als neuer Entwurf mit Herkunft und nächster Entscheidung gespeichert."
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Blockout",
+      "description": "Ein einfaches räumliches Modell zum Prüfen von Funktion, Maßen und Komposition vor Details."
+    },
+    {
+      "term": "Referenzvorschlag",
+      "description": "Generiertes oder gesammeltes Bild zur Designerprobung, keine geprüfte Geometrie."
+    },
+    {
+      "term": "Geprüfte Projektion",
+      "description": "Orthografisches Bild des akzeptierten 3D-Modells mit bekannten Achsen und Maßstab."
+    },
+    {
+      "term": "Komponente",
+      "description": "Wiederverwendbare prozedurale Funktion mit Parametern, Bauraum, Pivot, Befestigungen und Sockets."
+    },
+    {
+      "term": "Asset",
+      "description": "Komposition kompatibler Varianten, verbunden über deklarierte Slots und Sockets."
+    },
+    {
+      "term": "Variante",
+      "description": "Versioniertes Rezept mit Elternvererbung und Änderungen als Delta."
+    },
+    {
+      "term": "Impressor",
+      "description": "Aufgabenvorlagen, Iterationsregeln und lokaler Skizzen-Prompt-Compiler; der Agent ruft integriertes ImageGen auf."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+id: v010
+parent: v006
+delta:
+  arch_balance: liner_only
+level: 2
+author: llm
+note: 'Баланс арок B, стадия 3: то же меньшее горло и подкрылок, что в A; единственная
+  переменная сравнения — отсутствие наружного козырька.'
+tags:
+- zuk
+- sheet_study
+- stage3
+- inset
+- arch_balance
+- liner_only
+rating: null
+status: draft

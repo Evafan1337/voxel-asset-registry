@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {stage: 2}
+level: 2
+author: llm
+note: 'SILHOUETTE: клин кабины с наклонным лобовым, капот-клин, бампер, лонжероны и рессоры, подрамник, зеркала на кронштейнах, восьмигранные колёса.'
+tags: [transport, evolution]
+rating: null
+status: built

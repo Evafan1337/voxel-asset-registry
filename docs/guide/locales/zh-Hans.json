@@ -1,0 +1,357 @@
+{
+  "lang": "zh-Hans",
+  "direction": "ltr",
+  "title": "从提示词到游戏资产",
+  "subtitle": "Voxel Asset Registry 与 Impressor · 完整 Alpha 工作流程",
+  "ui": {
+    "language": "语言",
+    "nav": "指南导航",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyFallback": "请手动选中并复制文本",
+    "download": "下载",
+    "print": "打印或另存为 PDF",
+    "contents": "目录",
+    "documentation": "文档",
+    "prompt": "代理提示词",
+    "command": "命令",
+    "screenNote": "截图展示公开 Alpha 版的英语界面。可在应用中切换语言，技术 ID 保持不变。",
+    "top": "返回顶部",
+    "localGuide": "本地指南",
+    "status": "Alpha 工作流程",
+    "noscript": "启用 JavaScript 后可切换语言；下方仍提供默认指南。",
+    "glossary": "术语表"
+  },
+  "intro": [
+    "先明确物体功能，再搭出几个方块。用参考图选择布局，重建为程序化几何，从各个方向检查，再添加有助于游戏资产表现的造型、结构和材质。",
+    "生成图像只是设计提案。尺寸、对称性、连接点与视图一致性，必须通过同一个真实 3D 模型的渲染来验证。Impressor 在全流程中保留这一界限。"
+  ],
+  "sections": [
+    {
+      "id": "start",
+      "title": "安装并打开 Registry",
+      "paragraphs": [
+        "在仓库根目录运行命令。需要 Python 3.11+、Blender 5.1+，以及与锁定 Vite 版本兼容的 Node.js：20.19+ 或 22.12+。若 Blender 不在 PATH 中，请在 config.yaml 设置 blender_bin。游戏阶段需要 Godot 4。",
+        "run.sh 会创建 Python 环境、安装依赖并按需构建界面。正常界面为 http://127.0.0.1:8000，开发模式为 http://127.0.0.1:5173。现有注册表从磁盘读取，不要对已有工作重新初始化。"
+      ],
+      "code": [
+        {
+          "label": "运行应用",
+          "text": "./run.sh"
+        },
+        {
+          "label": "开发模式",
+          "text": "./run.sh --dev"
+        },
+        {
+          "label": "校验注册表配方",
+          "text": ".venv/bin/python -m registry check"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/registry.png",
+          "alt": "Registry 目录，含分类标签、搜索和实体卡片",
+          "caption": "在目录中寻找已有组件或资产。可按名称、ID、标签搜索并按级别筛选。"
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "title": "生成前先写任务说明",
+      "paragraphs": [
+        "描述一个物体、功能、游戏摄像机、以米为单位的外包尺寸及主要功能体块。卡车可分为底盘、驾驶室、货厢和车轮占位方块。记录与地块或角色的尺度关系、接地位置、间隙及必须固定的连接。",
+        "每次迭代只验证一个问题，写明允许改动和完成条件。风格档案定义系列，任务说明定义当前工作。草图 YAML 不是 Registry 配方；_base.md、generator.py 和 variants/vNNN.yaml 仍是模型源文件。",
+        "图像使用 impressor/templates/sketch_brief.example.yaml，系列规则使用 style_profile.example.yaml，建模任务使用 generation_brief.example.yaml，审查记录使用 iteration_review.example.yaml。Impressor CLI 只读取草图格式，其余模板用于指导代理。"
+      ],
+      "steps": [
+        "用一句话说明功能。",
+        "命名约 4–8 个有意义的体块组；简单组件可更少。",
+        "记录尺寸、轴向、枢轴和必须保留的锚点。",
+        "第一轮选择 cube_massing 和七视图参考图。",
+        "说明什么观察结果足以进入下一轮。"
+      ],
+      "prompts": [
+        {
+          "label": "方块卡车的任务说明",
+          "text": "Impressor：为小型配送卡车准备任务说明，阶段 cube_massing。功能：在 RTS 等距摄像机下可辨识的货运车辆。外包尺寸：长 3.0 m、宽 1.25 m、高 1.5 m。体块：底盘、前方短驾驶室、货厢方块、四个车轮占位方块。问题：驾驶室与货厢的比例是否清晰？保留地平面、轴距和整体外包尺寸。按 impressor/PROJECTION_CONTRACT.md 生成七视图图板。"
+        }
+      ]
+    },
+    {
+      "id": "projections",
+      "title": "使用六个投影视图和一个斜角视图",
+      "paragraphs": [
+        "标准图板包含前、后、左、右、上、下六个正交视图，以及一个等距视图。各图必须表示同一物体与迭代，采用相同比例、固定方向、对齐中心和浅色中性背景。斜角视图解释体积，不能替代正交投影。可另加四分之三视图辅助审查，但它不属于标准投影合同。",
+        "第一轮所有可见体块均为立方体或长方体，曲面部件也用方块占位。采用中性哑光灰、清晰轮廓和简单光照；暂不加入圆柱、圆车轮、倒角、窗户、面板缝、螺栓、贴花和纹理。",
+        "要求 ImageGen 在所有面板保持部件数量、比例和连接一致。明确检查差异：生成器可能虚构底面、移动车轴或只镜像一个视图。看似合理的图板仍是提案，并非测量图纸。",
+        "最终验证图板必须由同一个已接受 3D 场景的正交摄像机渲染。实际外包尺寸和锚点坐标应写入模型合同。不要从像素直接测算世界坐标，也不要把生成标签当作权威尺寸。",
+        "对比 Registry 渲染与 Impressor 图板时，将 preview_top.png 旋转 180 度：当前构建器的正面方向与 Impressor 约定不同，后者要求页面上方为 +Z。背面文件为 preview_back.png，斜角文件为 preview_iso.png。这个图像方向调整不改变模型几何和记录轴向。"
+      ],
+      "prompts": [
+        {
+          "label": "一致的参考图板",
+          "text": "为同一辆 cube_massing 卡车制作七个面板：前、后、左、右、上、下和等距视图。六个投影为同尺度正交视图，轴向对齐。所有视图中的体块、轴距、驾驶室高度、货厢尺寸和连接必须完全一致。只用中性灰长方体；六个正交视图无透视，不加装饰细节。此图板是设计提案，如有视图冲突，请指出并留待 3D 验证。"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/cube-reference-sheet.png",
+          "alt": "ImageGen 提案，展示方块卡车六个方向及等距视图",
+          "caption": "ImageGen 提案：方块卡车的七视图。俯视与侧视仍需修正或验证；此图板并非已接受的几何合同。"
+        }
+      ]
+    },
+    {
+      "id": "imagegen",
+      "title": "生成并保存草图",
+      "paragraphs": [
+        "请代理调用内置 ImageGen 生成图像。本地命令只整理 prompt.txt、imagegen_request.json、已解析 YAML 和 manifest.json；不会自行发起网络请求或生成图像。",
+        "每次迭代使用新输出目录。工作结果放在已被 Git 忽略的 var/impressor/；精选公开示例可放在 impressor/examples/，附提示词和来源。代理生成后保存实际图像并记录结果；prepared 不等于 generated。",
+        "编辑时提供 source_image、一个 change 和明确的 preserve 列表。准备命令会把源图复制到新迭代并记录摘要。仅重新发送文字不能保证保留已接受设计。"
+      ],
+      "code": [
+        {
+          "label": "准备请求",
+          "text": ".venv/bin/python -m impressor sketch impressor/templates/sketch_brief.example.yaml --out var/impressor/truck_sheet_r001"
+        }
+      ],
+      "prompts": [
+        {
+          "label": "生成已准备的请求",
+          "text": "使用 var/impressor/truck_sheet_r001/imagegen_request.json 调用内置 ImageGen。结果保存到该迭代目录，保留提示词和已解析任务说明，并按投影合同审查六个正交面板及斜角面板。"
+        },
+        {
+          "label": "修改一项比例",
+          "text": "Impressor：将已接受的卡车图板编辑为新迭代。只把驾驶室高度降低约 10%。保留底盘、轴距、货厢外包尺寸、部件数量、连接、摄像机方向和统一正交比例。所有视图都应用同一改动。继续前报告任何视图不一致。"
+        }
+      ]
+    },
+    {
+      "id": "reference-lab",
+      "title": "在正确的工具中研究参考",
+      "paragraphs": [
+        "卡车或建筑生成图及审查记录应保存在 Impressor 迭代中。当前 Reference Lab 面向外部角色网格与模板，不是通用的 ImageGen 图片上传页面。",
+        "从角色分类打开 Reference Lab，左侧选来源，右侧选 Registry 角色。可并排、叠加、轮廓或线框比较，检查 Solid、Wireframe、Normals、Armature 和 Weights 模式；使用前、侧、后与 3/4 摄像机预设。",
+        "导入参考用于研究。制作衍生作品或公开生产模板前，检查权限标记与来源。导入网格不代表它已成为可导出的游戏资产。"
+      ],
+      "code": [
+        {
+          "label": "导入角色参考",
+          "text": ".venv/bin/python -m registry reference import /path/to/reference.blend --id my_reference"
+        }
+      ]
+    },
+    {
+      "id": "cubes",
+      "title": "将提案重建为方块灰盒",
+      "paragraphs": [
+        "编写几何前，在组件和资产目录查找可复用功能。以实际尺寸、锚点和纯方块重建已接受布局。不要用细节弥补错误比例。",
+        "Registry 接口使用米及 glTF/Godot 轴向：Y 向上，正面朝 +Z；Blender 几何为 Z 向上。阅读参数模式，一些旧参数使用体素数量而非米。结构锚点网格为 0.25 m，细节锚点为 0.0625 m。",
+        "组件是带接口的可复用功能，并非每个方块都建一个组件。定义最大外包范围、底部中心枢轴、兼容安装位和 sockets。位置应由宿主边界、面、区域与端口推导，防止参数改变破坏结构。",
+        "现有 mt_truck 变体可示范程序化细化，但早期车轮已有曲面，不能证明严格纯方块首轮已完成。测试该流程时应新建草稿。"
+      ],
+      "prompts": [
+        {
+          "label": "建立首个程序化草稿",
+          "text": "根据已接受七视图提案建立新的程序化 cube_massing 卡车草稿。先列复用组件、体块、尺寸和锚点关系。仅使用方块，包括车轮占位；不加细节或动画。用数值外包范围与一致的 3D 布局解决矛盾。保留地平面和轴距。新变体写入 author: llm、status: draft。运行 registry check，构建，并检查报告、全部渲染投影和等距视图。"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/entity.png",
+          "alt": "实体页面，含变体树、3D 模型和构建信息",
+          "caption": "在树中选择变体；按住 Shift 点击另一变体，可用同步摄像机比较并查看参数差异。"
+        }
+      ]
+    },
+    {
+      "id": "sheet",
+      "title": "检查组件图板和真实投影",
+      "paragraphs": [
+        "资产可提供组件组的灰盒图板。从资产页面打开 块状草模图板（灰盒图板）。部件单独放在共享桌面上，能获取时使用该资产选定的组件变体，便于检查比例和规划复用。",
+        "缺少模型时用 构建 детали（构建部件）。在 Blender 中打开（在 Blender 打开）准备组件桌面，创建投影（创建投影）生成六视图。已有图像时 投影（投影）滚动到图像区域。准备后可用 下载 .blend（下载 .blend）。",
+        "在 Blender 选中某部件集合内全部对象，Shift+D 复制，G 移动。图板显示吸附步长。桌面自由摆放用于研究；正式程序化组装仍需在配方中明确真实 sockets、宿主和相对锚点。",
+        "单个变体中，缺少六张图时 创建投影（创建投影）触发重建；完成后 投影（投影）打开投影区域。结合等距视图检查前/后、左/右、上/下，包括支撑、相交、非对称和底部几何。"
+      ],
+      "figures": [
+        {
+          "src": "assets/blockout-sheet.png",
+          "alt": "灰盒图板，含桌面组件和投影控件",
+          "caption": "真实几何提供可验证投影；组件桌面与组装后的资产不同。"
+        }
+      ]
+    },
+    {
+      "id": "refinement",
+      "title": "细化轮廓与可复用组件",
+      "paragraphs": [
+        "前一轮决策明确后，依次进行 cube_massing、silhouette、structure、detail。仅在改善辨识或结构时加入楔形、圆柱和倒角。保留外包范围和锚点；更改支撑方案或安装位应另开结构分支。",
+        "复用组件应测试标准、小、大参数及高风险组合：窄支撑加大悬伸、最小宽度中最大重复数量、极端高度。单个参数有效不代表所有组合有效。",
+        "Registry level 为 0–3：灰盒、轮廓、细节、动画。blockout.Plan.stage 为 1–5：体块、形态、结构、细节、强调。Impressor 阶段名称不会自动指定这两套数值。动画需要明确节点、枢轴与运动间隙，并检查完整周期。"
+      ],
+      "prompts": [
+        {
+          "label": "轮廓阶段",
+          "text": "把已接受的方块卡车细化为轮廓草稿。只改有助辨识的几何：驾驶室外形与车轮形状。保留数值外包范围、轴距、货厢尺寸、接地、sockets 和结构锚点。保持中性灰，不加小细节。比较新旧模型六方向和游戏摄像机视图，保存新的子变体。"
+        },
+        {
+          "label": "可复用组件",
+          "text": "为该系列设计可复用支撑模块。先查现有组件，再定义功能、最大外包范围、枢轴、安装位、sockets、部件和关系。从方块开始，由宿主边界与锚点推导几何。测试标准、最小、最大参数，以及窄支撑加最大悬伸组合。添加细节前报告检查结果、六投影和等距预览。"
+        }
+      ]
+    },
+    {
+      "id": "assembly",
+      "title": "用兼容模块组装资产",
+      "paragraphs": [
+        "从一个主体体块、一个主导功能特征、最多两个次要特征及有意留白开始。允许空 sockets；连接点允许安装，不要求全部填满。",
+        "组装图应标明每个宿主、socket 和兼容组件。frame.gear_a 等嵌套 sockets 属于该 slot 的组件。检查 max_grid、必需 slots、通道宽度、接触和运动间隙。",
+        "组合页面选择父版本、兼容组件变体、参数、级别、说明和标签。构建（组装）创建新资产变体并加入构建队列。检查组合效果：单独良好的组件也可能形成混乱轮廓。"
+      ],
+      "prompts": [
+        {
+          "label": "组装系列资产",
+          "text": "按选定风格档案，使用兼容现有组件组装紧凑车间。先展示方块布局：一个主体体积、一个功能特征、最多两个次要强调和清晰入口。保留占地与通道。随后用已声明 sockets 和锚点替换模块。未使用 sockets 留空，移除多余附件，构建新草稿并与前一变体比较七视图和游戏摄像机视图。"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/compose.png",
+          "alt": "资产组合表单，含父版本、组件 slots 与参数",
+          "caption": "表单把组装保存为新变体；文件配方仍是事实来源。"
+        }
+      ]
+    },
+    {
+      "id": "validation",
+      "title": "构建并审查真实结果",
+      "paragraphs": [
+        "先校验配方，再构建选定变体。build 输出 build/<hash> 目录。阅读 report.json 的总状态、检查、结构问题、组合和统计。构建失败时先看 build.log，不要先改无关几何。",
+        "检查 preview_iso.png、preview_front.png、preview_top.png，并在界面生成或打开其余投影。按适用范围核对外包范围、枢轴、调色板、几何、sockets、支撑和多边形预算。绿色报告是技术门槛，并非视觉批准。",
+        "最终在真实游戏摄像机距离下，与邻近物体和角色或地块尺度参照一起查看。小细节、阴影和材质强调可能与浏览器近景效果不同。"
+      ],
+      "code": [
+        {
+          "label": "校验并构建现有示例",
+          "text": ".venv/bin/python -m registry check\n.venv/bin/python -m registry build assets/mt_truck/v001"
+        }
+      ],
+      "steps": [
+        "先修复合同、无效几何和支撑问题。",
+        "比较同一已构建模型的六正交视图与斜角视图。",
+        "用游戏摄像机和缩略图尺寸检查轮廓。",
+        "分别记录观察到的问题与推测原因。",
+        "当前阶段的问题得到解答后再前进。"
+      ]
+    },
+    {
+      "id": "materials",
+      "title": "造型通过后再应用材质",
+      "paragraphs": [
+        "项目已有命名颜色、表面属性、材质预设和生成的 albedo/ORM 纹理。Material Lab 可编辑已构建模型的 toon 着色、比较变体或 PBR，并另存为材质分支。",
+        "使用当前调色板与组件声明参数。对比材质时保持几何与摄像机相同。滑块可调光照分段、阴影、高光、边缘光、半色调和轮廓。保存为分支（另存为分支）写入材质 delta，不创建新网格。",
+        "当前流程部分环节仍把颜色和物理表面耦合。材质计划中的按角色 SurfaceMaterial、AssetLook 和扩展磨损/纹理绑定仍属提案，不是现有界面控件。仅降低 roughness 不会让窗户透明。",
+        "在 Blender 预览、Three.js 查看器和 Godot 中确认材质。记录渲染器间有意存在的差异，不默认像素完全一致。"
+      ],
+      "prompts": [
+        {
+          "label": "使用现有功能研究材质",
+          "text": "仅用已接受模型声明的调色板和材质参数，准备两种外观：中性检查和克制工业风。保留几何、锚点与摄像机。通过现有预设检查哑光主体、金属五金、车轮和窗户。比较 PBR 与 toon，在 Godot 验证选定结果。指出当前格式无法表达的属性，不虚构不支持的材质字段。"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/materials.png",
+          "alt": "Material Lab，含模型、材质变体树和 toon 控件",
+          "caption": "Material Lab 调整已构建几何的渲染风格；新的物理材质架构仍是独立开发计划。"
+        }
+      ]
+    },
+    {
+      "id": "godot",
+      "title": "导出并在 Godot 检查",
+      "paragraphs": [
+        "把已构建变体导出到已有 Godot 项目，将示例路径替换为自己的目录。export-godot 复制 GLB 和元数据；材质变体有相应 Godot shader/material 导出流程。文件复制成功不代表完成游戏集成。",
+        "打开目标场景，检查米制尺度、朝向 +Z、枢轴、接地、材质、轮廓与已有动画。运动过程中检查间隙，并和邻近游戏物体比较。",
+        "godot-check 当前侧重角色骨架、蒙皮、动画片段和尺度，不能替代卡车或建筑的场景检查。以实际游戏场景作为最终验收。"
+      ],
+      "code": [
+        {
+          "label": "导出已构建卡车示例",
+          "text": ".venv/bin/python -m registry export-godot /path/to/godot_project assets/mt_truck/v001"
+        }
+      ]
+    },
+    {
+      "id": "iterations",
+      "title": "将每次决策保存为新迭代",
+      "paragraphs": [
+        "创建新的 vNNN.yaml，写明 parent、最小必要改动、author: llm、status: draft 和有意义的说明。组件使用 delta；资产使用变更的 slots 和 params_delta。保留原有配方，由人工审查后设置 approved。代理不修改手工 .blend 源文件；程序化工作应从程序化祖先版本开始。",
+        "记录任务说明、风格版本、输入图像、最终提示词、已知图像工具/模型、代码版本或快照、调色板、工具版本、变体引用、构建哈希、报告路径和所有审查视图。当前构建哈希不能完整快照所有外部依赖。",
+        "每轮选择 refine、advance、rollback 或结构分支。两次定向修改仍不能修复位置时，回到体块、锚点或宿主区域；添加装饰无法修复错误关系。",
+        "修改 generator.py 或配套 blender.py 时，递增 generator_version。共享构建器变更需要更新 BUILDER_VERSION；角色库另有版本规则。将这些版本记录在迭代中，避免把旧产物误认为新结果。"
+      ],
+      "steps": [
+        "指出具体视图中观察到的问题。",
+        "选择一个待验证原因，列出允许改动。",
+        "明确尺寸、接口和已接受决策。",
+        "生成或构建新迭代，并重复相同审查视图。",
+        "记录决策和下个问题，删除无价值细节。"
+      ],
+      "prompts": [
+        {
+          "label": "一次定向程序化修正",
+          "text": "从最后接受的程序化变体建立新子草稿。问题：驾驶室在游戏摄像机中过高。仅在声明范围内修改驾驶室高度。保留轴距、货厢外包尺寸、sockets、接地和材质。重建后比较同步视图，检查六投影、等距与游戏视图，记录修正是否有效。"
+        }
+      ]
+    },
+    {
+      "id": "contract",
+      "title": "验收清单与源文档",
+      "paragraphs": [
+        "可用迭代应有明确用途、单一一致 3D 模型、六正交视图与斜角视图、明确尺寸与锚点、有效配方、适用构建检查和游戏摄像机审查。第一轮严格纯方块，后续几何须服务当前问题。",
+        "几何验证前，将参考图板标为提案。生成视图可能冲突，应在数值模型合同中解决并从模型重新渲染。不要仅凭图像宣称精确重建。",
+        "详细规则见 CLAUDE.md、impressor/PROJECTION_CONTRACT.md、impressor/BLOCKOUT_PRACTICES.md、impressor/REFERENCE_ITERATION.md、impressor/ASSET_ITERATION.md 和 impressor/SKETCH_GENERATION.md。开源、本地化和材质路线图位于 docs/。本 HTML 指南描述当前 Alpha；未来功能仍标明为计划。"
+      ],
+      "steps": [
+        "任务说明和带版本风格已保存。",
+        "所有参考面板表示同一迭代，差异已有记录。",
+        "真实投影由同一已接受模型渲染。",
+        "尺寸、网格、轴向、枢轴、锚点和 sockets 已明确。",
+        "技术报告、视觉及游戏审查已完成。",
+        "结果已另存新草稿，附来源和下一步决策。"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "灰盒",
+      "description": "用于测试功能、尺寸与布局的简单空间模型，先于精细几何。"
+    },
+    {
+      "term": "参考提案",
+      "description": "为探索设计而生成或收集的图片，并非已验证几何。"
+    },
+    {
+      "term": "已验证投影",
+      "description": "由已接受 3D 模型以已知轴向和比例渲染的正交图像。"
+    },
+    {
+      "term": "组件",
+      "description": "带参数、外包范围、枢轴、安装位与 sockets 的可复用程序化功能。"
+    },
+    {
+      "term": "资产",
+      "description": "通过声明 slots 与 sockets 连接的兼容组件变体组合。"
+    },
+    {
+      "term": "变体",
+      "description": "继承父版本，并以 delta 记录改动的版本化配方。"
+    },
+    {
+      "term": "Impressor",
+      "description": "任务模板、迭代规则及本地草图提示词编译器；代理调用内置 ImageGen。"
+    }
+  ]
+}

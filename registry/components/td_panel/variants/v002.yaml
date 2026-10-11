@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {width: 0.2, height: 0.16, panel_thickness: 0.04, frame: false, palette_color: steel_dark}
+level: 1
+author: llm
+note: стабилизатор дрона (вылет 0.16)
+tags: [tower_defence, environment, blockout, enemy]
+rating: null
+status: built

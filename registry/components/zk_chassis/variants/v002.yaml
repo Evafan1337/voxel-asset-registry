@@ -1,0 +1,14 @@
+id: v002
+parent: v001
+delta:
+  stage: 2
+level: 2
+author: llm
+note: 'Первое уточнение по бюджету D01–D10: квадратные проёмы и функциональные поля
+  без изменения осей.'
+tags:
+- zuk
+- sheet_study
+- stage2
+rating: null
+status: draft

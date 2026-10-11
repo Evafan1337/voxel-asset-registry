@@ -1,0 +1,10 @@
+id: v001
+parent: null
+slots: {base: td_base@v003, pedestal: td_pedestal@v002, ring: td_ring@v001, emitter: td_light@v002, beacon: td_light@v001}
+params_delta: {}
+level: 1
+author: llm
+note: blockout v1 по референсу Orbital Defense
+tags: [tower_defence, tower, blockout]
+rating: null
+status: built

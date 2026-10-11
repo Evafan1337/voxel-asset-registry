@@ -1,0 +1,9 @@
+id: v003
+parent: v001
+delta: {length: 0.7}
+level: 1
+author: llm
+note: световая полоса по верху укрытия
+tags: [tower_defence, blockout, environment]
+rating: null
+status: built

@@ -1,0 +1,7 @@
+# Tested Python environment; transitive versions are constrained as well.
+-c constraints.txt
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+sqlmodel==0.0.47
+pydantic==2.13.5
+PyYAML==6.0.3

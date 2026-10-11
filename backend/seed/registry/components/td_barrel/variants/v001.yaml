@@ -1,0 +1,9 @@
+id: v001
+parent: null
+delta: {count: 3, barrel_length: 0.5, barrel_radius: 0.045}
+level: 1
+author: llm
+note: связка из 3 стволов (gatling)
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

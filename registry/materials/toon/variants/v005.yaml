@@ -1,0 +1,9 @@
+id: v005
+parent: v001
+delta: {bands: 1, outline_mode: screen, outline_px: 1.5, specular: 0.0, rim: 0.0}
+level: 2
+author: llm
+note: плоская заливка + контур (flat / ligne claire)
+tags: [flat]
+rating: null
+status: built

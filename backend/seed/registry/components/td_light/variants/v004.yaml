@@ -1,0 +1,9 @@
+id: v004
+parent: v001
+delta: {shape: block, size: 0.07, color: signal_blue}
+level: 1
+author: llm
+note: синий огонь на голове башни
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

@@ -1,0 +1,78 @@
+# Предлагаемый формат Impressor. Поля не передаются напрямую в Registry API.
+schema: impressor/brief/v1
+id: workshop_cube_study
+style: industrial_chunky/v1
+task: blockout
+pass: cube_massing
+
+purpose: Игрок должен увидеть небольшой цех с рабочей зоной и входом для груза.
+question: Понятны ли компоновка цеха и направление подачи груза с игровой камеры?
+source:
+  registry_ref: null
+  reference_paths: []
+
+dimensions:
+  units: meters
+  axes: gltf_y_up
+  # [X, Y вверх, Z]. Это габарит исследования, не готовый interface компонента.
+  envelope_m: [4.0, 3.0, 3.0]
+  ground_y_m: 0.0
+
+view_contract:
+  schema: impressor/projections/v1
+  axes: gltf_y_up
+  front_axis: +Z
+  orthographic_views: [front, rear, left, right, top, bottom]
+  angled_view: isometric
+  layout: rows_of_four
+
+masses:
+  - id: hall
+    function: Основной объём цеха.
+    primitive: box
+  - id: work_volume
+    function: Место под рабочую часть будущего механизма.
+    primitive: box
+  - id: loading_area
+    function: Зона приёма груза перед рабочей частью.
+    primitive: box
+
+constraints:
+  primitive_allowlist: [box]
+  visible_surface: neutral_review
+  max_semantic_groups: 6
+  macro_grid_m: 0.25
+  forbidden_geometry: [bevels, cylinders, windows, frames, bolts, lamps, decorative_strips]
+  quiet_zones:
+    - Половина крыши без дополнительных механизмов.
+    - Проход рядом с зоной загрузки.
+  preserved:
+    - Общий габарит и плоскость земли.
+  allowed_changes:
+    - Размеры и размещение перечисленных масс внутри габарита.
+  parameter_units: Проверять по схеме выбранного генератора Registry.
+
+registry_target:
+  kind: assets
+  entity_id: workshop_study
+  registry_level: 0
+  author: llm
+  status: draft
+  # Только для генератора на blockout.Plan. level и stage не взаимозаменяемы.
+  blockout_stage_if_supported: 1
+
+outputs:
+  - Список смысловых масс с размерами и связями.
+  - Новые рецепты или генераторы в обычном формате Registry.
+  - Отчёт сборки и все семь превью iso, front, back, left, right, top, bottom.
+  - Полный лист front, rear, left, right, top, bottom и isometric из одной принятой 3D геометрии; ориентация и имена файлов по PROJECTION_CONTRACT.md.
+  - Кадр с игровой камеры рядом с эталоном масштаба.
+
+acceptance:
+  technical: Все применимые проверки Registry проходят.
+  visual:
+    - Все проекции получены из одной модели с общим габаритом, землёй и ортографическим масштабом.
+    - Массы различимы и выполняют указанную функцию.
+    - Вход и зона подачи груза имеют достаточно пространства.
+    - Соседний объект помогает оценить масштаб.
+  next_pass_condition: После выбора компоновки сформулирован вопрос к силуэту.

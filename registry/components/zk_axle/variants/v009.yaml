@@ -1,0 +1,9 @@
+id: v009
+parent: v004
+delta: {wheel_fit: inset}
+level: 3
+author: llm
+note: 'Stage 3 inset задняя ось: узкие колёса и новые опоры, исходная подвеска и вращение без поворота.'
+tags: [zuk, inset, running_gear]
+rating: null
+status: draft

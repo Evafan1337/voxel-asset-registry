@@ -1,0 +1,9 @@
+id: v003
+parent: v001
+delta: {shape: square, width: 0.16, height: 0.52, taper: 0.0, foot: false, accent: true}
+level: 1
+author: llm
+note: стойка укрытия с оранжевым поясом
+tags: [tower_defence, blockout, environment]
+rating: null
+status: built

@@ -1,0 +1,10 @@
+id: v008
+parent: v003
+delta: {wheel_fit: inset}
+level: 3
+author: llm
+note: 'Stage 3 inset передняя ось: ширина 1,75 м, поворот ±20° помещается под кузов 2 м; связанные узлы
+  подвески.'
+tags: [zuk, inset, running_gear]
+rating: null
+status: draft

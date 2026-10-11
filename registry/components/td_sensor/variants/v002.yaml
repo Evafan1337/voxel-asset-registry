@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {size: 0.24, depth: 0.08, eye: 0.7}
+level: 1
+author: llm
+note: крупный квадратный глаз grunt
+tags: [tower_defence, enemy, blockout]
+rating: null
+status: built

@@ -1,0 +1,357 @@
+{
+  "lang": "en",
+  "direction": "ltr",
+  "title": "From a prompt to a game asset",
+  "subtitle": "Voxel Asset Registry and Impressor · the complete alpha workflow",
+  "ui": {
+    "language": "Language",
+    "nav": "Guide navigation",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFallback": "Select and copy this text manually",
+    "download": "Download",
+    "print": "Print or save as PDF",
+    "contents": "Contents",
+    "documentation": "Documentation",
+    "prompt": "Agent prompt",
+    "command": "Command",
+    "screenNote": "Screenshots use the English interface of the public alpha. Choose your language in the app; technical IDs stay the same.",
+    "top": "Back to top",
+    "localGuide": "Local guide",
+    "status": "Alpha workflow",
+    "noscript": "Enable JavaScript to select a language. The default guide remains available below.",
+    "glossary": "Glossary"
+  },
+  "intro": [
+    "Start with the object's function and a few boxes. Choose a layout using a reference sheet, reproduce it as procedural geometry, check it from every side, then add only the form, structure and materials that improve the game asset.",
+    "A generated image is a design proposal. Dimensions, symmetry, sockets and view consistency become verified only when the views are rendered from the same real 3D model. Impressor records that distinction throughout the workflow."
+  ],
+  "sections": [
+    {
+      "id": "start",
+      "title": "Set up and open the Registry",
+      "paragraphs": [
+        "Run commands from the repository root. You need Python 3.11 or newer, Blender 5.1 or newer, and Node.js compatible with the locked Vite version. Use Node 20.19+ or 22.12+. Set blender_bin in config.yaml if Blender is not in PATH. Godot 4 is needed for the game stage.",
+        "run.sh creates the Python environment, installs dependencies and builds the interface when needed. The normal interface opens at http://127.0.0.1:8000; development mode uses http://127.0.0.1:5173. The existing registry is read from disk. Do not initialize over existing work."
+      ],
+      "code": [
+        {
+          "label": "Run the application",
+          "text": "./run.sh"
+        },
+        {
+          "label": "Development mode",
+          "text": "./run.sh --dev"
+        },
+        {
+          "label": "Validate registry recipes",
+          "text": ".venv/bin/python -m registry check"
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/registry.png",
+          "alt": "Registry catalog with category tabs, search and entity cards",
+          "caption": "The catalog is the starting point for finding an existing component or asset. Search by name, ID or tag and filter by level."
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "title": "Write a brief before generating",
+      "paragraphs": [
+        "Describe one object, its function, the game camera, its envelope in meters and the large functional masses. For a truck: chassis, cab, cargo and wheel placeholders. Record the scale relative to a tile or character, ground contact, clearances and connections that must remain fixed.",
+        "Give each iteration one question, allowed changes and a finish condition. The style profile defines the family; the brief defines the current task. Sketch YAML is not a Registry recipe: _base.md, generator.py and variants/vNNN.yaml remain the model's source files.",
+        "Use impressor/templates/sketch_brief.example.yaml for images, style_profile.example.yaml for family rules, generation_brief.example.yaml for a modeling task and iteration_review.example.yaml to record its review. Only the sketch format is consumed by the Impressor CLI; the other templates guide the agent."
+      ],
+      "steps": [
+        "Write the function in one sentence.",
+        "Name about 4–8 meaningful mass groups, fewer for a simple component.",
+        "Record dimensions, axes, pivot and preserved anchors.",
+        "Choose cube_massing and a seven-view reference sheet for the first pass.",
+        "Decide what observation would justify the next pass."
+      ],
+      "prompts": [
+        {
+          "label": "Brief for a cube truck",
+          "text": "Impressor: prepare a brief for a small delivery truck, pass cube_massing. Function: recognizable cargo transport from an isometric RTS camera. Envelope: 3.0 m long, 1.25 m wide, 1.5 m high. Masses: chassis, short front cab, cargo block, four box placeholders for wheels. Question: is the cab-to-cargo ratio clear? Preserve the ground plane, wheelbase and overall envelope. Generate a seven-view sheet under impressor/PROJECTION_CONTRACT.md."
+        }
+      ]
+    },
+    {
+      "id": "projections",
+      "title": "Use six projections and an angled view",
+      "paragraphs": [
+        "The standard sheet shows front, back, left, right, top and bottom orthographic views, plus one isometric view. Every panel describes the same object and iteration. Use equal orthographic scale, fixed orientation, aligned centers and a light neutral background. The angled panel explains volume; it does not replace a projection. An additional three-quarter view can support review outside the standard projection contract.",
+        "For the initial pass, every visible mass is a cube or rectangular box, including curved-part placeholders. Use neutral matte gray, clear silhouettes and simple lighting. Exclude cylinders, rounded wheels, bevels, windows, panel seams, bolts, decals and textures until the relevant later pass.",
+        "Ask ImageGen to keep part count, proportions and connections consistent across all panels. Review discrepancies explicitly: an image generator may invent a different underside, move an axle or mirror only one view. A plausible-looking sheet is still a proposal, never a measured drawing.",
+        "The final verification sheet must be rendered from one accepted 3D scene with orthographic cameras. Record the actual envelope and anchor coordinates in the model contract. Do not measure world coordinates directly from pixels or treat generated labels as authoritative dimensions.",
+        "When comparing Registry renders with the Impressor sheet, rotate preview_top.png by 180 degrees: the current builder places the front differently from the Impressor convention, which requires +Z toward the top of the page. The rear render is named preview_back.png and the angled render preview_iso.png. Keep this image-orientation adjustment separate from the model's geometry and recorded axes."
+      ],
+      "prompts": [
+        {
+          "label": "Consistent reference sheet",
+          "text": "Create one reference sheet of the same cube-massing truck in seven panels: front, back, left, right, top, bottom and isometric. The six projections are orthographic at the same scale with aligned axes. All views share exactly the same masses, wheelbase, cab height, cargo dimensions and connections. Use only neutral gray rectangular boxes. No perspective in the six projections, no decorative details. The sheet is a design proposal; if views conflict, flag the conflict for 3D verification."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/cube-reference-sheet.png",
+          "alt": "ImageGen proposal showing a cube truck from six directions and an isometric angle",
+          "caption": "ImageGen proposal: seven views of a cube truck. The upper and side views still require correction/verification; this sheet is not an accepted geometric contract."
+        }
+      ]
+    },
+    {
+      "id": "imagegen",
+      "title": "Generate and preserve the sketch",
+      "paragraphs": [
+        "Ask the agent to create the image through built-in ImageGen. The local command only assembles prompt.txt, imagegen_request.json, resolved YAML and manifest.json; it does not make a network request or generate an image by itself.",
+        "Use a new output folder for every iteration. Working results belong in var/impressor/, which is excluded from Git. Keep a selected public example under impressor/examples/ with its prompt and provenance. After generation, the agent saves the actual image and records the result; prepared does not mean generated.",
+        "For an edit, supply source_image, one change and an explicit preserve list. The preparation command copies the source image into the new iteration and records its digest. A text-only rerun does not guarantee preservation of the accepted design."
+      ],
+      "code": [
+        {
+          "label": "Prepare the request",
+          "text": ".venv/bin/python -m impressor sketch impressor/templates/sketch_brief.example.yaml --out var/impressor/truck_sheet_r001"
+        }
+      ],
+      "prompts": [
+        {
+          "label": "Render the prepared request",
+          "text": "Create an image through built-in ImageGen using var/impressor/truck_sheet_r001/imagegen_request.json. Save the result in that iteration folder, keep the prompt and resolved brief, and review all six orthographic panels plus the angled panel against the projection contract."
+        },
+        {
+          "label": "Change one proportion",
+          "text": "Impressor: edit the accepted truck sheet as a new iteration. Change only the cab height, reducing it by about 10%. Preserve the chassis, wheelbase, cargo envelope, part count, all connections, camera directions and equal orthographic scale. Update the same change in every view. Report any view inconsistency before proceeding."
+        }
+      ]
+    },
+    {
+      "id": "reference-lab",
+      "title": "Study references in the correct tool",
+      "paragraphs": [
+        "For a generated truck or building sheet, keep images and review notes in the Impressor iteration. The current Reference Lab serves external character meshes and templates. It is not a generic ImageGen upload screen.",
+        "Open Reference Lab from the Characters section. Choose sources on the left and a Registry character on the right. Compare side by side, overlay, silhouette or wireframes; examine Solid, Wireframe, Normals, Armature and Weights modes. Use the front, side, back and 3/4 camera presets.",
+        "Imported references are study sources. Inspect the permission flags and provenance before making derivatives or public production templates. Importing a mesh does not make it an exported game asset."
+      ],
+      "code": [
+        {
+          "label": "Import a character reference",
+          "text": ".venv/bin/python -m registry reference import /path/to/reference.blend --id my_reference"
+        }
+      ]
+    },
+    {
+      "id": "cubes",
+      "title": "Reproduce the proposal as a cube blockout",
+      "paragraphs": [
+        "Before writing geometry, inspect the existing Components and Assets catalogs for reusable functions. Reproduce the accepted layout with actual dimensions, anchors and only boxes. Do not add details to compensate for incorrect proportions.",
+        "The Registry interface uses meters and glTF/Godot axes: Y is up and the front faces +Z. Blender geometry uses Z up. Read each parameter schema: some legacy parameters use voxel counts rather than meters. Structural anchors use the 0.25 m grid; detail anchors use 0.0625 m.",
+        "A component is a reusable function with an interface, not one component per cube. Define its maximum envelope, bottom-center pivot, compatible mounts and sockets. Derive positions from host bounds, faces, regions and ports so parameters do not break the structure.",
+        "The existing mt_truck variants are useful examples of procedural refinement, but their early wheel geometry is already curved. They are not evidence that the strict cube-only first pass has been performed. Create a new draft when testing that workflow."
+      ],
+      "prompts": [
+        {
+          "label": "Build the first procedural draft",
+          "text": "Create a new procedural cube-massing truck draft from the accepted seven-view proposal. First list reused components, masses, dimensions and anchor relations. Use only boxes, including wheel placeholders; no details or animation. Resolve contradictions using the numerical envelope and one coherent 3D layout. Preserve the ground plane and wheelbase. Write a new variant with author: llm and status: draft. Run registry check, build it, inspect the report and every rendered projection plus the isometric view."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/entity.png",
+          "alt": "Entity page showing a variant tree, 3D model and build information",
+          "caption": "Select a variant in the tree. Shift-click another variant to compare with synchronized cameras and inspect parameter differences."
+        }
+      ]
+    },
+    {
+      "id": "sheet",
+      "title": "Inspect the component sheet and real projections",
+      "paragraphs": [
+        "An asset can expose a Blockout Sheet for its component group. Open Blockout sheet from the asset page. Parts appear separately on a shared table, with the selected asset's component variants where available. This layout is useful for checking proportions and planning reuse.",
+        "Use Build детали if models are missing. Open in Blender prepares the component table; Create projections creates its six-view images. When they already exist, Projections scrolls to them. Download .blend becomes available after preparation.",
+        "In Blender, select all objects of a part's collection; Shift+D duplicates and G moves them. The sheet displays its snap step. Free placement on this table is a study: an accepted procedural assembly must still express actual sockets, hosts and relative anchors in its recipe.",
+        "On an individual variant, Create projections rebuilds when the six images are missing; Projections opens the projection area when complete. Verify front/back, left/right and top/bottom together with the isometric view. Check supports, intersections, asymmetry and underside geometry."
+      ],
+      "figures": [
+        {
+          "src": "assets/blockout-sheet.png",
+          "alt": "Blockout Sheet with components on a table and projection controls",
+          "caption": "The real geometry supplies the verified projections. The component table is distinct from the assembled asset."
+        }
+      ]
+    },
+    {
+      "id": "refinement",
+      "title": "Refine silhouette and reusable components",
+      "paragraphs": [
+        "Proceed through cube_massing, silhouette, structure and detail only when the previous decision is clear. Introduce wedges, cylinders and bevels where they improve recognition or construction. Keep the accepted envelope and anchors; a changed support scheme or mount is a separate structural branch.",
+        "For a reusable component, test nominal, small and large settings plus risky combinations: narrow support with a large overhang, maximum repetitions in minimum width, or extreme heights. A valid parameter on its own does not prove that every combination is valid.",
+        "Registry level is 0–3: blockout, silhouette, detail, animation. blockout.Plan.stage is 1–5: mass, form, structure, detail, accent. Impressor pass names describe work and do not automatically assign either scale. Animation needs explicit nodes, pivots and movement clearances; inspect the full cycle."
+      ],
+      "prompts": [
+        {
+          "label": "Silhouette pass",
+          "text": "Refine the accepted cube truck into a silhouette draft. Change only geometry that improves recognition: cab profile and wheel shape. Preserve the numerical envelope, wheelbase, cargo size, ground contact, sockets and structural anchors. Keep neutral gray materials and no small details. Compare old and new models from all six directions and the game camera; save a new child variant."
+        },
+        {
+          "label": "Reusable component",
+          "text": "Design a reusable support module for this family. First check existing components, then define function, maximum envelope, pivot, mounts, sockets, parts and relations. Begin with boxes. Derive geometry from host bounds and anchors. Test nominal, minimum, maximum and the narrow-support/maximum-overhang combination. Report checks, six projections and isometric preview before adding detail."
+        }
+      ]
+    },
+    {
+      "id": "assembly",
+      "title": "Assemble the asset from compatible modules",
+      "paragraphs": [
+        "Start with one primary mass, one dominant functional feature, up to two secondary features and deliberate quiet zones. Empty sockets are allowed. A socket permits an attachment; it does not require every available point to be occupied.",
+        "The assembly graph names each host, socket and compatible component. Nested sockets such as frame.gear_a belong to that slot's component. Check max_grid and required slots, passage widths, contact and motion clearances.",
+        "The composition page selects a parent, compatible component variants, parameters, level, note and tags. Build creates a new asset variant and queues its build. Review the combined result: individually good components can create a confusing silhouette."
+      ],
+      "prompts": [
+        {
+          "label": "Assemble a family asset",
+          "text": "Assemble a compact workshop using compatible existing components in the selected style profile. Show the cube composition first: one primary volume, one functional feature, no more than two secondary accents and a clear entrance. Preserve the footprint and passage. Then substitute modules using declared sockets and anchors. Leave unused sockets empty, remove unnecessary attachments, build a new draft and compare its seven-view sheet and game-camera view with the previous variant."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/compose.png",
+          "alt": "Asset composition form with parent, component slots and parameters",
+          "caption": "The composition form records the assembly as a new variant. The file-based recipe remains the source of truth."
+        }
+      ]
+    },
+    {
+      "id": "validation",
+      "title": "Build and review the actual result",
+      "paragraphs": [
+        "First run recipe validation, then build the chosen variant. build prints the build/<hash> directory. Read report.json, including overall status, checks, structure issues, composition and statistics. If a build fails, inspect build.log before changing unrelated geometry.",
+        "Inspect preview_iso.png, preview_front.png and preview_top.png; generate or open the remaining projections in the UI. Validate the envelope, pivot, palette, geometry, sockets, support and polygon budget where applicable. A green report is a technical gate, not a visual approval.",
+        "Finally inspect the asset at the actual game camera distance, with neighboring objects and a character or tile scale reference. Tiny details, shadows and material accents can read very differently than in a close-up browser view."
+      ],
+      "code": [
+        {
+          "label": "Check and build an existing example",
+          "text": ".venv/bin/python -m registry check\n.venv/bin/python -m registry build assets/mt_truck/v001"
+        }
+      ],
+      "steps": [
+        "Fix contract, invalid geometry and support errors first.",
+        "Compare the six orthographic views and angled view for the same built model.",
+        "Check the silhouette from the game camera and at thumbnail size.",
+        "Record observed problems separately from proposed causes.",
+        "Advance only when the current pass's question has been answered."
+      ]
+    },
+    {
+      "id": "materials",
+      "title": "Apply materials after the form works",
+      "paragraphs": [
+        "The project already has named palette colors, surface properties, material presets and generated albedo/ORM textures. The Material Lab edits toon shading on a selected built model, compares variants or PBR, and saves changes as a new material branch.",
+        "Use the current palette and parameters declared by the component. Keep identical geometry and camera when comparing finishes. In the Lab, sliders adjust light bands, shadow, highlights, rim, halftone and outlines. Save as branch writes a material delta; it is not a new mesh.",
+        "Color and physical surface are still coupled in parts of the current pipeline. Per-role SurfaceMaterial, AssetLook and extended wear/texture bindings described in the materials plan are proposed development, not existing UI controls. Low roughness alone does not make a window transparent.",
+        "Confirm the selected finish in Blender preview, the Three.js viewer and Godot. Record intentional differences between renderer implementations instead of assuming identical pixels."
+      ],
+      "prompts": [
+        {
+          "label": "Material study using current features",
+          "text": "Prepare two finish variants for the accepted model using only its declared palette and material parameters: neutral inspection and a restrained industrial finish. Preserve geometry, anchors and camera. Check matte body, metal hardware, wheels and window treatment using the existing presets. Compare PBR and toon and verify the selected result in Godot. Identify requested properties that the current format cannot express; do not invent unsupported material fields."
+        }
+      ],
+      "figures": [
+        {
+          "src": "assets/materials.png",
+          "alt": "Material Lab showing a model, material variant tree and toon controls",
+          "caption": "Material Lab adjusts the rendering style on built geometry. New physical-material architecture remains a separate development plan."
+        }
+      ]
+    },
+    {
+      "id": "godot",
+      "title": "Export and inspect in Godot",
+      "paragraphs": [
+        "Export a built variant into an existing Godot project. Replace the path below with your own project folder. export-godot copies GLB and metadata; material variants have their Godot shader/material export path. Do not judge game integration only from a successful file copy.",
+        "Open the target scene and check meter scale, +Z-facing orientation, pivot, contact with ground, materials, silhouette and animation when present. Inspect clearances during movement and compare against neighboring game objects.",
+        "godot-check is currently oriented toward character rig, skin, clips and scale. It does not replace a scene check for a truck or building. Use the game scene as the final acceptance point."
+      ],
+      "code": [
+        {
+          "label": "Export the built truck example",
+          "text": ".venv/bin/python -m registry export-godot /path/to/godot_project assets/mt_truck/v001"
+        }
+      ]
+    },
+    {
+      "id": "iterations",
+      "title": "Save each decision as a new iteration",
+      "paragraphs": [
+        "Create a new vNNN.yaml with parent, the smallest useful change, author: llm, status: draft and a meaningful note. Components use delta; assets use changed slots and params_delta. Keep the previous recipe. A human assigns approved after review. The agent does not modify manual .blend sources; start procedural work from a procedural ancestor.",
+        "Record the brief, style version, input images, final prompt, image tool/model when known, code revision or snapshot, palette, tool versions, variant references, build hashes, report paths and all reviewed views. The current build hash does not fully snapshot every external dependency.",
+        "After each pass, choose refine, advance, rollback or structural branch. If two targeted edits fail to solve placement, return to the mass, anchor or host region. Adding decorative geometry will not fix a broken relation.",
+        "When generator.py or its paired blender.py changes, increment generator_version. Changes to the shared builder require BUILDER_VERSION; character libraries have additional version rules. Record these versions with the iteration so stale artifacts are not mistaken for the new result."
+      ],
+      "steps": [
+        "State the observed problem in a specific view.",
+        "Choose one cause to test and list the permitted changes.",
+        "Keep dimensions, interfaces and accepted decisions explicit.",
+        "Generate or build a new iteration and repeat the same review views.",
+        "Record the decision and the next question; remove details that add no value."
+      ],
+      "prompts": [
+        {
+          "label": "One targeted procedural correction",
+          "text": "From the last accepted procedural variant, create one new child draft. Observed problem: the cab is too tall from the game camera. Change only cab height within the declared parameter range. Preserve wheelbase, cargo envelope, sockets, ground contact and materials. Rebuild, compare synchronized views, inspect all six projections plus isometric and game-camera views, then record whether the correction worked."
+        }
+      ]
+    },
+    {
+      "id": "contract",
+      "title": "Acceptance checklist and source documents",
+      "paragraphs": [
+        "A usable iteration includes a clear purpose, one coherent 3D model, the six orthographic views and angled view, explicit dimensions and anchors, valid recipes, applicable build checks and a review from the game camera. The first pass is strictly box-only. Later geometry must serve the current question.",
+        "Keep the reference sheet marked as a proposal until its geometry is verified. Generated views may conflict; resolve conflicts in the numerical model contract and rerender from that model. Do not claim precise reconstruction from an image alone.",
+        "The detailed rules live in CLAUDE.md, impressor/PROJECTION_CONTRACT.md, impressor/BLOCKOUT_PRACTICES.md, impressor/REFERENCE_ITERATION.md, impressor/ASSET_ITERATION.md and impressor/SKETCH_GENERATION.md. Open-source, localization and material roadmaps live in docs/. This HTML guide explains the alpha as it is; future features remain marked as plans."
+      ],
+      "steps": [
+        "Brief and versioned style are saved.",
+        "Every reference panel describes the same iteration; any discrepancy is documented.",
+        "Real projections are rendered from the same accepted model.",
+        "Dimensions, grid, axes, pivot, anchors and sockets are explicit.",
+        "Technical report and visual/game reviews are complete.",
+        "The result is saved as a new draft with provenance and a next-step decision."
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Blockout",
+      "description": "A simple spatial model for testing function, dimensions and composition before detailed geometry."
+    },
+    {
+      "term": "Reference proposal",
+      "description": "A generated or collected image used to explore a design; it is not verified geometry."
+    },
+    {
+      "term": "Verified projection",
+      "description": "An orthographic image rendered from the accepted 3D model with known axes and scale."
+    },
+    {
+      "term": "Component",
+      "description": "A reusable procedural function with parameters, an envelope, pivot, mounts and sockets."
+    },
+    {
+      "term": "Asset",
+      "description": "A composition of compatible component variants connected through declared slots and sockets."
+    },
+    {
+      "term": "Variant",
+      "description": "A versioned recipe inheriting from a parent and recording changes as a delta."
+    },
+    {
+      "term": "Impressor",
+      "description": "Task templates, iteration rules and a local sketch-prompt compiler; built-in ImageGen is invoked by the agent."
+    }
+  ]
+}

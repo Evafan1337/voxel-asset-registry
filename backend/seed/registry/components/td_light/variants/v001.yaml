@@ -1,0 +1,9 @@
+id: v001
+parent: null
+delta: {shape: strip, length: 0.3, size: 0.06}
+level: 1
+author: llm
+note: оранжевая полоса-маркер на основании
+tags: [tower_defence, blockout]
+rating: null
+status: built

@@ -1,0 +1,9 @@
+id: v003
+parent: v001
+delta: {width: 0.26, height: 0.05, panel_thickness: 0.44, frame: false, palette_color: steel_dark}
+level: 1
+author: llm
+note: наплечная броня grunt (вылет 0.05, длина 0.44)
+tags: [tower_defence, environment, blockout, enemy]
+rating: null
+status: built

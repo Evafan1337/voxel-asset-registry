@@ -1,0 +1,62 @@
+[
+  {
+    "file": "registry.png",
+    "route": "#/assets",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "captured_at": "2026-10-11T16:56:01.178Z",
+    "page_errors": [],
+    "source": "verified_public_alpha",
+    "locale": "en"
+  },
+  {
+    "file": "entity.png",
+    "route": "#/assets/mt_truck?v=v001",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "captured_at": "2026-10-11T16:56:04.478Z",
+    "page_errors": [],
+    "source": "verified_public_alpha",
+    "locale": "en"
+  },
+  {
+    "file": "blockout-sheet.png",
+    "route": "#/blockout/asset%3Amt_truck?asset=mt_truck&v=v001",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "captured_at": "2026-10-11T16:56:08.089Z",
+    "page_errors": [],
+    "source": "verified_public_alpha",
+    "locale": "en"
+  },
+  {
+    "file": "compose.png",
+    "route": "#/assets/mt_truck/compose?parent=v001",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "captured_at": "2026-10-11T16:56:10.451Z",
+    "page_errors": [],
+    "source": "verified_public_alpha",
+    "locale": "en"
+  },
+  {
+    "file": "materials.png",
+    "route": "#/materials/toon?v=v001",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "captured_at": "2026-10-11T16:56:12.414Z",
+    "page_errors": [],
+    "source": "verified_public_alpha",
+    "locale": "en"
+  }
+]

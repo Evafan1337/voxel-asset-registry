@@ -1,0 +1,501 @@
+presets:
+  blockout_gray:
+    title: Серый блок-аут
+    colors:
+      body: paint_gray
+      trim: steel_dark
+      bare_metal: steel_dark
+      track: steel_dark
+      wheel: paint_gray
+      glass: steel_dark
+      lamp: paint_gray
+      cargo: paint_gray
+      canvas: steel_dark
+      antenna: steel_dark
+      muzzle: paint_gray
+    materials:
+      paint_gray:
+        metallic: 0.0
+        roughness: 0.85
+      steel_dark:
+        metallic: 0.0
+        roughness: 0.9
+  military_olive:
+    title: Оливковая военная техника
+    colors:
+      body: olive
+      trim: olive_dark
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: lamp_amber
+      cargo: wood
+      canvas: olive_dark
+      antenna: metal_dark
+      muzzle: metal_steel
+    materials:
+      olive:
+        metallic: 0.65
+        roughness: 0.25
+      olive_dark:
+        metallic: 0.65
+        roughness: 0.3
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.22
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.18
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      lamp_amber:
+        metallic: 0.0
+        roughness: 0.45
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+  military_olive_grain:
+    title: Оливковый металл · мелкое зерно
+    colors:
+      body: olive
+      trim: olive_dark
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: lamp_amber
+      cargo: wood
+      canvas: olive_dark
+      antenna: metal_dark
+      muzzle: metal_steel
+    materials:
+      olive:
+        metallic: 0.65
+        roughness: 0.25
+        texture:
+          style: grain
+          strength: 0.035
+          density: 32
+          seed: 13
+      olive_dark:
+        metallic: 0.65
+        roughness: 0.3
+        texture:
+          style: grain
+          strength: 0.035
+          density: 32
+          seed: 13
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.22
+        texture:
+          style: grain
+          strength: 0.035
+          density: 32
+          seed: 13
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.18
+        texture:
+          style: grain
+          strength: 0.035
+          density: 32
+          seed: 13
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      lamp_amber:
+        metallic: 0.0
+        roughness: 0.45
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+  military_olive_brushed:
+    title: Оливковый металл · шлифовка
+    colors:
+      body: olive
+      trim: olive_dark
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: lamp_amber
+      cargo: wood
+      canvas: olive_dark
+      antenna: metal_dark
+      muzzle: metal_steel
+    materials:
+      olive:
+        metallic: 0.65
+        roughness: 0.25
+        texture:
+          style: brushed
+          strength: 0.035
+          density: 32
+          seed: 13
+      olive_dark:
+        metallic: 0.65
+        roughness: 0.3
+        texture:
+          style: brushed
+          strength: 0.035
+          density: 32
+          seed: 13
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.22
+        texture:
+          style: brushed
+          strength: 0.035
+          density: 32
+          seed: 13
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.18
+        texture:
+          style: brushed
+          strength: 0.035
+          density: 32
+          seed: 13
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      lamp_amber:
+        metallic: 0.0
+        roughness: 0.45
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+  military_olive_hammered:
+    title: Оливковый металл · лёгкая ковка
+    colors:
+      body: olive
+      trim: olive_dark
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: lamp_amber
+      cargo: wood
+      canvas: olive_dark
+      antenna: metal_dark
+      muzzle: metal_steel
+    materials:
+      olive:
+        metallic: 0.65
+        roughness: 0.25
+        texture:
+          style: hammered
+          strength: 0.035
+          density: 32
+          seed: 13
+      olive_dark:
+        metallic: 0.65
+        roughness: 0.3
+        texture:
+          style: hammered
+          strength: 0.035
+          density: 32
+          seed: 13
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.22
+        texture:
+          style: hammered
+          strength: 0.035
+          density: 32
+          seed: 13
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.18
+        texture:
+          style: hammered
+          strength: 0.035
+          density: 32
+          seed: 13
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      lamp_amber:
+        metallic: 0.0
+        roughness: 0.45
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+  industrial_orange:
+    title: Строительная техника · серый металл и оранжевый
+    description: Порошковая окраска, открытая сталь, тёмные траки и белые фары. Лёгкий
+      пиксельный шум на металлах.
+    colors:
+      body: construction_gray
+      trim: safety_orange
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: reflector_white
+      cargo: wood
+      canvas: safety_orange
+      antenna: metal_dark
+      muzzle: safety_orange
+    materials:
+      construction_gray:
+        metallic: 0.35
+        roughness: 0.36
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      safety_orange:
+        metallic: 0.35
+        roughness: 0.36
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.3
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.24
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      reflector_white:
+        metallic: 0.0
+        roughness: 0.3
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+  industrial_yellow:
+    title: Строительная техника · серый металл и жёлтый
+    description: Порошковая окраска, открытая сталь, тёмные траки и белые фары. Лёгкий
+      пиксельный шум на металлах.
+    colors:
+      body: construction_gray
+      trim: safety_yellow
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: reflector_white
+      cargo: wood
+      canvas: safety_yellow
+      antenna: metal_dark
+      muzzle: safety_yellow
+    materials:
+      construction_gray:
+        metallic: 0.35
+        roughness: 0.36
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      safety_yellow:
+        metallic: 0.35
+        roughness: 0.36
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.3
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.24
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      reflector_white:
+        metallic: 0.0
+        roughness: 0.3
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+  scorpion_chitin:
+    title: Хитин · тёмно-коричневый с красными клешнями
+    description: Неметаллический матовый панцирь с лёгким пиксельным зерном; светятся
+      только глаза.
+    colors:
+      body: chitin_brown
+      trim: chitin_red
+      bare_metal: chitin_dark
+      track: chitin_dark
+      wheel: chitin_brown
+      glass: chitin_dark
+      lamp: venom_eye
+      cargo: chitin_brown
+      canvas: chitin_dark
+      antenna: chitin_dark
+      muzzle: chitin_red
+    materials:
+      chitin_red:
+        metallic: 0.0
+        roughness: 0.62
+        texture:
+          style: grain
+          strength: 0.018
+          density: 24
+          seed: 71
+      chitin_brown:
+        metallic: 0.0
+        roughness: 0.62
+        texture:
+          style: grain
+          strength: 0.018
+          density: 24
+          seed: 71
+      chitin_dark:
+        metallic: 0.0
+        roughness: 0.62
+        texture:
+          style: grain
+          strength: 0.018
+          density: 24
+          seed: 71
+      venom_eye:
+        metallic: 0.0
+        roughness: 0.4
+        emission: 3.0
+  scorpion_sand:
+    title: Хитин · песочный с терракотовыми клешнями
+    description: Неметаллический матовый панцирь с лёгким пиксельным зерном; светятся
+      только глаза.
+    colors:
+      body: chitin_sand
+      trim: chitin_rust
+      bare_metal: chitin_dark
+      track: chitin_dark
+      wheel: chitin_sand
+      glass: chitin_dark
+      lamp: venom_eye
+      cargo: chitin_sand
+      canvas: chitin_dark
+      antenna: chitin_dark
+      muzzle: chitin_rust
+    materials:
+      chitin_sand:
+        metallic: 0.0
+        roughness: 0.62
+        texture:
+          style: grain
+          strength: 0.018
+          density: 24
+          seed: 71
+      chitin_rust:
+        metallic: 0.0
+        roughness: 0.62
+        texture:
+          style: grain
+          strength: 0.018
+          density: 24
+          seed: 71
+      chitin_dark:
+        metallic: 0.0
+        roughness: 0.62
+        texture:
+          style: grain
+          strength: 0.018
+          density: 24
+          seed: 71
+      venom_eye:
+        metallic: 0.0
+        roughness: 0.4
+        emission: 3.0
+  industrial_scorpion:
+    title: Инженерная расцветка скорпиона · красные глаза
+    description: Порошковая окраска, открытая сталь, тёмные траки и белые фары. Лёгкий
+      пиксельный шум на металлах.
+    colors:
+      body: construction_gray
+      trim: safety_orange
+      bare_metal: metal_dark
+      track: metal_dark
+      wheel: metal_steel
+      glass: glass_tinted
+      lamp: venom_eye
+      cargo: wood
+      canvas: safety_orange
+      antenna: metal_dark
+      muzzle: safety_orange
+    materials:
+      construction_gray:
+        metallic: 0.35
+        roughness: 0.36
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      safety_orange:
+        metallic: 0.35
+        roughness: 0.36
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      metal_dark:
+        metallic: 0.95
+        roughness: 0.3
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      metal_steel:
+        metallic: 0.95
+        roughness: 0.24
+        texture:
+          style: grain
+          strength: 0.025
+          density: 32
+          seed: 29
+      glass_tinted:
+        metallic: 0.0
+        roughness: 0.08
+      reflector_white:
+        metallic: 0.0
+        roughness: 0.3
+        emission: 1.5
+      wood:
+        metallic: 0.0
+        roughness: 0.85
+      venom_eye:
+        metallic: 0.0
+        roughness: 0.4
+        emission: 3.0

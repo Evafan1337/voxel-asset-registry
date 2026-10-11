@@ -1,0 +1,11 @@
+id: v001
+parent: null
+slots: {hull: td_body@v005, sensor: td_sensor@v003, fin_left: td_panel@v002, fin_right: td_panel@v002,
+  spike: td_barrel@v002}
+params_delta: {}
+level: 1
+author: llm
+note: blockout v1 по референсу Orbital Defense
+tags: [tower_defence, enemy, blockout]
+rating: null
+status: built

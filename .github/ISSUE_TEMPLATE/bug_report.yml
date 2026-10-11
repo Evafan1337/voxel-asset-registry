@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible installation, recipe or UI problem
+title: "Bug: "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version and environment
+      description: Alpha version, OS, Python, Node.js and Blender versions
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Commands or UI steps, including the model reference
+    validations:
+      required: true
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Expected and actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Relevant checks or logs
+      description: Remove personal paths, credentials and private model content
+      render: text

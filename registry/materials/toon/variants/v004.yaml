@@ -1,0 +1,10 @@
+id: v004
+parent: v001
+delta: {bands: 2, halftone: 0.9, halftone_scale: 5.0, shadow_strength: 0.35, outline_mode: screen, outline_px: 2.0,
+  outline_color: '#111111', specular: 0.0}
+level: 2
+author: llm
+note: 'комикс: растровые точки в тени, экранный контур'
+tags: [comic, halftone]
+rating: null
+status: built

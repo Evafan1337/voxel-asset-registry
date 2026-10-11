@@ -1,0 +1,9 @@
+id: v012
+parent: v001
+delta: {part: wheel}
+level: 2
+author: llm
+note: Ключевой блок «колесо с подкрылком» на стадии 1.
+tags: [transport, evolution]
+rating: null
+status: built

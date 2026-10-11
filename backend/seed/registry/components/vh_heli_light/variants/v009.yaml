@@ -1,0 +1,9 @@
+id: v009
+parent: v001
+delta: {part: rotor}
+level: 3
+author: llm
+note: Ключевой блок «главный ротор» на стадии 1.
+tags: [transport, evolution, animated]
+rating: null
+status: built

@@ -1,0 +1,9 @@
+id: v001
+parent: null
+delta: {leg_length: 0.22}
+level: 1
+author: llm
+note: тонкая быстрая нога scout
+tags: [tower_defence, enemy, blockout]
+rating: null
+status: built

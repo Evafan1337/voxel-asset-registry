@@ -1,0 +1,65 @@
+# Предлагаемый формат Impressor. Это описание процесса, а не конфиг Registry.
+schema: impressor/style/v1
+id: industrial_chunky
+version: 1
+
+purpose: Согласованное семейство небольших промышленных зданий для игрового прототипа.
+units: meters
+interface_axes: gltf_y_up
+geometry_axes: blender_z_up
+
+scale:
+  tile_m: 1.0
+  macro_grid_m: 0.25
+  detail_grid_m: 0.0625
+
+shape_language:
+  initial_pass: cube_massing
+  initial_primitives: [box]
+  initial_surface: neutral_review
+  later_primitives: [box, wedge, beam, cylinder]
+  primary_forms: Крупные компактные объёмы с ясным направлением и простой опорой.
+  proportions: Рабочая часть заметнее корпуса; вторичные детали подчинены ей.
+  silhouette: Различимые основные массы на игровой дистанции.
+
+composition:
+  primary_mass_count: 1
+  hero_feature_count: 1
+  max_secondary_features: 2
+  quiet_zones_required: true
+
+materials:
+  palette_path: registry/palette.yaml
+  allowed_palette_keys: [steel, steel_dark, stone, wood, signal_orange]
+  accent_rule: Один небольшой акцент после проверки нейтрального силуэта.
+
+interfaces:
+  vocabulary: [ground, roof, wall_base, axle, surface]
+  placement: Положение дочерней части выводится из грани или общего якоря хоста.
+  reuse: Сначала существующий компонент, затем вариант, затем новая функция.
+
+review:
+  camera: Фиксированный изометрический ракурс целевой игровой сцены.
+  scale_in_frame: Одинаковый масштаб объектов относительно игрового тайла.
+  technical_views: [iso, front, back, left, right, top, bottom]
+  # Новая сборка Registry даёт все семь видов; старый кэш требует пересборки.
+  # Ориентацию top согласовать с контрактом: PROJECTION_CONTRACT.md.
+  projection_contract:
+    schema: impressor/projections/v1
+    axes: gltf_y_up
+    front_axis: +Z
+    orthographic_views: [front, rear, left, right, top, bottom]
+    angled_view: isometric
+    layout: rows_of_four
+  comparisons: [previous_pass, family_sheet, in_game]
+  silhouette_surface: neutral_review
+
+avoid:
+  - Ранние фаски и текстуры на кубическом проходе.
+  - Мелкая механика без видимой функции.
+  - Заполнение каждого сокета.
+  - Случайная асимметрия и независимые координаты стыкующихся частей.
+
+# В записи конкретного запуска сохранить разрешённые значения профиля,
+# состояние палитры и конкретную камеру: ссылка на этот файл сама по себе
+# не фиксирует все внешние зависимости.

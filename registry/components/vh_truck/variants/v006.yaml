@@ -1,0 +1,9 @@
+id: v006
+parent: v001
+delta: {part: cab}
+level: 2
+author: llm
+note: Ключевой блок «кабина» на стадии 1.
+tags: [transport, evolution]
+rating: null
+status: built

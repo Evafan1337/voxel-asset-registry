@@ -1,0 +1,9 @@
+id: v020
+parent: v001
+delta: {width: 54.88, depth: 14.5, height: 0.1, edge: false, color: stone_dark}
+level: 1
+author: llm
+note: 'Подиум витрины эволюции: width 54.88, depth 14.5, height 0.1, edge False, color stone_dark'
+tags: [showcase, evolution, transport]
+rating: null
+status: built

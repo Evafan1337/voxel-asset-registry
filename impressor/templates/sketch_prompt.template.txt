@@ -1,0 +1,22 @@
+Use case: stylized-concept
+Asset type: game asset blockout sketch for Impressor
+Primary request: Create a reference sketch of $subject.
+$input_line
+Purpose: $purpose
+Iteration question: $question
+Workflow pass: $pass_name
+Scene/backdrop: $background
+Style/medium: $style
+Composition/framing: $composition
+$view_line
+Lighting/mood: $lighting
+Functional masses and placement:
+$masses
+Proportions: $proportions
+Geometry: $geometry
+Materials/textures: $materials
+$edit_line
+Constraints: $constraints
+Text: No text, labels, dimensions, logos or watermark anywhere in the image.
+Avoid: $avoid
+Output intent: A readable visual hypothesis for later procedural modeling, not a CAD drawing or a finished 3D asset.

@@ -1,0 +1,26 @@
+.page-new-asset { max-width: 1440px; margin: 0 auto; }
+.page-new-asset .entity-head p { margin: 4px 0 12px; max-width: 900px; }
+.new-asset-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 18px; }
+.new-asset-assembly, .new-asset-meta { min-width: 0; }
+.new-asset-parts { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+.new-asset-part { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); padding: 10px; }
+.new-asset-part-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.new-asset-part-main { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 12px; }
+.new-asset-part-preview { aspect-ratio: 1; display: grid; place-items: center; text-align: center; background: var(--viewer-bg); border-radius: 6px; overflow: hidden; }
+.new-asset-part-preview img { width: 100%; height: 100%; object-fit: contain; }
+.new-asset-part-fields { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.new-asset-part-fields label, .new-asset-meta label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
+.new-asset-part-fields label input, .new-asset-part-fields label select, .new-asset-meta label input, .new-asset-meta label select { color: var(--text); font-size: 14px; }
+.new-asset-part-fields select { width: 100%; }
+.new-asset-part-controls { display: grid; grid-template-columns: minmax(120px, 1fr) minmax(190px, 2fr); gap: 8px; }
+.new-asset-offset { display: flex; align-items: end; gap: 6px; flex-wrap: wrap; }
+.new-asset-offset input { width: 86px; }
+.new-asset-meta { display: flex; flex-direction: column; gap: 10px; padding: 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.new-asset-meta h2 { margin-bottom: 2px; }
+.new-asset-meta p { margin: 0; }
+.new-asset-grid { display: flex; gap: 5px; }
+.new-asset-grid span { flex: 1; display: flex; align-items: center; gap: 4px; }
+.new-asset-grid input { width: 100%; }
+.page-new-asset .form-errors:not(:empty) { border: 1px solid var(--err); border-radius: 6px; padding: 8px; color: var(--err); font-size: 12px; }
+@media (max-width: 850px) { .new-asset-layout { grid-template-columns: 1fr; } }
+@media (max-width: 540px) { .new-asset-part-main { grid-template-columns: 1fr; } .new-asset-part-preview { display: none; } .new-asset-part-controls { grid-template-columns: 1fr; } }

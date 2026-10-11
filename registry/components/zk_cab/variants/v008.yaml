@@ -1,0 +1,17 @@
+id: v008
+parent: v005
+delta:
+  arch_balance: mini_cap
+level: 2
+author: llm
+note: 'Баланс арок A, стадия 2: меньшее фасетное горло, тёмный подкрылок и тонкий
+  наружный козырёк с мостом к реальной оболочке. Колёса и детали не изменены.'
+tags:
+- zuk
+- sheet_study
+- stage2
+- inset
+- arch_balance
+- mini_cap
+rating: null
+status: draft

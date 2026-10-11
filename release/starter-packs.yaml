@@ -1,0 +1,68 @@
+schema: public-alpha/v1
+demo_refs:
+  - assets/zuk_truck/v009
+  - assets/td_gatling_tower/v002
+  - assets/td_grunt/v002
+  - assets/mt_truck/v001
+  - assets/mt_truck/v005
+  - components/vh_truck/v001
+  - components/vh_truck/v005
+  - components/vh_heli_light/v001
+  - components/vh_heli_light/v005
+  - materials/toon/v001
+packs:
+  - id: zuk_truck
+    title: {en: Zuk modular truck, ru: Модульный грузовик Zuk}
+    refs:
+      - assets/zuk_truck/v009
+      - assets/zuk_truck/v010
+      - assets/zuk_truck/v011
+      - assets/zuk_truck/v012
+  - id: td
+    title: {en: Tower defence kit, ru: Набор Tower Defence}
+    refs:
+      - assets/td_gatling_tower/v002
+      - assets/td_missile_tower/v001
+      - assets/td_support_tower/v002
+      - assets/td_scout/v002
+      - assets/td_grunt/v002
+      - assets/td_flyer/v001
+      - assets/td_cover/v001
+      - assets/td_path_tile/v001
+  - id: evo_truck
+    title: {en: Truck evolution, ru: Эволюция грузовика}
+    refs:
+      - assets/evo_truck/v001
+      - components/vh_truck/v001
+      - components/vh_truck/v002
+      - components/vh_truck/v003
+      - components/vh_truck/v004
+      - components/vh_truck/v005
+  - id: mt_truck
+    title: {en: Modular cargo truck, ru: Модульный грузовик фургон}
+    refs:
+      - assets/mt_truck/v001
+      - assets/mt_truck/v002
+      - assets/mt_truck/v003
+      - assets/mt_truck/v004
+      - assets/mt_truck/v005
+  - id: evo_heli_light
+    title: {en: Light helicopter evolution, ru: Эволюция лёгкого вертолёта}
+    refs:
+      - assets/evo_heli_light/v001
+      - components/vh_heli_light/v001
+      - components/vh_heli_light/v002
+      - components/vh_heli_light/v003
+      - components/vh_heli_light/v004
+      - components/vh_heli_light/v005
+materials_refs:
+  - materials/toon/v001
+  - materials/toon/v002
+  - materials/toon/v003
+  - materials/toon/v004
+  - materials/toon/v005
+  - materials/toon/v006
+material_preview_refs:
+  - assets/mt_truck/v005
+  - components/vh_truck/v005
+  - components/vh_heli_light/v005

@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {stage: 3}
+level: 2
+author: llm
+note: Третья стадия — отдельный металлический корпус и утопленная жёлтая линза с цветной GLB-эмиссией.
+tags: [vehicle, zuk, modular, lamp, stage3]
+rating: null
+status: draft

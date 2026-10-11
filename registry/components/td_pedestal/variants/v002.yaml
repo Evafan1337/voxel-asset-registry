@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {width: 0.15, height: 1.0, taper: 0.2, collar_at: 0.68}
+level: 1
+author: llm
+note: тонкая мачта support-башни
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built

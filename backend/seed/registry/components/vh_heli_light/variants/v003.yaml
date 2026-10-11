@@ -1,0 +1,9 @@
+id: v003
+parent: v002
+delta: {stage: 3}
+level: 3
+author: llm
+note: "STRUCTURE: регионы стекла на гранях фонаря, двери, решётчатая балка по рёбрам массы, редуктор, основание мачты."
+tags: [transport, evolution, animated]
+rating: null
+status: built

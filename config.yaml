@@ -1,0 +1,22 @@
+# Public defaults. Optional personal overrides belong in ignored config.local.yaml.
+# Relative data paths are resolved from the project root.
+blender_bin: blender
+godot_bin: ""
+godot_vulkan_icd: ""
+registry_dir: registry
+build_dir: build
+db_path: var/index.sqlite
+parallel_builds: 1
+build_timeout: 300
+preview_size: 512
+priority_tags: [starter, transport, tower_defence]
+limits:
+  poly_limit_asset: 5000
+  poly_limit_component: 3000
+  bbox_tolerance: 0.02
+server:
+  host: 127.0.0.1
+  port: 8000
+legacy:
+  parallel: 1
+  sources: []

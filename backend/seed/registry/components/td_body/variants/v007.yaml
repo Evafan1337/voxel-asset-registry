@@ -1,0 +1,9 @@
+id: v007
+parent: v004
+delta: {width: 0.56, depth: 0.66, height: 0.34, lift: 0.34}
+level: 1
+author: llm
+note: 'grunt v2: выше на ногах, под длинные толстые ноги'
+tags: [tower_defence, blockout, enemy]
+rating: null
+status: built

@@ -1,0 +1,9 @@
+id: v010
+parent: v005
+delta: {dual: true}
+level: 2
+author: llm
+note: Спаренные колёса задней оси, GAME.
+tags: [modular_truck, transport, modular]
+rating: null
+status: built

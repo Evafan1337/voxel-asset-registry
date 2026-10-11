@@ -1,0 +1,13 @@
+id: v005
+parent: v001
+slots: {chassis: zk_chassis@v004, cab: zk_cab@v004, body: zk_body@v005, axle_front: zk_axle@v006, axle_rear: zk_axle@v006}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'Stage 1, structural correction: колёса 0,25 м внутри кузова, низ борта 0,50 м и настоящие прямоугольные
+  арки. База, радиус и крыша сохранены.'
+tags: [zuk, modular, impressor, arch_fix, stage1]
+rating: null
+status: draft

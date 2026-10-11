@@ -1,0 +1,9 @@
+id: v005
+parent: v004
+delta: {stage: 5}
+level: 2
+author: llm
+note: 'GAME: козырёк с маркерами, антенна, номер, поворотники, маркеры и полоса фургона, запоры, брызговики, выхлоп, крышка бака.'
+tags: [transport, evolution]
+rating: null
+status: built

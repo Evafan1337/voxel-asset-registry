@@ -1,0 +1,14 @@
+id: v005
+parent: v004
+slots: {chassis: mt_chassis@v005, cab: mt_cabin@v005, box: mt_cargo_box@v005, axle_front: mt_wheelset@v005,
+  axle_rear_1: mt_wheelset@v010, axle_rear_2: mt_wheelset@v010, exhaust: mt_exhaust@v005, tank: mt_tank@v005,
+  toolbox: mt_toolbox@v005}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 2
+author: llm
+note: 'GAME: материалы — как референс v3.'
+tags: [modular_truck, transport, modular, showcase]
+rating: null
+status: built

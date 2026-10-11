@@ -1,0 +1,9 @@
+id: v004
+parent: v003
+delta: {steering: false}
+level: 3
+author: llm
+note: Задняя ось использует те же колёса и подвеску stage 3; отключён только поворот.
+tags: [zuk, stage_3, rear_axle, animated]
+rating: null
+status: draft

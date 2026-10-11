@@ -1,0 +1,12 @@
+; Minimal Godot 4 project used by `python -m registry godot-preview` (copied into build/godot_preview/).
+config_version=5
+
+[application]
+config/name="Registry Godot Preview"
+
+[display]
+window/size/viewport_width=900
+window/size/viewport_height=560
+
+[rendering]
+renderer/rendering_method="forward_plus"

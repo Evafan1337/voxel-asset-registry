@@ -1,0 +1,13 @@
+id: v007
+parent: v003
+slots: {chassis: zk_chassis@v006, cab: zk_cab@v006, body: zk_body@v007, axle_front: zk_axle@v008, axle_rear: zk_axle@v009}
+slot_offsets: {}
+params_delta: {}
+composition_delta: {}
+level: 3
+author: llm
+note: 'Stage 3 A, structural correction: сквозные арки, утопленные колёса, рама и опоры подвески перенесены
+  внутрь; прочие D11–D20 сохранены.'
+tags: [zuk, modular, impressor, arch_fix, stage3]
+rating: null
+status: draft

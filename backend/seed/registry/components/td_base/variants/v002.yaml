@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {height: 0.16, tiers: 1, rim: straight, chamfer: 0.06, palette_color: stone}
+level: 1
+author: llm
+note: 'тайл дороги: прямой участок, бортики по бокам'
+tags: [tower_defence, blockout, environment]
+rating: null
+status: built

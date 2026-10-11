@@ -1,0 +1,9 @@
+id: v022
+parent: v001
+delta: {width: 7.7, depth: 5.8, pips: 2, arrow: true, gap: 1.4}
+level: 1
+author: llm
+note: 'Подиум витрины эволюции: width 7.7, depth 5.8, pips 2, arrow True, gap 1.4'
+tags: [showcase, evolution, transport]
+rating: null
+status: built

@@ -1,0 +1,9 @@
+id: v003
+parent: v001
+delta: {chamfer: 0.26}
+level: 1
+author: llm
+note: восьмигранное основание (support)
+tags: [tower_defence, blockout, tower]
+rating: null
+status: built
