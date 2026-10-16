@@ -4,25 +4,26 @@ Create procedural blockouts, refine reusable components and assemble game
 assets with Blender. A local web interface lets you browse recipes, compare
 variants, change parameters, build GLB models and inspect their projections.
 
-**Public alpha 0.1.0-alpha.1.** The starter collection contains trucks, a light
-helicopter and a tower defence kit. Impressor prepares consistent reference
+**Public alpha 0.1.0-alpha.2.** The starter collection contains trucks, a light
+helicopter, a tower defence kit and an animated steam engine. Impressor prepares consistent reference
 prompts and records the path from a sketch to verified 3D geometry.
 
 [Русский](README.ru.md) · [Seven language pipeline guide](docs/guide/index.html)
 
-[Download the alpha](https://github.com/Evafan1337/voxel-asset-registry/releases/tag/0.1.0-alpha.1)
+[Download the alpha](https://github.com/Evafan1337/voxel-asset-registry/releases/tag/0.1.0-alpha.2)
 for the source package, ready-to-import starter models and offline HTML guide.
-The model archive contains 29 GLB files and 203 rendered views; it can be used
+The model archive contains 32 GLB files and 224 rendered views; it can be used
 without installing this service. See [the pack guide](docs/STARTER_PACKS.md)
 and [the development roadmap](docs/STARTER_ROADMAP.md).
 
 **Blender files:** open **Releases → Assets** and download
-[the starter `.blend` archive](https://github.com/Evafan1337/voxel-asset-registry/releases/download/0.1.0-alpha.1/voxel-asset-registry-starter-blends-0.1.0-alpha.1.zip).
-It contains 29 editable scenes converted from the released GLBs, with final
+[the starter `.blend` archive](https://github.com/Evafan1337/voxel-asset-registry/releases/download/0.1.0-alpha.2/voxel-asset-registry-starter-blends-0.1.0-alpha.2.zip).
+It contains 32 editable scenes converted from the released GLBs, with final
 meshes, materials and available animations. No service installation is needed.
 For Zuk, extract the archive and open `models/assets/zuk_truck/v011/model.blend`;
 `v012` is the alternative without the external wheel-arch caps. Procedural
-recipe controls are available separately in this repository. Original demo
+recipe controls are available separately in this repository. The steam engine
+is `models/components/mx_steam_engine/v002/model.blend`; press Space to run it. Original demo
 models are CC0: commercial use without required attribution.
 
 ![Procedural truck projection sheet](docs/guide/assets/verified-truck-sheet.png)
@@ -81,6 +82,7 @@ variant. Existing recipes remain available for comparison and rebuilding.
 | `mt_truck` | Five stages of a modular truck assembled from reusable components |
 | `evo_truck` | Truck evolution display and individual `vh_truck` vehicle stages |
 | `evo_heli_light` | Helicopter evolution display and individual `vh_heli_light` stages |
+| `steam_engine` | A cut-away mill steam engine whose piston, conrod, crank, valve gear and governor move from one crank angle; three presets |
 
 The catalogue also contains the components and parent recipes required by
 these packs. See [release/starter-packs.yaml](release/starter-packs.yaml) for

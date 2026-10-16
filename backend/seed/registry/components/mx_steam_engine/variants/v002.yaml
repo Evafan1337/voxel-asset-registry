@@ -1,0 +1,9 @@
+id: v002
+parent: v001
+delta: {color: signal_red, flywheel: soot, accent: brass, metal: steel, spokes: 6, base: brick}
+level: 3
+author: llm
+note: 'Героическая красная машина: чёрный маховик на 6 спиц, кирпичный фундамент.'
+tags: [mechanism, animated]
+rating: null
+status: built

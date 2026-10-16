@@ -192,7 +192,7 @@ IMPRESSOR_DOCUMENTS = (
 )
 PUBLIC_TESTS = ("tests/test_public_release.py", "tests/test_public_materials.py", "tests/test_public_runtime.py",
                 "tests/test_build_failures.py", "tests/test_impressor_sketch.py", "tests/test_public_models.py",
-                "tests/test_public_web.py", "tests/test_slot_previews.py")
+                "tests/test_public_web.py", "tests/test_slot_previews.py", "tests/test_motion_clearance.py")
 
 
 def source_files(root: Path) -> dict[Path, Path]:

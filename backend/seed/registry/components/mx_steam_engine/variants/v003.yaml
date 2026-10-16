@@ -1,0 +1,10 @@
+id: v003
+parent: v001
+delta: {size: 0.6, turns: 3, color: paint_blue, flywheel: paint_blue, accent: copper, metal: steel_dark,
+  spokes: 6}
+level: 3
+author: llm
+note: 'Малая синяя машина 0,6 для цехов поменьше: 3 оборота за цикл, медь.'
+tags: [mechanism, animated]
+rating: null
+status: built

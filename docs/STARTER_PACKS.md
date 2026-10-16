@@ -11,6 +11,7 @@ can resolve independently of the author's working collection.
 | `mt_truck` | `assets/mt_truck/v001` | `v002` through `v005` |
 | `evo_truck` | `components/vh_truck/v001` | Individual stages `v002`–`v005`, then the exhibition asset |
 | `evo_heli_light` | `components/vh_heli_light/v001` | Individual stages `v002`–`v005`, then the exhibition asset |
+| `steam_engine` | `components/mx_steam_engine/v001` | The red hero `v002` and the small blue `v003` |
 
 `evo_*` assets are exhibitions on plinths. Use the individual `vh_*` component
 models for a game vehicle. Existing early demonstrations may contain curved
@@ -24,6 +25,7 @@ primitives; a new strict Impressor cube-massing pass uses boxes only.
 .venv/bin/python -m registry build-demo --pack mt_truck
 .venv/bin/python -m registry build-demo --pack evo_truck
 .venv/bin/python -m registry build-demo --pack evo_heli_light
+.venv/bin/python -m registry build-demo --pack steam_engine
 ```
 
 Running `build-demo` without a pack builds ten introductory targets including
@@ -33,11 +35,14 @@ prints the targets without launching Blender.
 ## Review and refine
 
 Inspect the report and seven real views. Check wheel/leg contact, supports,
-silhouette and intersections before adding detail. Use a new child variant
+silhouette and intersections before adding detail. For animated mechanisms,
+also check moving parts through the whole loop with
+`blender -b --factory-startup -P builder/motion_clearance.py -- build/<hash>/model.glb`
+(see `tests/test_motion_clearance.py` for the steam engine's joints). Use a new child variant
 to change one parameter or attachment. Keep technical IDs and socket names
 unchanged when switching the interface language.
 
-The optional starter-model ZIP contains 29 GLBs with seven PNG projections
+The optional starter-model ZIP contains 32 GLBs with seven PNG projections
 per model. Its `index.json` records canonical references and SHA-256 digests.
 It contains no build logs, absolute recipe paths or private source files.
 Source recipes remain in the main repository; the ZIP is for inspection and

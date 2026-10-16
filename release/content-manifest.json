@@ -32,8 +32,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "4c0860a91b0f0911e5552a6d7da3b80461c9048b2dd98ea50cfe01d29aaa566c",
-      "size": 756
+      "sha256": "38c659d9dd38518a8ad8199f30c344f65149d238d52d6e32d5fed03679b305b8",
+      "size": 1440
     },
     {
       "path": "CLAUDE.md",
@@ -62,17 +62,17 @@
     },
     {
       "path": "README.md",
-      "sha256": "70b53ab9cc130ce2e45d410e31804a7ac79ba6de75c2771f311e8dbe7b071b8a",
-      "size": 5934
+      "sha256": "2f80e47c305a13a69d3ce1d2fbb36f9aa591ac105f9355af056a9b0eb3ab3abb",
+      "size": 6881
     },
     {
       "path": "README.ru.md",
-      "sha256": "7a45d0ba94314b04d39622ae4eb76a1e67406e44970ef094af44c908e27ffbc3",
-      "size": 6321
+      "sha256": "8b506a5ffb2e81b2717c3257ff50ccc2d15c0364212969db9aaac283a46ff42c",
+      "size": 7685
     },
     {
       "path": "backend/__init__.py",
-      "sha256": "d83aaf0b606467a56bc73047169ac4937bae03a59dc40f5a0d2e40cd42a6cc4d",
+      "sha256": "42f8331ba5a1bf5b08966d8435017659651e882ffd1bf5f653eb81f43c50da76",
       "size": 111
     },
     {
@@ -372,8 +372,8 @@
     },
     {
       "path": "backend/seed/registry/catalog_groups.yaml",
-      "sha256": "0f86214f52b75295614b8e63413c0671af145249e5127d72e60413c8a5adbc83",
-      "size": 1082
+      "sha256": "3fb226fed5723f2370874fb18edf226ad15eb386f845cabea35fa338939bd3f9",
+      "size": 1170
     },
     {
       "path": "backend/seed/registry/components/ev_plinth/_base.md",
@@ -839,6 +839,31 @@
       "path": "backend/seed/registry/components/mt_wheelset/variants/v010.yaml",
       "sha256": "39b10fe565e907fc1d6bfcfc03ea8b2d3962a6365d29054b965961f8aae4f66b",
       "size": 197
+    },
+    {
+      "path": "backend/seed/registry/components/mx_steam_engine/_base.md",
+      "sha256": "d250e52a66d1101e80c11ac62cc21d265fedd89fd35294d83da5a1da8e347361",
+      "size": 4787
+    },
+    {
+      "path": "backend/seed/registry/components/mx_steam_engine/generator.py",
+      "sha256": "8ec8c855def8076e9b6a20b76d337eb722f1ea3c088a0d0dba31e5c2c828902e",
+      "size": 16592
+    },
+    {
+      "path": "backend/seed/registry/components/mx_steam_engine/variants/v001.yaml",
+      "sha256": "87e86fb7e65f22b4bf6fbf4d32ac1dc0698ad18512e851336b7caacb4a421992",
+      "size": 290
+    },
+    {
+      "path": "backend/seed/registry/components/mx_steam_engine/variants/v002.yaml",
+      "sha256": "7f96b975312dcdf9a1792ab76f00723365a91cf5566f0506b00b74ca8c77d819",
+      "size": 338
+    },
+    {
+      "path": "backend/seed/registry/components/mx_steam_engine/variants/v003.yaml",
+      "sha256": "9249f1f7d22de7ac1b195062657e35b1efe034fe585b0be8eb0332a369006bdd",
+      "size": 341
     },
     {
       "path": "backend/seed/registry/components/td_barrel/_base.md",
@@ -1671,6 +1696,11 @@
       "size": 2039
     },
     {
+      "path": "builder/motion_clearance.py",
+      "sha256": "3ea4244f2ab2fa88ea07ab2e7c4cf599ed4963893781a34cbfa9c6ab964fae8a",
+      "size": 7700
+    },
+    {
       "path": "builder/preview.py",
       "sha256": "fd604fa8a2a8e5fb721721381783721f2da7cbe80fe16686758382d0da6e1b3e",
       "size": 5002
@@ -1767,8 +1797,8 @@
     },
     {
       "path": "docs/STARTER_PACKS.md",
-      "sha256": "42932311da2e7a31ab8b4f7ea483567eb144fbbd458d8c001477f0f6c53c082e",
-      "size": 2357
+      "sha256": "d2459bf104f50bba88cb492686ef5c7160ecc760b5f691ae5fa9489b4564b0c1",
+      "size": 2755
     },
     {
       "path": "docs/STARTER_ROADMAP.md",
@@ -2002,12 +2032,12 @@
     },
     {
       "path": "frontend/package-lock.json",
-      "sha256": "f9848afb5f524963f4b1b09ff1f48fb4ad189087545d1bb03adbe2965af096c2",
+      "sha256": "bc7cc3ba2775bf3e1a827ac64d1e2c765512dc672b7dc5af68c03f8057408b6c",
       "size": 40135
     },
     {
       "path": "frontend/package.json",
-      "sha256": "2ba3595055c2a672ec2149235fcffc5ad315a1a4470b4ca4986d4d53baa21671",
+      "sha256": "2c96a928d892f2b7572d9b1eaba543476b1d651c257dc47874d567276cc7abd9",
       "size": 447
     },
     {
@@ -2142,7 +2172,7 @@
     },
     {
       "path": "frontend/src/version.ts",
-      "sha256": "206933ad3a2dc78ca2c3e699d24d101427394c9811ee9657215d0b2f617d128d",
+      "sha256": "18f20d21bcc77ec557320e9c606ff3f18620c099cad1ea78d8f94c37e2169695",
       "size": 44
     },
     {
@@ -2552,8 +2582,8 @@
     },
     {
       "path": "registry/catalog_groups.yaml",
-      "sha256": "0f86214f52b75295614b8e63413c0671af145249e5127d72e60413c8a5adbc83",
-      "size": 1082
+      "sha256": "3fb226fed5723f2370874fb18edf226ad15eb386f845cabea35fa338939bd3f9",
+      "size": 1170
     },
     {
       "path": "registry/components/ev_plinth/_base.md",
@@ -3019,6 +3049,31 @@
       "path": "registry/components/mt_wheelset/variants/v010.yaml",
       "sha256": "39b10fe565e907fc1d6bfcfc03ea8b2d3962a6365d29054b965961f8aae4f66b",
       "size": 197
+    },
+    {
+      "path": "registry/components/mx_steam_engine/_base.md",
+      "sha256": "d250e52a66d1101e80c11ac62cc21d265fedd89fd35294d83da5a1da8e347361",
+      "size": 4787
+    },
+    {
+      "path": "registry/components/mx_steam_engine/generator.py",
+      "sha256": "8ec8c855def8076e9b6a20b76d337eb722f1ea3c088a0d0dba31e5c2c828902e",
+      "size": 16592
+    },
+    {
+      "path": "registry/components/mx_steam_engine/variants/v001.yaml",
+      "sha256": "87e86fb7e65f22b4bf6fbf4d32ac1dc0698ad18512e851336b7caacb4a421992",
+      "size": 290
+    },
+    {
+      "path": "registry/components/mx_steam_engine/variants/v002.yaml",
+      "sha256": "7f96b975312dcdf9a1792ab76f00723365a91cf5566f0506b00b74ca8c77d819",
+      "size": 338
+    },
+    {
+      "path": "registry/components/mx_steam_engine/variants/v003.yaml",
+      "sha256": "9249f1f7d22de7ac1b195062657e35b1efe034fe585b0be8eb0332a369006bdd",
+      "size": 341
     },
     {
       "path": "registry/components/td_barrel/_base.md",
@@ -3777,8 +3832,8 @@
     },
     {
       "path": "release/starter-packs.yaml",
-      "sha256": "05fa93cd67ec6b947ec7c952fc63e75f6656d1ad045c19fe9fa13c352bd3fc5b",
-      "size": 2089
+      "sha256": "b3a61f8715f5f6273040857856ec9a4596c51b021249b15b9f51e715e6d3e487",
+      "size": 2339
     },
     {
       "path": "requirements-dev.txt",
@@ -3804,6 +3859,11 @@
       "path": "tests/test_impressor_sketch.py",
       "sha256": "a9938a25dfadacc87e58e24230a670c5bf2aac8757373fd00ce92446276aed37",
       "size": 6880
+    },
+    {
+      "path": "tests/test_motion_clearance.py",
+      "sha256": "2291a002048b762c3d0cceaa06bbc2eb84ed107ffd96ede8812c81d97343379f",
+      "size": 1991
     },
     {
       "path": "tests/test_public_materials.py",
@@ -3872,13 +3932,13 @@
     },
     {
       "path": "tools/public_release.py",
-      "sha256": "fa06e5f80c5fffe98e86eae68acafe7590e14ba917b60ea099486ffd981e18a6",
-      "size": 26456
+      "sha256": "6a73a8336cefb896c534ccf9e6e4efce6a26a6cedfe2bbcd25483bfe83a9fa16",
+      "size": 26490
     }
   ],
   "registry": {
-    "entities": 41,
-    "variants": 216
+    "entities": 42,
+    "variants": 219
   },
   "schema": "public-source-export/v1",
   "transforms": [

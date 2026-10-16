@@ -55,6 +55,12 @@ packs:
       - components/vh_heli_light/v003
       - components/vh_heli_light/v004
       - components/vh_heli_light/v005
+  - id: steam_engine
+    title: {en: Animated steam engine, ru: Анимированная паровая машина}
+    refs:
+      - components/mx_steam_engine/v001
+      - components/mx_steam_engine/v002
+      - components/mx_steam_engine/v003
 materials_refs:
   - materials/toon/v001
   - materials/toon/v002

@@ -19,3 +19,6 @@ groups:
 - id: evo_heli_light
   title: Light helicopter evolution
   items: [assets/evo_heli_light, components/vh_heli_light]
+- id: steam_engine
+  title: Animated steam engine
+  items: [components/mx_steam_engine]
